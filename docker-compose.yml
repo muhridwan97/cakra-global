@@ -1,0 +1,67 @@
+version: '3'
+services:  
+  php_fpm:
+    build:
+      context: ./
+      dockerfile: ./docker-config/php/php.dockerfile
+    container_name: cakra-global
+    working_dir: /d/php-dev/cakra-global/
+    volumes:
+      - ./:/d/php-dev/cakra-global/
+    networks:
+      - app-network
+    links:
+      - database
+    depends_on:
+      - database
+  
+  database:
+    image: mariadb
+    container_name: cakra-global_database
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: cakra-global
+      MYSQL_ROOT_PASSWORD: 12345
+    volumes:
+      - dbdata:/var/lib/mysql/
+      - ./docker-config/mysql/db:/docker-entrypoint-initdb.d
+    networks:
+      - app-network
+
+  # phpmyadmin:
+  #   depends_on:
+  #     - database
+  #   image: phpmyadmin
+  #   restart: always
+  #   ports:
+  #     - "8090:80"
+  #   environment:
+  #     PMA_HOST: database
+  #     MYSQL_ROOT_PASSWORD: 12345
+  #   networks:
+  #     - app-network
+
+  web:
+    image: nginx:latest
+    container_name: cakra-global-webserver
+    volumes:
+      - ./docker-config/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./:/d/php-dev/cakra-global/
+    ports:
+      - "8080:80"
+    networks:
+      - app-network
+    depends_on:
+      - php_fpm
+      - database
+
+networks:
+  app-network:
+    driver: bridge
+volumes:
+  dbdata:
+    driver: local
+    
