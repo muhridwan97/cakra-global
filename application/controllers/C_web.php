@@ -15,7 +15,7 @@ class C_web extends CI_Controller {
 	{
 		$data["banner"]=$this->m_web->get_banner();
 		$data["instagram"]=$this->m_web->get_instagram();
-		$this->load->view('tampilanAwal2',$data);
+		$this->load->view('tampilanAwal',$data);
 	}
 	public function tampilanHome()
 	{
@@ -43,28 +43,6 @@ class C_web extends CI_Controller {
 
 		$data["galeri"] = $this->m_admin->get_galeri($id);
 		$data["wisata"] = $this->m_admin->get_wisataa($id);
-		// $wst = $this->m_admin->get_wisata("where paketwisata.idWisata='$id'");
-		// $data = array(
-		// 	"idWisata"=> $wst[0]['idWisata'], 
-		// 	"namaWisata" => $wst[0]['namaWisata'], 
-		// 	"foto" => $wst[0]['foto'], 
-		// 	"tanggal" => $wst[0]['tanggal'], 
-		// 	"preview" => $wst[0]['preview'], 
-		// 	"latitude" => $wst[0]['latitude'],
-		// 	"longitude" => $wst[0]['longitude'],
-		// 	"idGaleri" => $wst[0]['idGaleri'],
-		// 	"foto1" => $wst[0]['foto1'],
-		// 	"foto2" => $wst[0]['foto2'],
-		// 	"foto3" => $wst[0]['foto3'],
-		// 	"foto4" => $wst[0]['foto4'],
-		// 	// "idGuide"=> $wst[0]['idGuide'], 
-		// 	// "namaGuide" => $wst[0]['namaGuide'], 
-		// 	// "fotoGuide" => $wst[0]['fotoGuide'], 
-		// 	// "emailGuide" => $wst[0]['emailGuide'], 
-		// 	// "notelpGuide" => $wst[0]['notelpGuide'], 
-		// 	// "umurGuide" => $wst[0]['umurGuide'],
-		// 	// "alamatGuide" => $wst[0]['alamatGuide'],
-		// );
 		$data["guide"]=$this->m_admin->get_wisata2($id);
 		$this->load->view('tampilanDetail',$data);
 		

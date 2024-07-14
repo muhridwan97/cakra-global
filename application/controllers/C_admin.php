@@ -26,6 +26,7 @@ class C_admin extends CI_Controller {
 	{	
 
 		$data["banner"]=$this->m_admin->readBanner();
+		$data["sidebar"]="dashboard";
 		$this->load->view("tampilanAdmin",$data);
 	}
 	
