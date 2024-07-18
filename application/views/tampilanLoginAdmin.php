@@ -39,7 +39,7 @@ if(isset($gagal)){
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Admin</b>Priangan<b></b></a>
+    <a href="../../index2.html"><b>Admin</b>Cakra Global Logistik<b></b></a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">

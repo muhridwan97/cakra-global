@@ -36,6 +36,11 @@ class m_admin extends CI_Model {
         $query = $this->db->query("SELECT * FROM banner ".$where);
         return $query->result_array();
     }
+	
+    function get_tentang_kami($where=""){
+        $query = $this->db->query("SELECT * FROM tentang_kami ".$where);
+        return $query->result_array();
+    }
 	function get_wisata($where=""){
         $query = $this->db->query("SELECT * FROM paketwisata JOIN galeri ON galeri.idWisata=paketwisata.idWisata ".$where);
         return $query->result_array();
@@ -52,6 +57,10 @@ class m_admin extends CI_Model {
 		$query = $this->db->insert($table,$data);
 		return $query;
 	}
+	function set_data($data,$table){
+		$query = $this->db->insert($table,$data);
+		return $query;
+	}
 	function set_produk($data,$table){
 		$query = $this->db->insert($table,$data);
 		return $query;
@@ -61,6 +70,12 @@ class m_admin extends CI_Model {
 		return $query;
 	}
 	public function update_banner($data, $id, $table)
+	{
+	   $this->db->where('id', $id);
+	   $this->db->update($table,$data); 
+	}
+	
+	public function update_data($data, $id, $table)
 	{
 	   $this->db->where('id', $id);
 	   $this->db->update($table,$data); 
@@ -80,6 +95,12 @@ class m_admin extends CI_Model {
 	function readBanner(){
 		$this->db->order_by("id","desc");
 		$query=$this->db->get("banner");
+		return $query->result_array();
+	}
+	
+	function readTentangKami(){
+		$this->db->order_by("id","desc");
+		$query=$this->db->get("tentang_kami");
 		return $query->result_array();
 	}
 	function readInstagram(){

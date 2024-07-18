@@ -159,12 +159,11 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div id="latar-belakang-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img class="img-fluid rounded" src="<?php echo base_url(); ?>asset-landing/img/freight.jpg">
+                            <?php foreach($tentang_kami as $index => $item) { ?>
+                            <div class="carousel-item <?php echo $index == 0 ? 'active' : ''; ?>">
+                                <img class="img-fluid rounded" src="<?php echo base_url(); ?>asset-landing/img/<?php echo "$item[foto]"?>">
                             </div>
-                            <div class="carousel-item">
-                                <img class="img-fluid rounded" src="<?php echo base_url(); ?>asset-landing/img/freight.jpg">
-                            </div>
+                            <?php } ?>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#latar-belakang-carousel" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -218,7 +217,7 @@
                         <div class="project-item pe-5 pb-5">
                             <div class="project-img mb-3">
                                 <img class="img-fluid rounded" src="<?php echo base_url(); ?>asset-landing/img/ffw.jpg" alt="">
-                                <a href="ffw"><i class="fa fa-link fa-3x text-primary"></i></a>
+                                <a href="<?php echo base_url(); ?>c_web/layananKami/freight-forwarding"><i class="fa fa-link fa-3x text-primary"></i></a>
                             </div>
                             <div class="project-title">
                                 <h4 class="mb-0">Freight Forwarding</h4>
@@ -588,8 +587,7 @@
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-5" data-aos="fade-up" data-aos-delay="0">
-                    <h2 class="heading">Wanna Talk To Us?</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                    <h2 class="heading" style="text-align:justify">Kami dengan senang hati mem-berikan penawaran konsultasi gratis dengan para profesional yang kompeten dan berpengalaman</h2>
                 </div>
                 <div class="col-lg-5 text-end" data-aos="fade-up" data-aos-delay="100">
                     <a href="#" class="btn btn-outline-white-reverse">Contact us</a>

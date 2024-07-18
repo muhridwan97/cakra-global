@@ -71,6 +71,11 @@ class m_web extends CI_Model {
 		$query=$this->db->get("banner");
 		return $query->result_array();
 	}
+	function get_tentang_kami(){
+		$this->db->order_by("id","desc");
+		$query=$this->db->get("tentang_kami");
+		return $query->result_array();
+	}
 	function hapusWisata($table,$where){
 		$res=$this->db->delete($table,$where);
 		return $res;

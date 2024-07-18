@@ -27,7 +27,18 @@ class C_admin extends CI_Controller {
 
 		$data["banner"]=$this->m_admin->readBanner();
 		$data["sidebar"]="dashboard";
+		$data["menu"]="dashboard";
+		$data["title"]="Data Banner";
 		$this->load->view("tampilanAdmin",$data);
+	}
+	public function tentangKami()
+	{
+		$data["datas"]=$this->m_admin->readTentangKami();
+		$data["sidebar"]="tentang_kami";
+		$data["title"]="Data foto tentang kami";
+		$data["menu"]="Tentang kami";
+		$this->load->view("tentang_kami/index",$data);
+
 	}
 	
 	public function adminInstagram()
@@ -41,6 +52,13 @@ class C_admin extends CI_Controller {
 		$data["produk"]=$this->m_admin->readProduk();
 		$this->load->view("adminProduk",$data);
 
+	}
+	public function tambahTentangKami($error=''){
+		$data["sidebar"]="tentang_kami";
+		$data["menu"]="Tentang kami";
+		$data["title"]="Tambah Foto";
+		$data["error"]=$error;
+		$this->load->view('tentang_kami/tambah', $data);
 	}
 	
 	public function tampilanTambahBanner($error=''){
@@ -67,7 +85,21 @@ class C_admin extends CI_Controller {
 		$this->load->view('tampilanInfoBanner',$data);
 		
 	}
-		public function tampilanEditBanner($id){
+	public function infoTentangKami($id){
+
+		$wst = $this->m_admin->get_tentang_kami("where id='$id'");
+		$data = array(
+			"id"=> $wst[0]['id'], 
+			"namaFoto" => $wst[0]['nama_foto'], 
+			"foto" => $wst[0]['foto']
+		);
+		$data["sidebar"]="tentang_kami";
+		$data["menu"]="Tentang kami";
+		$data["title"]="Info Foto";
+		$this->load->view('tentang_kami/info',$data);
+		
+	}
+	public function tampilanEditBanner($id){
 
 		$wst = $this->m_admin->get_bannerAdmin("where id='$id'");
 		$data = array(
@@ -76,6 +108,20 @@ class C_admin extends CI_Controller {
 			"fotoBanner" => $wst[0]['fotoBanner']
 		);
 		$this->load->view('tampilanEditBanner',$data);
+		
+	}
+	public function editTentangKami($id){
+
+		$wst = $this->m_admin->get_tentang_kami("where id='$id'");
+		$data = array(
+			"id"=> $wst[0]['id'], 
+			"namaFoto" => $wst[0]['nama_foto'], 
+			"foto" => $wst[0]['foto']
+		);
+		$data["sidebar"]="tentang_kami";
+		$data["menu"]="Tentang kami";
+		$data["title"]="Edit Foto";
+		$this->load->view('tentang_kami/edit',$data);
 		
 	}
 	public function tampilanEditInstagram($id){
@@ -125,7 +171,33 @@ class C_admin extends CI_Controller {
 		
 	}
 
-	
+	public function save_tentang_kami(){
+		$config['upload_path']          = './assets/images/foto/';
+		$config['allowed_types']        = 'gif|jpg|png|jpeg';
+		$config['max_size']             = 5000;
+ 
+		$this->load->library('upload', $config);
+ 
+		if ( ! $this->upload->do_upload('berkas')){
+			$error = array('error' => $this->upload->display_errors());
+			$this->tambahTentangKami($error);
+		}else{
+			$nama =  $this->input->post('nama');
+			$upload_data = $this->upload->data();
+			$foto =  $upload_data['file_name'];
+			
+			$this->load->model('m_admin');
+		
+			$data = array(
+				'nama_foto' => $nama,
+				'foto' => $foto,
+				);
+
+			$this->m_admin->set_data($data,'tentang_kami');
+			$data = array('upload_data' => $this->upload->data());
+			redirect('c_admin/tentangKami');
+		}
+	}
 
 	public function aksi_upload(){
 		$config['upload_path']          = './assets/images/foto/';
@@ -151,7 +223,7 @@ class C_admin extends CI_Controller {
 
 			$this->m_admin->set_banner($data,'banner');
 			$data = array('upload_data' => $this->upload->data());
-			$this->tampilanAdmin();
+			redirect('c_admin/tampilanAdmin');
 		}
 	}
 	public function aksi_uploadIg(){
@@ -213,13 +285,13 @@ class C_admin extends CI_Controller {
 	public function editBanner($id){
 		$config['upload_path']          = './assets/images/foto/';
 		$config['allowed_types']        = 'gif|jpg|png|jpeg';
-		$config['max_size']             = 10000;
+		$config['max_size']             = 5000;
  
 		$this->load->library('upload', $config);
  
 		if ( ! $this->upload->do_upload('berkas')){
 			$error = array('error' => $this->upload->display_errors());
-			$this->tampilanTambahBanner($error);
+			$this->tampilanEditBanner($error);
 		}else{
 			
 			$nama =  $this->input->post('nama');
@@ -235,7 +307,37 @@ class C_admin extends CI_Controller {
 
 			$this->m_admin->update_banner($data,$id,'banner');
 			$data = array('upload_data' => $this->upload->data());
-			$this->tampilanAdmin();
+			redirect('c_admin/tampilanAdmin');
+		}
+
+	}
+	
+	public function edit_tentang_kami($id){
+		$config['upload_path']          = './assets/images/foto/';
+		$config['allowed_types']        = 'gif|jpg|png|jpeg';
+		$config['max_size']             = 5000;
+ 
+		$this->load->library('upload', $config);
+ 
+		if ( ! $this->upload->do_upload('berkas')){
+			$error = array('error' => $this->upload->display_errors());
+			$this->editTentangKami($error);
+		}else{
+			
+			$nama =  $this->input->post('nama');
+			$upload_data = $this->upload->data();
+			$foto =  $upload_data['file_name'];
+			
+			$this->load->model('m_admin');
+		
+		$data = array(
+			'nama_foto' => $nama,
+			'foto' => $foto
+			);
+
+			$this->m_admin->update_data($data,$id,'tentang_kami');
+			$data = array('upload_data' => $this->upload->data());
+			redirect('c_admin/tentangKami');
 		}
 
 	}
