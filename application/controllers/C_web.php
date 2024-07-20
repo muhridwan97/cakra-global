@@ -25,9 +25,23 @@ class C_web extends CI_Controller {
 	}
 	public function layananKami($id)
 	{
-		$data["banner"]=$this->m_web->get_banner();
 		$data["tentang_kami"]=$this->m_web->get_tentang_kami();
 		$this->load->view('layananKami',$data);
+	}
+	public function warehouse()
+	{
+		$data["tentang_kami"]=$this->m_web->get_tentang_kami();
+		$this->load->view('warehouse',$data);
+	}
+	public function artikel()
+	{
+		$data["tentang_kami"]=$this->m_web->get_tentang_kami();
+		$this->load->view('artikel',$data);
+	}
+	public function artikelDetail($id)
+	{
+		$data["tentang_kami"]=$this->m_web->get_tentang_kami();
+		$this->load->view('artikelDetail',$data);
 	}
 	public function tampilanDetail($id)
 	{	

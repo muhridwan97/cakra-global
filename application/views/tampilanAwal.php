@@ -9,12 +9,14 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="<?php echo base_url(); ?>asset-landing/img/favicon.ico" rel="icon">
+    <link href="<?php echo base_url(); ?>asset-landing/img/trucking.jpg" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -32,32 +34,40 @@
 
     <link href="<?php echo base_url(); ?>asset-landing/css/templatemo-kind-heart-charity.css" rel="stylesheet">
 
+    <!-- Template Gallery knight -->
+    <link href="<?php echo base_url(); ?>asset-landing/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>asset-landing/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>asset-landing/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
     <!-- Template Stylesheet -->
     <style>
+    .carousel-top {
+        margin-top: 120px;
+    }
+
+    /* Media query untuk perangkat mobile */
+    @media (max-width: 768px) {
+        .navbar-logo {
+            max-width: 250px;
+            /* Adjust the max-width for smaller screens */
+        }
+
         .carousel-top {
-            margin-top: 120px;
+            margin-top: 20px;
         }
+    }
 
-        /* Media query untuk perangkat mobile */
-        @media (max-width: 768px) {
-            .navbar-logo {
-                max-width: 250px;
-                /* Adjust the max-width for smaller screens */
-            }
-
-            .carousel-top {
-                margin-top: 20px;
-            }
-        }
-        html {
-            scroll-behavior: smooth;
-        }
+    html {
+        scroll-behavior: smooth;
+    }
     </style>
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
     <!-- Spinner End -->
@@ -78,7 +88,8 @@
             <a href="index" class="navbar-brand ms-4 ms-lg-0">
                 <img src="<?php echo base_url(); ?>asset-landing/img/logo-01.png" class="navbar-logo">
             </a>
-            <button type="button" class="navbar-toggler me-4 ms-auto" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <button type="button" class="navbar-toggler me-4 ms-auto" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -97,19 +108,23 @@
                             <a href="asesor" class="dropdown-item">PLB</a>
                         </div>
                     </div>
+                    <a href="#artikel" class="nav-item nav-link">Artikel</a>
                     <a href="#hubungi-kami" class="nav-item nav-link">Hubungi Kami</a>
                 </div>
                 <div class="d-none d-lg-flex ms-2">
                     <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="">
                         <small class="fab fa-facebook-f text-primary"></small>
                     </a>
-                    <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="https://www.instagram.com/cde_learning/" target="_blank">
+                    <a class="btn btn-light btn-sm-square rounded-circle ms-3"
+                        href="https://www.instagram.com/cde_learning/" target="_blank">
                         <small class="fab fa-instagram text-primary"></small>
                     </a>
                     <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="">
                         <small class="fab fa-youtube text-primary"></small>
                     </a>
-                    <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="https://api.whatsapp.com/send/?phone=6281210006323&text&type=phone_number&app_absent=0" target="_blank">
+                    <a class="btn btn-light btn-sm-square rounded-circle ms-3"
+                        href="https://api.whatsapp.com/send/?phone=6281210006323&text&type=phone_number&app_absent=0"
+                        target="_blank">
                         <small class="fab fa-whatsapp text-primary"></small>
                     </a>
                 </div>
@@ -126,7 +141,8 @@
                     foreach($banner as $index => $a){ 
                 ?>
                 <div class="carousel-item <?php echo $index == 0 ? 'active' : ''; ?>">
-                    <img class="w-100" src="<?php echo base_url(); ?>/assets/images/foto/<?php echo "$a[fotoBanner]"?>" alt="Image">
+                    <img class="w-100" src="<?php echo base_url(); ?>/assets/images/foto/<?php echo "$a[fotoBanner]"?>"
+                        alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-start">
@@ -139,11 +155,13 @@
                 <?php 
                     } 
                 ?>
-                <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -157,19 +175,23 @@
         <div class="container" style="margin-top: 40px;">
             <div class="row g-4 align-items-center mb-4">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div id="latar-belakang-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                    <div id="latar-belakang-carousel" class="carousel slide" data-bs-ride="carousel"
+                        data-bs-interval="2000">
                         <div class="carousel-inner">
                             <?php foreach($tentang_kami as $index => $item) { ?>
                             <div class="carousel-item <?php echo $index == 0 ? 'active' : ''; ?>">
-                                <img class="img-fluid rounded" src="<?php echo base_url(); ?>asset-landing/img/<?php echo "$item[foto]"?>">
+                                <img class="img-fluid rounded"
+                                    src="<?php echo base_url(); ?>asset-landing/img/<?php echo "$item[foto]"?>">
                             </div>
                             <?php } ?>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#latar-belakang-carousel" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#latar-belakang-carousel"
+                            data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#latar-belakang-carousel" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#latar-belakang-carousel"
+                            data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -177,27 +199,47 @@
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h1 class="display-5 mb-4">Tentang Kami</h1>
-                    <h5 style="text-align: justify;">PT Cakra Global Logistik didirikan pada tahun 2024 dengan komitmen untuk menjadi mitra terdepan dalam solusi logistik global.</h5>
-                    <h5 style="text-align: justify;">Kami menawarkan berbagai layanan komprehensif untuk memenuhi kebutuhan rantai pasokan Anda, mulai dari freight forwarding hingga warehousing dan project logistics.</h5>
+                    <h5 style="text-align: justify;">PT Cakra Global Logistik didirikan pada tahun 2024 dengan komitmen
+                        untuk menjadi mitra terdepan dalam solusi logistik global.</h5>
+                    <h5 style="text-align: justify;">Kami menawarkan berbagai layanan komprehensif untuk memenuhi
+                        kebutuhan rantai pasokan Anda, mulai dari freight forwarding hingga warehousing dan project
+                        logistics.</h5>
                     <div class="border rounded p-4">
                         <nav>
                             <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
-                                <button class="nav-link fw-semi-bold" id="nav-stg-tab" data-bs-toggle="tab" data-bs-target="#nav-visi" type="button" role="tab" aria-controls="nav-visi" aria-selected="false">Visi</button>
-                                <button class="nav-link fw-semi-bold" id="nav-target-tab" data-bs-toggle="tab" data-bs-target="#nav-misi" type="button" role="tab" aria-controls="nav-misi" aria-selected="false">Misi</button>
+                                <button class="nav-link fw-semi-bold" id="nav-stg-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-visi" type="button" role="tab" aria-controls="nav-visi"
+                                    aria-selected="false">Visi</button>
+                                <button class="nav-link fw-semi-bold" id="nav-target-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-misi" type="button" role="tab" aria-controls="nav-misi"
+                                    aria-selected="false">Misi</button>
                             </div>
                         </nav>
                         <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="nav-visi" role="tabpanel" aria-labelledby="nav-visi-tab">
-                                <p style="text-align: justify;">Menjadi mitra terkemuka dalam solusi logistik global, mempersembahkan keunggulan dalam pengiriman dan pengelolaan rantai pasok, serta menjadi pionir dalam inovasi teknologi untuk memenuhi kebutuhan pelanggan kami.</p>
+                            <div class="tab-pane fade show active" id="nav-visi" role="tabpanel"
+                                aria-labelledby="nav-visi-tab">
+                                <p style="text-align: justify;">Menjadi mitra terkemuka dalam solusi logistik global,
+                                    mempersembahkan keunggulan dalam pengiriman dan pengelolaan rantai pasok, serta
+                                    menjadi pionir dalam inovasi teknologi untuk memenuhi kebutuhan pelanggan kami.</p>
                             </div>
                             <div class="tab-pane fade" id="nav-misi" role="tabpanel" aria-labelledby="nav-misi-tab">
                                 <ol class="mb-4">
-                                    <li>Pelayanan Unggul : Memberikan layanan pelanggan yang unggul melalui pendekatan yang personal, cepat, dan andal dalam setiap tahap pengiriman.</li>
-                                    <li>Inovasi Berkelanjutan : Mengembangkan dan menerapkan solusi inovatif untuk meningkatkan efisiensi dalam rantai pasok, menggunakan teknologi terkini dan praktik terbaik industri.</li>
-                                    <li>Kemitraan yang Kokoh : Membangun hubungan kemitraan jangka panjang dengan pelanggan, mitra, dan pemasok, berdasarkan kepercayaan, transparansi, dan saling menguntungkan.</li>
-                                    <li>Kepemimpinan Global : Menjadi pemimpin dalam industri forwarding dengan ekspansi global yang berkelanjutan, memperluas jaringan kami untuk mencapai pelanggan di seluruh dunia.</li>
-                                    <li>Komitmen Lingkungan : Mengintegrasikan praktik berkelanjutan dalam operasi kami, dengan fokus pada pengurangan jejak karbon dan perlindungan lingkungan.</li>
-                                    <li>Pengembangan SDM : Memberdayakan dan mengembangkan karyawan kami sebagai aset terpenting, memberikan pelatihan yang berkelanjutan dan menciptakan lingkungan kerja yang inklusif dan berdaya.</li>
+                                    <li>Pelayanan Unggul : Memberikan layanan pelanggan yang unggul melalui pendekatan
+                                        yang personal, cepat, dan andal dalam setiap tahap pengiriman.</li>
+                                    <li>Inovasi Berkelanjutan : Mengembangkan dan menerapkan solusi inovatif untuk
+                                        meningkatkan efisiensi dalam rantai pasok, menggunakan teknologi terkini dan
+                                        praktik terbaik industri.</li>
+                                    <li>Kemitraan yang Kokoh : Membangun hubungan kemitraan jangka panjang dengan
+                                        pelanggan, mitra, dan pemasok, berdasarkan kepercayaan, transparansi, dan saling
+                                        menguntungkan.</li>
+                                    <li>Kepemimpinan Global : Menjadi pemimpin dalam industri forwarding dengan ekspansi
+                                        global yang berkelanjutan, memperluas jaringan kami untuk mencapai pelanggan di
+                                        seluruh dunia.</li>
+                                    <li>Komitmen Lingkungan : Mengintegrasikan praktik berkelanjutan dalam operasi kami,
+                                        dengan fokus pada pengurangan jejak karbon dan perlindungan lingkungan.</li>
+                                    <li>Pengembangan SDM : Memberdayakan dan mengembangkan karyawan kami sebagai aset
+                                        terpenting, memberikan pelatihan yang berkelanjutan dan menciptakan lingkungan
+                                        kerja yang inklusif dan berdaya.</li>
                                 </ol>
                             </div>
 
@@ -216,8 +258,10 @@
                     <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.3s">
                         <div class="project-item pe-5 pb-5">
                             <div class="project-img mb-3">
-                                <img class="img-fluid rounded" src="<?php echo base_url(); ?>asset-landing/img/ffw.jpg" alt="">
-                                <a href="<?php echo base_url(); ?>c_web/layananKami/freight-forwarding"><i class="fa fa-link fa-3x text-primary"></i></a>
+                                <img class="img-fluid rounded" src="<?php echo base_url(); ?>asset-landing/img/ffw.jpg"
+                                    alt="">
+                                <a href="<?php echo base_url(); ?>c_web/layananKami/freight-forwarding"><i
+                                        class="fa fa-link fa-3x text-primary"></i></a>
                             </div>
                             <div class="project-title">
                                 <h4 class="mb-0">Freight Forwarding</h4>
@@ -225,8 +269,9 @@
                         </div>
                         <div class="project-item pe-5 pb-5">
                             <div class="project-img mb-3">
-                                <img class="img-fluid rounded" src="<?php echo base_url(); ?>asset-landing/img/customehandling.jpg" alt="">
-                                <a href=""><i class="fa fa-link fa-3x text-primary"></i></a>
+                                <img class="img-fluid rounded"
+                                    src="<?php echo base_url(); ?>asset-landing/img/customehandling.jpg" alt="">
+                                <a href="<?php echo base_url(); ?>c_web/layananKami/freight-forwarding"><i class="fa fa-link fa-3x text-primary"></i></a>
                             </div>
                             <div class="project-title">
                                 <h4 class="mb-0">Custom Handling</h4>
@@ -234,8 +279,9 @@
                         </div>
                         <div class="project-item pe-5 pb-5">
                             <div class="project-img mb-3">
-                                <img class="img-fluid rounded" src="<?php echo base_url(); ?>asset-landing/img/warehouse.jpg" alt="">
-                                <a href=""><i class="fa fa-link fa-3x text-primary"></i></a>
+                                <img class="img-fluid rounded"
+                                    src="<?php echo base_url(); ?>asset-landing/img/warehouse.jpg" alt="">
+                                <a href="<?php echo base_url(); ?>c_web/warehouse"><i class="fa fa-link fa-3x text-primary"></i></a>
                             </div>
                             <div class="project-title">
                                 <h4 class="mb-0">Warehousing</h4>
@@ -243,8 +289,9 @@
                         </div>
                         <div class="project-item pe-5 pb-5">
                             <div class="project-img mb-3">
-                                <img class="img-fluid rounded" src="<?php echo base_url(); ?>asset-landing/img/projectlogistik.jpg" alt="">
-                                <a href=""><i class="fa fa-link fa-3x text-primary"></i></a>
+                                <img class="img-fluid rounded"
+                                    src="<?php echo base_url(); ?>asset-landing/img/projectlogistik.jpg" alt="">
+                                <a href="<?php echo base_url(); ?>c_web/layananKami/freight-forwarding"><i class="fa fa-link fa-3x text-primary"></i></a>
                             </div>
                             <div class="project-title">
                                 <h4 class="mb-0">Project Logistic</h4>
@@ -252,8 +299,9 @@
                         </div>
                         <div class="project-item pe-5 pb-5">
                             <div class="project-img mb-3">
-                                <img class="img-fluid rounded" src="<?php echo base_url(); ?>asset-landing/img/trucking.jpg" alt="">
-                                <a href=""><i class="fa fa-link fa-3x text-primary"></i></a>
+                                <img class="img-fluid rounded"
+                                    src="<?php echo base_url(); ?>asset-landing/img/trucking.jpg" alt="">
+                                <a href="<?php echo base_url(); ?>c_web/layananKami/freight-forwarding"><i class="fa fa-link fa-3x text-primary"></i></a>
                             </div>
                             <div class="project-title">
                                 <h4 class="mb-0">Trucking</h4>
@@ -261,8 +309,9 @@
                         </div>
                         <div class="project-item pe-5 pb-5">
                             <div class="project-img mb-3">
-                                <img class="img-fluid rounded" src="<?php echo base_url(); ?>asset-landing/img/plb.jpg" alt="">
-                                <a href=""><i class="fa fa-link fa-3x text-primary"></i></a>
+                                <img class="img-fluid rounded" src="<?php echo base_url(); ?>asset-landing/img/plb.jpg"
+                                    alt="">
+                                <a href="<?php echo base_url(); ?>c_web/layananKami/freight-forwarding"><i class="fa fa-link fa-3x text-primary"></i></a>
                             </div>
                             <div class="project-title">
                                 <h5 class="mb-0">PLB (Pusat Logistik Berikat)</h5>
@@ -281,19 +330,27 @@
                     <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="col-lg-4">
                             <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">
-                                <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 active" data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
-                                    <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Perusahaan Manufaktur</h5>
+                                <button
+                                    class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 active"
+                                    data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
+                                    <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Perusahaan Manufaktur
+                                    </h5>
                                 </button>
-                                <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
-                                    <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Perusahaan Perdagangan</h5>
+                                <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4"
+                                    data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
+                                    <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Perusahaan Perdagangan
+                                    </h5>
                                 </button>
-                                <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
+                                <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4"
+                                    data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
                                     <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Perusahaan Ritel</h5>
                                 </button>
-                                <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
+                                <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4"
+                                    data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
                                     <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Perusahaan Logistik</h5>
                                 </button>
-                                <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-5" type="button">
+                                <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4"
+                                    data-bs-toggle="pill" data-bs-target="#tab-pane-5" type="button">
                                     <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Pemerintah</h5>
                                 </button>
                             </div>
@@ -304,13 +361,17 @@
                                     <div class="row g-4">
                                         <div class="col-md-6" style="min-height: 350px;">
                                             <div class="position-relative h-100">
-                                                <img class="position-absolute rounded w-100 h-100" src="<?php echo base_url(); ?>asset-landing/img/plb.jpg" style="object-fit: cover;" alt="">
+                                                <img class="position-absolute rounded w-100 h-100"
+                                                    src="<?php echo base_url(); ?>asset-landing/img/plb.jpg"
+                                                    style="object-fit: cover;" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <h3 class="mb-4">Perusahaan Manufaktur</h3>
                                             <h5 class="mb-4" style="text-align: justify;">
-                                                Kami membantu perusahaan manufaktur mengoptimalkan rantai pasokan mereka, memastikan pengiriman bahan baku dan produk jadi yang tepat waktu dan hemat biaya.</h5>
+                                                Kami membantu perusahaan manufaktur mengoptimalkan rantai pasokan
+                                                mereka, memastikan pengiriman bahan baku dan produk jadi yang tepat
+                                                waktu dan hemat biaya.</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -318,12 +379,16 @@
                                     <div class="row g-4">
                                         <div class="col-md-6" style="min-height: 350px;">
                                             <div class="position-relative h-100">
-                                                <img class="position-absolute rounded w-100 h-100" src="<?php echo base_url(); ?>asset-landing/img/ffw.jpg" style="object-fit: cover;" alt="">
+                                                <img class="position-absolute rounded w-100 h-100"
+                                                    src="<?php echo base_url(); ?>asset-landing/img/ffw.jpg"
+                                                    style="object-fit: cover;" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <h3 class="mb-4">Perusahaan Perdagangan</h3>
-                                            <h5 class="mb-4" style="text-align: justify;">Kami menyediakan solusi logistik yang fleksibel dan andal untuk perusahaan perdagangan, mendukung ekspansi bisnis mereka ke pasar global.
+                                            <h5 class="mb-4" style="text-align: justify;">Kami menyediakan solusi
+                                                logistik yang fleksibel dan andal untuk perusahaan perdagangan,
+                                                mendukung ekspansi bisnis mereka ke pasar global.
                                             </h5>
                                         </div>
                                     </div>
@@ -332,12 +397,16 @@
                                     <div class="row g-4">
                                         <div class="col-md-6" style="min-height: 350px;">
                                             <div class="position-relative h-100">
-                                                <img class="position-absolute rounded w-100 h-100" src="<?php echo base_url(); ?>asset-landing/img/ffw.jpg" style="object-fit: cover;" alt="">
+                                                <img class="position-absolute rounded w-100 h-100"
+                                                    src="<?php echo base_url(); ?>asset-landing/img/ffw.jpg"
+                                                    style="object-fit: cover;" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <h3 class="mb-4">Perusahaan Ritel</h3>
-                                            <h5 class="mb-4" style="text-align: justify;">Kami membantu perusahaan ritel mengelola inventaris mereka secara efisien dan memastikan ketersediaan produk yang tepat di toko, meningkatkan kepuasan pelanggan
+                                            <h5 class="mb-4" style="text-align: justify;">Kami membantu perusahaan ritel
+                                                mengelola inventaris mereka secara efisien dan memastikan ketersediaan
+                                                produk yang tepat di toko, meningkatkan kepuasan pelanggan
                                             </h5>
                                         </div>
                                     </div>
@@ -346,12 +415,16 @@
                                     <div class="row g-4">
                                         <div class="col-md-6" style="min-height: 350px;">
                                             <div class="position-relative h-100">
-                                                <img class="position-absolute rounded w-100 h-100" src="<?php echo base_url(); ?>asset-landing/img/ffw.jpg" style="object-fit: cover;" alt="">
+                                                <img class="position-absolute rounded w-100 h-100"
+                                                    src="<?php echo base_url(); ?>asset-landing/img/ffw.jpg"
+                                                    style="object-fit: cover;" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <h3 class="mb-4">Perusahaan logistik</h3>
-                                            <h5 class="mb-4" style="text-align: justify;">Kami bermitra dengan perusahaan logistik lain untuk memperluas jangkauan dan keahlian kami, memberikan solusi logistik yang komprehensif kepada pelanggan.
+                                            <h5 class="mb-4" style="text-align: justify;">Kami bermitra dengan
+                                                perusahaan logistik lain untuk memperluas jangkauan dan keahlian kami,
+                                                memberikan solusi logistik yang komprehensif kepada pelanggan.
                                             </h5>
                                         </div>
                                     </div>
@@ -360,12 +433,16 @@
                                     <div class="row g-4">
                                         <div class="col-md-6" style="min-height: 350px;">
                                             <div class="position-relative h-100">
-                                                <img class="position-absolute rounded w-100 h-100" src="<?php echo base_url(); ?>asset-landing/img/trucking.jpg" style="object-fit: cover;" alt="">
+                                                <img class="position-absolute rounded w-100 h-100"
+                                                    src="<?php echo base_url(); ?>asset-landing/img/trucking.jpg"
+                                                    style="object-fit: cover;" alt="">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <h3 class="mb-4">Pemerintah</h3>
-                                            <h5 class="mb-4" style="text-align: justify;">Kami bekerja sama dengan lembaga pemerintah untuk mendukung program dan proyek logistik mereka, memastikan kelancaran dan efisiensi distribusi barang dan jasa.</h5>
+                                            <h5 class="mb-4" style="text-align: justify;">Kami bekerja sama dengan
+                                                lembaga pemerintah untuk mendukung program dan proyek logistik mereka,
+                                                memastikan kelancaran dan efisiensi distribusi barang dan jasa.</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -377,19 +454,22 @@
         </div>
     </div>
     <!-- Pelanggan Kami End -->
-  <!-- Nilai Nilai Perusahaan Start -->
-  <div class="container-xxl feature py-5">
+    <!-- Nilai Nilai Perusahaan Start -->
+    <div class="container-xxl feature py-5">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Nilai Nilai Perusahaan</p>
+                    <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Nilai Nilai Perusahaan
+                    </p>
                     <h4 class="display-5 mb-4">Nilai-nilai inti yang memandu operasi kami adalah:</h4>
                     <i class="fa fa-check fa-3x text-primary mb-3"></i>
                     <h4 class="mb-3">Kejujuran</h4>
-                    <p style="text-align: justify;">Kami selalu bertindak dengan integritas dan transparansi dalam semua interaksi dengan pelanggan, mitra, dan karyawan.</p>
+                    <p style="text-align: justify;">Kami selalu bertindak dengan integritas dan transparansi dalam semua
+                        interaksi dengan pelanggan, mitra, dan karyawan.</p>
                     <i class="fa fa-check fa-3x text-primary mb-3"></i>
                     <h4 class="mb-3">Keterpercayaan</h4>
-                    <p style="text-align: justify;">Kami membangun hubungan yang didasarkan pada kepercayaan dan komitmen, memastikan kepuasan dan loyalitas pelanggan.</p>
+                    <p style="text-align: justify;">Kami membangun hubungan yang didasarkan pada kepercayaan dan
+                        komitmen, memastikan kepuasan dan loyalitas pelanggan.</p>
                 </div>
                 <div class="col-lg-6">
                     <div class="row g-4 align-items-center">
@@ -399,14 +479,16 @@
                                     <div class="feature-box border rounded p-4">
                                         <i class="fa fa-check fa-3x text-primary mb-3"></i>
                                         <h4 class="mb-3">Efisiensi</h4>
-                                        <p class="mb-3">Kami terus berusaha meningkatkan efisiensi operasi kami, meminimalkan biaya dan memaksimalkan nilai bagi pelanggan.</p>
+                                        <p class="mb-3">Kami terus berusaha meningkatkan efisiensi operasi kami,
+                                            meminimalkan biaya dan memaksimalkan nilai bagi pelanggan.</p>
                                     </div>
                                 </div>
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
                                     <div class="feature-box border rounded p-4">
                                         <i class="fa fa-check fa-3x text-primary mb-3"></i>
                                         <h4 class="mb-3">Kefektifan</h4>
-                                        <p class="mb-3">Kami fokus pada hasil dan mencapai tujuan kami dengan cara yang efektif dan tepat waktu.</p>
+                                        <p class="mb-3">Kami fokus pada hasil dan mencapai tujuan kami dengan cara yang
+                                            efektif dan tepat waktu.</p>
                                     </div>
                                 </div>
                             </div>
@@ -415,7 +497,8 @@
                             <div class="feature-box border rounded p-4">
                                 <i class="fa fa-check fa-3x text-primary mb-3"></i>
                                 <h4 class="mb-3">Kemitraan</h4>
-                                <p class="mb-3">Kami membangun hubungan kolaboratif dengan pelanggan, mitra, dan karyawan untuk mencapai kesuksesan bersama.</p>
+                                <p class="mb-3">Kami membangun hubungan kolaboratif dengan pelanggan, mitra, dan
+                                    karyawan untuk mencapai kesuksesan bersama.</p>
                             </div>
                         </div>
                     </div>
@@ -432,13 +515,17 @@
                     <div class="p-lg-5 ps-lg-0">
                         <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
                         <h1 class="display-5 mb-5">Why Choose Us</h1>
-                        <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
-                        
+                        <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam
+                            amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat
+                            amet</p>
+
                     </div>
                 </div>
                 <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="<?php echo base_url(); ?>asset-landing/img/projectlogistik.jpg" style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100"
+                            src="<?php echo base_url(); ?>asset-landing/img/projectlogistik.jpg"
+                            style="object-fit: cover;" alt="">
                     </div>
                 </div>
             </div>
@@ -446,20 +533,21 @@
     </div>
     <!-- Why choose us end -->
 
-    <!-- News Start -->
-    <section class="news-section section-padding wow fadeInUp" data-wow-delay="0.1s" id="section_5">
+    <!-- Artikel Start -->
+    <section class="news-section section-padding wow fadeInUp" data-wow-delay="0.1s" id="artikel">
         <div class="container">
             <div class="row">
 
                 <div class="col-lg-12 col-12 mb-5">
-                    <h2>Latest News</h2>
+                    <h2>Latest Article</h2>
                 </div>
 
                 <div class="col-lg-7 col-12">
                     <div class="news-block">
                         <div class="news-block-top">
-                            <a href="news-detail.html">
-                                <img src="<?php echo base_url(); ?>asset-landing/img/news/medium-shot-volunteers-with-clothing-donations.jpg" class="news-image img-fluid" alt="">
+                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
+                                <img src="<?php echo base_url(); ?>asset-landing/img/news/medium-shot-volunteers-with-clothing-donations.jpg"
+                                    class="news-image img-fluid" alt="">
                             </a>
                         </div>
 
@@ -481,7 +569,7 @@
                             </div>
 
                             <div class="news-block-title mb-2">
-                                <h4><a href="news-detail.html" class="news-block-title-link">Clothing donation to
+                                <h4><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Clothing donation to
                                         urban area</a></h4>
                             </div>
 
@@ -494,8 +582,9 @@
 
                     <div class="news-block mt-3">
                         <div class="news-block-top">
-                            <a href="news-detail.html">
-                                <img src="<?php echo base_url(); ?>asset-landing/img/news/medium-shot-people-collecting-foodstuff.jpg" class="news-image img-fluid" alt="">
+                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
+                                <img src="<?php echo base_url(); ?>asset-landing/img/news/medium-shot-people-collecting-foodstuff.jpg"
+                                    class="news-image img-fluid" alt="">
                             </a>
                         </div>
 
@@ -517,7 +606,7 @@
                             </div>
 
                             <div class="news-block-title mb-2">
-                                <h4><a href="news-detail.html" class="news-block-title-link">Food donation area</a>
+                                <h4><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Food donation area</a>
                                 </h4>
                             </div>
 
@@ -531,18 +620,19 @@
                 </div>
 
                 <div class="col-lg-4 col-12 mx-auto">
-                    <h5 class="mt-5 mb-3">Popular news</h5>
+                    <h5 class="mt-5 mb-3">Popular Article</h5>
 
                     <div class="news-block news-block-two-col d-flex mt-4">
                         <div class="news-block-two-col-image-wrap">
-                            <a href="news-detail.html">
-                                <img src="<?php echo base_url(); ?>asset-landing/img/news/africa-humanitarian-aid-doctor.jpg" class="news-image img-fluid" alt="">
+                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
+                                <img src="<?php echo base_url(); ?>asset-landing/img/news/africa-humanitarian-aid-doctor.jpg"
+                                    class="news-image img-fluid" alt="">
                             </a>
                         </div>
 
                         <div class="news-block-two-col-info">
                             <div class="news-block-title mb-2">
-                                <h6><a href="news-detail.html" class="news-block-title-link">Food donation area</a>
+                                <h6><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Food donation area</a>
                                 </h6>
                             </div>
 
@@ -557,14 +647,15 @@
 
                     <div class="news-block news-block-two-col d-flex mt-4">
                         <div class="news-block-two-col-image-wrap">
-                            <a href="news-detail.html">
-                                <img src="<?php echo base_url(); ?>asset-landing/img/news/close-up-happy-people-working-together.jpg" class="news-image img-fluid" alt="">
+                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
+                                <img src="<?php echo base_url(); ?>asset-landing/img/news/close-up-happy-people-working-together.jpg"
+                                    class="news-image img-fluid" alt="">
                             </a>
                         </div>
 
                         <div class="news-block-two-col-info">
                             <div class="news-block-title mb-2">
-                                <h6><a href="news-detail.html" class="news-block-title-link">Volunteering Clean</a>
+                                <h6><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Volunteering Clean</a>
                                 </h6>
                             </div>
 
@@ -576,18 +667,21 @@
                             </div>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
+            <a class="fw-semi-bold" href="<?php echo base_url(); ?>c_web/artikel">Explore More <i class="fa fa-arrow-right ms-1"></i></a>
         </div>
     </section>
-    <!-- News End -->
+    <!-- Artikel End -->
     <!-- Hubungi Kami Start -->
-    <div class="section sec-cta overlay wow fadeInUp" data-wow-delay="0.1s" style="background-image: url('<?php echo base_url(); ?>asset-landing/img/img-3.jpg')">
+    <div class="section sec-cta overlay wow fadeInUp" data-wow-delay="0.1s"
+        style="background-image: url('<?php echo base_url(); ?>asset-landing/img/img-3.jpg')">
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-5" data-aos="fade-up" data-aos-delay="0">
-                    <h2 class="heading" style="text-align:justify">Kami dengan senang hati mem-berikan penawaran konsultasi gratis dengan para profesional yang kompeten dan berpengalaman</h2>
+                    <h2 class="heading" style="text-align:justify">Kami dengan senang hati mem-berikan penawaran
+                        konsultasi gratis dengan para profesional yang kompeten dan berpengalaman</h2>
                 </div>
                 <div class="col-lg-5 text-end" data-aos="fade-up" data-aos-delay="100">
                     <a href="#" class="btn btn-outline-white-reverse">Contact us</a>
@@ -608,10 +702,13 @@
                         <div class="btn-square bg-white border rounded-circle">
                             <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
-                        Herry permana adalah sosok pengajar dan asesor berpengalaman dalam industri tambang. Mempunyai pengetahuan yang luas tentang metodologi terbaik dalam mengelola sumber daya alam.
-                        Siap menjadi sosok Pengajar dan asesor yang menjunjung tinggi kualitas pembelajaran serta memastikan mutu pendidikan.
+                        Herry permana adalah sosok pengajar dan asesor berpengalaman dalam industri tambang. Mempunyai
+                        pengetahuan yang luas tentang metodologi terbaik dalam mengelola sumber daya alam.
+                        Siap menjadi sosok Pengajar dan asesor yang menjunjung tinggi kualitas pembelajaran serta
+                        memastikan mutu pendidikan.
                     </div>
-                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-01.jpg" alt="">
+                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-01.jpg"
+                        alt="">
                     <h5>Dr.Ing. Herry Permana, ST., Msc</h5>
                 </div>
                 <div class="testimonial-item">
@@ -619,11 +716,14 @@
                         <div class="btn-square bg-white border rounded-circle">
                             <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
-                        Hillarius Petrus adalah seorang pengajar dan asesor yang mengintegrasikan teknik pemeliharaan terpadu dengan analisis keselamatan dan kesehatan kerja, serta mengoperasikan pelatihan dalam teknologi pertambangan yang paling mutakhir.
+                        Hillarius Petrus adalah seorang pengajar dan asesor yang mengintegrasikan teknik pemeliharaan
+                        terpadu dengan analisis keselamatan dan kesehatan kerja, serta mengoperasikan pelatihan dalam
+                        teknologi pertambangan yang paling mutakhir.
                         Dengan pengawasan yang terarah untuk perusahaan pertambangan dan analisis investasi.
                         <br>
                     </div>
-                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-02.jpg" alt="">
+                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-02.jpg"
+                        alt="">
                     <h5>Hillarius Petrus De Rosari, S.Sos, MT</h5>
                 </div>
                 <div class="testimonial-item">
@@ -631,12 +731,14 @@
                         <div class="btn-square bg-white border rounded-circle">
                             <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
-                        Mariyanti adalah seorang pengajar dan asesor yang telah memiliki pengalaman selama lebih dari 13 tahun sebagai praktisi pelatih Keselamatan dan Kesehatan Kerja dalam sektor Pertambangan,
+                        Mariyanti adalah seorang pengajar dan asesor yang telah memiliki pengalaman selama lebih dari 13
+                        tahun sebagai praktisi pelatih Keselamatan dan Kesehatan Kerja dalam sektor Pertambangan,
                         Migas serta Lingkungan Hidup (LH) untuk meningkatkan kualitas para pekerja industri.
                         <br>
                         <br>
                     </div>
-                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-03.jpg" alt="">
+                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-03.jpg"
+                        alt="">
                     <h5>Mariyanti, S.E</h5>
                 </div>
                 <div class="testimonial-item">
@@ -644,11 +746,14 @@
                         <div class="btn-square bg-white border rounded-circle">
                             <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
-                        Seorang pengajar dan asesor dengan latar belakang sebagai Praktisi dan Pengajar Keselamatan dan Kesehatan Kerja serta memiliki pengalaman praktis yang luas dalam dunia kompetensi, mampu mengintegrasikan teori dan praktik terkini dalam pembelajaran.
+                        Seorang pengajar dan asesor dengan latar belakang sebagai Praktisi dan Pengajar Keselamatan dan
+                        Kesehatan Kerja serta memiliki pengalaman praktis yang luas dalam dunia kompetensi, mampu
+                        mengintegrasikan teori dan praktik terkini dalam pembelajaran.
                         Berkomitmen untuk memahami dan menerapkan praktik K3 yang efektif di tempat kerja.
                         <br>
                     </div>
-                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-04.jpg" alt="">
+                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-04.jpg"
+                        alt="">
                     <h5>Rinto Andrianto,ST., MSi</h5>
                 </div>
                 <div class="testimonial-item">
@@ -656,13 +761,16 @@
                         <div class="btn-square bg-white border rounded-circle">
                             <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
-                        Dengan pengalaman 30 tahun di berbagai bidang strategis posisi di Industri Pertambangan dan Migas di Indonesia,
-                        Yogi Sasongko merupakan pengajar di sektor pertambangan yang mempunyai komitmen tinggi dalam kaidah teknis pertambangan.
+                        Dengan pengalaman 30 tahun di berbagai bidang strategis posisi di Industri Pertambangan dan
+                        Migas di Indonesia,
+                        Yogi Sasongko merupakan pengajar di sektor pertambangan yang mempunyai komitmen tinggi dalam
+                        kaidah teknis pertambangan.
                         <br>
                         <br>
                         <br>
                     </div>
-                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-05.jpg" alt="">
+                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-05.jpg"
+                        alt="">
                     <h5>Ir. Yogi Sasongko, MSc</h5>
                 </div>
                 <div class="testimonial-item">
@@ -671,13 +779,15 @@
                             <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
                         Dengan latar belakang sebagai praktisi dan pengajar sektor pertambangan,
-                        Hadisyah Putra merupakan seorang pengajar yang telah lama berkecimpung dalam ranah pertambangan dan perencanaan tambang.
+                        Hadisyah Putra merupakan seorang pengajar yang telah lama berkecimpung dalam ranah pertambangan
+                        dan perencanaan tambang.
                         <br>
                         <br>
                         <br>
                         <br>
                     </div>
-                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-06.jpg" alt="">
+                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-06.jpg"
+                        alt="">
                     <h5>Hadisyah Putra, ST</h5>
                 </div>
                 <div class="testimonial-item">
@@ -685,10 +795,13 @@
                         <div class="btn-square bg-white border rounded-circle">
                             <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
-                        Seorang pelatih K3 yang berpengalaman dan berkualifikasi tinggi, siap untuk memberikan pelatihan yang komprehensif dan efektif dalam keselamatan dan kesehatan kerja.
-                        Dengan pengetahuan mendalam tentang regulasi K3, Hendrajati mampu meningkatkan budaya keselamatan untuk mengurangi risiko kecelakaan di tempat kerja.
+                        Seorang pelatih K3 yang berpengalaman dan berkualifikasi tinggi, siap untuk memberikan pelatihan
+                        yang komprehensif dan efektif dalam keselamatan dan kesehatan kerja.
+                        Dengan pengetahuan mendalam tentang regulasi K3, Hendrajati mampu meningkatkan budaya
+                        keselamatan untuk mengurangi risiko kecelakaan di tempat kerja.
                     </div>
-                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-07.jpg" alt="">
+                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-07.jpg"
+                        alt="">
                     <h5>Hendrajati, MM</h5>
                 </div>
                 <div class="testimonial-item">
@@ -696,12 +809,14 @@
                         <div class="btn-square bg-white border rounded-circle">
                             <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
-                        Dengan pengalaman yang luas dan mendalam sebagai seorang asesor serta inspektur tambang, Faisal memiliki pengetahuan dan pemahaman yang komprehensif
+                        Dengan pengalaman yang luas dan mendalam sebagai seorang asesor serta inspektur tambang, Faisal
+                        memiliki pengetahuan dan pemahaman yang komprehensif
                         tentang industri pertambangan untuk mengimplementasikan ilmu dalam kerja yang aktual.
                         <br>
                         <br>
                     </div>
-                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-08.jpg" alt="">
+                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-08.jpg"
+                        alt="">
                     <h5>Faisal, T.C</h5>
                 </div>
             </div>
@@ -718,7 +833,10 @@
                     <p style="text-align: justify;">Jl. Epicentrum Utama Raya No.2
                         Kuningan, Setiabudi,
                         Jakarta Selatan 12940.</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3966.337060755108!2d106.8319136!3d-6.2192067!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3f65ff69f6d%3A0xe31b5c3ce0b14b41!2sBakrie%20Tower!5e0!3m2!1sid!2sid!4v1719148955545!5m2!1sid!2sid" width="320" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3966.337060755108!2d106.8319136!3d-6.2192067!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3f65ff69f6d%3A0xe31b5c3ce0b14b41!2sBakrie%20Tower!5e0!3m2!1sid!2sid!4v1719148955545!5m2!1sid!2sid"
+                        width="320" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <div class="d-flex pt-2">
                     </div>
                 </div>
@@ -735,14 +853,21 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Informasi</h4>
-                    <p class="mb-2"><i class="fa fa-globe me-3"></i><a href="http://cde-learningcenter.id/">cde-learningcenter.id</a></p>
+                    <p class="mb-2"><i class="fa fa-globe me-3"></i><a
+                            href="http://cde-learningcenter.id/">cde-learningcenter.id</a></p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>daftar@cde-learningcenter.id</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+6281210006323</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href="https://api.whatsapp.com/send/?phone=6281210006323&text&type=phone_number&app_absent=0" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href="https://www.instagram.com/cde_learning/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2"
+                            href="https://api.whatsapp.com/send/?phone=6281210006323&text&type=phone_number&app_absent=0"
+                            target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2"
+                            href="https://www.instagram.com/cde_learning/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i
+                                class="fab fa-youtube"></i></a>
                     </div>
                     <div class="position-relative w-100">
                     </div>
@@ -771,7 +896,8 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -782,6 +908,11 @@
     <script src="<?php echo base_url(); ?>asset-landing/lib/waypoints/waypoints.min.js"></script>
     <script src="<?php echo base_url(); ?>asset-landing/lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="<?php echo base_url(); ?>asset-landing/lib/counterup/counterup.min.js"></script>
+
+    <!-- JavaScript Gallery knight -->
+    <script src="<?php echo base_url(); ?>asset-landing/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="<?php echo base_url(); ?>asset-landing/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="<?php echo base_url(); ?>asset-landing/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="<?php echo base_url(); ?>asset-landing/js/main.js"></script>

@@ -86,9 +86,9 @@ if($this->session->userdata('username')==null){
               
             </div>
             <div class="box-header">
-              <a href="<?php echo base_url();?>c_admin/tambahTentangKami">
-              <button type="button" class="btn  btn-success btn-lg"><i class="fa fa-plus"> </i>Tambah Foto</button>
-              </a>
+              <!-- <a href="<?php echo base_url();?>c_admin/tambahLayananKami/<?=$sidebar?>/">
+              <button type="button" class="btn  btn-success btn-lg"><i class="fa fa-plus"> </i>Tambah</button>
+              </a> -->
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -97,7 +97,8 @@ if($this->session->userdata('username')==null){
                 <tr>
                   <th>Nomor </th>
                   <th>Foto</th>
-                  <th>Nama Foto</th>
+                  <th>Nama layanan</th>
+                  <th>Deskripsi</th>
                   <th>Aksi</th>
                 </tr>
                 </thead>
@@ -111,18 +112,19 @@ if($this->session->userdata('username')==null){
                   <td>
                     <img src="<?php echo base_url();?>/assets/images/foto/<?php echo "$a[foto]"?>" class="" alt="User Image" width="150px" height="150px">
                   </td>
-                  <td><?php echo "$a[nama_foto]" ?>
+                  <td><?php echo "$a[nama]" ?>
+                  <td><?php echo "$a[deskripsi]" ?>
                   </td>
                   <td><div class="btn-group">
                     <div>
-                    <a href="<?php echo base_url(); ?>c_admin/infoTentangKami/<?php echo "$a[id]" ?>" type="button" class="btn btn-info btn-flat"><i class="fa fa-info">Detail</i></a>
+                    <a href="<?php echo base_url(); ?>c_admin/infoLayananKami//<?php echo "$a[id]" ?>" type="button" class="btn btn-info btn-flat"><i class="fa fa-info">Detail</i></a>
                     </div>
                     <div>
-                    <a href="<?php echo base_url(); ?>c_admin/editTentangKami/<?php echo "$a[id]" ?>" type="button" class="btn btn-warning btn-flat"><i class="fa fa-edit">Edit</i></a>
+                    <a href="<?php echo base_url(); ?>c_admin/editLayananKami/<?= $sidebar?>/<?php echo "$a[id]" ?>" type="button" class="btn btn-warning btn-flat"><i class="fa fa-edit">Edit</i></a>
                     </div>
-                    <div>
-                    <button type="button" class="btn btn-danger btn-flat hapus-member" id="hapus" data-nama = "<?php echo "$a[nama_foto]"?>" data-id="<?php echo "$a[id]"?>" ><i class="fa fa-trash">Hapus</i></button>
-                    </div>
+                    <!-- <div>
+                    <button type="button" class="btn btn-danger btn-flat hapus-member" id="hapus" data-nama = "<?php echo "$a[nama]"?>" data-id="<?php echo "$a[id]"?>" ><i class="fa fa-trash">Hapus</i></button>
+                    </div> -->
                   </div></td>
                   
                 </tr>
@@ -135,7 +137,8 @@ if($this->session->userdata('username')==null){
                 <tr>
                   <th>Nomor </th>
                   <th>Foto</th>
-                  <th>Nama Foto</th>
+                  <th>Nama Layanan</th>
+                  <th>Deskripsi</th>
                   <th>Aksi</th>
                   
                 </tr>

@@ -1,13 +1,3 @@
-<?php
-if($this->session->userdata('username')==null){
-  ?>
-  <script>
-   alert("login gagal");
-  </script>
-  <?php
-  redirect($home."c_login/tampilanLoginAdmin");
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,9 +29,6 @@ if($this->session->userdata('username')==null){
   <link rel="stylesheet" href="<?php echo base_url();?>/assets/bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="<?php echo base_url();?>/assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-  <!-- pop up-->
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/sweetalert/sweetalert.css'); ?>">
-  <script type="text/javascript" src="<?php echo base_url('assets/sweetalert/sweetalert.min.js'); ?>"></script>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -62,6 +49,7 @@ if($this->session->userdata('username')==null){
     <?php 
     include_once __DIR__ . '/../v_sidebar.php';
     ?>
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -71,7 +59,7 @@ if($this->session->userdata('username')==null){
         <small>Control panel</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="<?php echo base_url();?>c_admin/tampilanAdmin"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="<?php echo base_url();?>c_admin/adminGuide"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active"><?= $menu ?></li>
       </ol>
     </section>
@@ -79,74 +67,51 @@ if($this->session->userdata('username')==null){
     <!-- Main content -->
     <section class="content">
       <div class="row">
-        <div class="col-xs-12">
+    <div class="col-md-3">
+    </div>
+        <div class="col-md-6">
+          
+          <!-- /.box -->
+          <form action="<?php echo base_url(); ?>c_admin/save_layanan_kami" method="post" enctype="multipart/form-data">
           <div class="box">
             <div class="box-header">
               <h3 class="box-title"><?= $title ?></h3>
-              
-            </div>
-            <div class="box-header">
-              <a href="<?php echo base_url();?>c_admin/tambahTentangKami">
-              <button type="button" class="btn  btn-success btn-lg"><i class="fa fa-plus"> </i>Tambah Foto</button>
-              </a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <table id="example2" class="table table-bordered table-hover">
-                <thead>
-                <tr>
-                  <th>Nomor </th>
-                  <th>Foto</th>
-                  <th>Nama Foto</th>
-                  <th>Aksi</th>
-                </tr>
-                </thead>
-                <tbody>
-        <?php
-          $i=1;
-          foreach ($datas as $a) {
-        ?>
-                <tr data-id="<?php echo "$a[id]"?>">
-                  <td><?php echo $i++;?></td>
-                  <td>
-                    <img src="<?php echo base_url();?>/assets/images/foto/<?php echo "$a[foto]"?>" class="" alt="User Image" width="150px" height="150px">
-                  </td>
-                  <td><?php echo "$a[nama_foto]" ?>
-                  </td>
-                  <td><div class="btn-group">
-                    <div>
-                    <a href="<?php echo base_url(); ?>c_admin/infoTentangKami/<?php echo "$a[id]" ?>" type="button" class="btn btn-info btn-flat"><i class="fa fa-info">Detail</i></a>
-                    </div>
-                    <div>
-                    <a href="<?php echo base_url(); ?>c_admin/editTentangKami/<?php echo "$a[id]" ?>" type="button" class="btn btn-warning btn-flat"><i class="fa fa-edit">Edit</i></a>
-                    </div>
-                    <div>
-                    <button type="button" class="btn btn-danger btn-flat hapus-member" id="hapus" data-nama = "<?php echo "$a[nama_foto]"?>" data-id="<?php echo "$a[id]"?>" ><i class="fa fa-trash">Hapus</i></button>
-                    </div>
-                  </div></td>
-                  
-                </tr>
-        <?php
-          }
-        ?>
+              <div class="box-body">
 
-                </tbody>
-                <tfoot>
-                <tr>
-                  <th>Nomor </th>
-                  <th>Foto</th>
-                  <th>Nama Foto</th>
-                  <th>Aksi</th>
-                  
-                </tr>
-                </tfoot>
-              </table>
+                <div class="form-group">
+                  <label for="exampleInputFile">Foto Layanan</label>
+                  <p class="help-block"><?php if($error!=""){echo $error;}?></p>  
+                  <input type="file" id="exampleInputFile" name="berkas" required>
+
+                  <p class="help-block">Max size foto : 5 MB</p>
+                  <p class="help-block">800X600</p>
+
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nama Layanan</label>
+                  <input type="text" class="form-control" id="nama" value="" name="nama" placeholder="Masukkan nama layanan"> 
+                </div>
+
+                <div class="form-group">
+                  <label for="deskripsi">Deskripsi Layanan</label>
+                  <textarea type="text" class="form-control" id="deskripsi" value="" name="deskripsi" placeholder="Masukkan deskripsi layanan"></textarea>
+                </div>
+                
+                  <input type="hidden" class="form-control" id="slug" value="<?= $sidebar ?>" name="slug"> 
+                <div class="box-footer">
+                  <button type="submit" class="btn btn-primary" value="upload">Submit</button>
+                </div>
+        </form>       
+                
+              </div>
+              <!-- /.box-body -->
             </div>
             <!-- /.box-body -->
           </div>
-          <!-- /.box -->
-
-          
           <!-- /.box -->
         </div>
         <!-- /.col -->
@@ -160,7 +125,7 @@ if($this->session->userdata('username')==null){
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; 2018<a href="https://adminlte.io"></a>.</strong> All rights
+    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
     reserved.
   </footer>
 
@@ -217,42 +182,36 @@ if($this->session->userdata('username')==null){
 <script src="<?php echo base_url();?>/assets/js/demo.js"></script>
 <!-- script data table -->
 <script>
-  $(function () {
-
-     $.ajaxSetup({
-  type:"post",
-  cache:false,
-  dataType: "json"
-  })
-  
-  $(document).on("click",".hapus-member",function(){
-  var id=$(this).attr("data-id");
-  var nama=$(this).attr("data-nama");
-
-  swal({
-    title: "Hapus data"+ nama +"",
-    text:"Yakin akan menghapus data ini?",
-    type: "warning",
-    showCancelButton: true,
-    confirmButtonText: "Hapus",
-    closeOnConfirm: true,
-  },
-    function(){
-     $.ajax({
-      url:"<?php echo base_url('c_admin/hapus'); ?>",
-      data:{id:id},
-      success: function(){
-        alert("Data berhasil dihapus");
-        $("tr[data-id='"+id+"']").fadeOut("fast",function(){
-          $(this).remove();
-        });
+   //Date range picker
+    $('#reservation').daterangepicker()
+    //Date range picker with time picker
+    $('#reservationtime').daterangepicker({ timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A' })
+    //Date range as a button
+    $('#daterange-btn').daterangepicker(
+      {
+        ranges   : {
+          'Today'       : [moment(), moment()],
+          'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month'  : [moment().startOf('month'), moment().endOf('month')],
+          'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        },
+        startDate: moment().subtract(29, 'days'),
+        endDate  : moment()
+      },
+      function (start, end) {
+        $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
       }
-     });
-  });
-});
+    )
+
+    //Date picker
+    $('#datepicker').datepicker({
+      autoclose: true
+    })
 
 
-
+  $(function () {
     $('#example1').DataTable()
     $('#example2').DataTable({
       'paging'      : true,
@@ -264,5 +223,6 @@ if($this->session->userdata('username')==null){
     })
   })
 </script>
+
 </body>
 </html>

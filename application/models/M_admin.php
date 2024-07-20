@@ -41,6 +41,10 @@ class m_admin extends CI_Model {
         $query = $this->db->query("SELECT * FROM tentang_kami ".$where);
         return $query->result_array();
     }
+    function get_layanan_kami($where=""){
+        $query = $this->db->query("SELECT * FROM layanan_kami ".$where);
+        return $query->result_array();
+    }
 	function get_wisata($where=""){
         $query = $this->db->query("SELECT * FROM paketwisata JOIN galeri ON galeri.idWisata=paketwisata.idWisata ".$where);
         return $query->result_array();
@@ -103,6 +107,14 @@ class m_admin extends CI_Model {
 		$query=$this->db->get("tentang_kami");
 		return $query->result_array();
 	}
+	
+	function readLayananKami($slug){
+		$this->db->order_by("id","desc");
+		$this->db->where("slug",$slug);
+		$query=$this->db->get("layanan_kami");
+		return $query->result_array();
+	}
+
 	function readInstagram(){
 		$this->db->order_by("id","desc");
 		$query=$this->db->get("instagram");

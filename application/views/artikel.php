@@ -8,8 +8,9 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
+
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="<?php echo base_url(); ?>asset-landing/img/trucking.jpg" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,6 +32,8 @@
 
     <!-- Template Stylesheet -->
     <link href="<?php echo base_url(); ?>asset-landing/css/style.css" rel="stylesheet">
+
+    <link href="<?php echo base_url(); ?>asset-landing/css/templatemo-kind-heart-charity.css" rel="stylesheet">
 
     <!-- Template Gallery knight -->
     <link href="<?php echo base_url(); ?>asset-landing/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -91,7 +94,7 @@
                     <a href="<?php echo base_url(); ?>#tentang-kami" class="nav-item nav-link">Tentang Kami</a>
 
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Layanan Kami</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan Kami</a>
                         <div class="dropdown-menu border-light m-0">
                             <a href="produkpelatihan" class="dropdown-item">Freight Forwarding</a>
                             <a href="asesor" class="dropdown-item">Custom Handling</a>
@@ -101,7 +104,7 @@
                             <a href="asesor" class="dropdown-item">PLB</a>
                         </div>
                     </div>
-                    <a href="<?php echo base_url(); ?>#artikel" class="nav-item nav-link">Artikel</a>
+                    <a href="<?php echo base_url(); ?>#artikel" class="nav-item nav-link active">Artikel</a>
                     <a href="<?php echo base_url(); ?>#hubungi-kami" class="nav-item nav-link">Hubungi Kami</a>
                 </div>
                 <div class="d-none d-lg-flex ms-2">
@@ -126,188 +129,182 @@
     </div>
     <!-- Navbar End -->
 
-    <!-- Freight Forwarding Start -->
-    <div class="container-xxl feature py-5">
-
-        <div class="wow fadeInUp text-center" data-wow-delay="0.1s">
-            <div class="d-flex flex-column align-items-center">
-                <h5 class="display-5 mb-4">Freight Forwarding</h5>
-            </div>
-        </div>
-
+    <!-- Artikel Start -->
+    <section class="news-section section-padding wow fadeInUp" data-wow-delay="0.1s" id="artikel" style="margin-top:100px">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <img class="img-fluid rounded mb-4" src="<?php echo base_url(); ?>asset-landing/img/freight.jpg">
+            <div class="row">
+
+                <div class="col-lg-12 col-12 mb-5">
+                    <h2>Article</h2>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="feature-box rounded p-4">
-                        <div class="mb-4">
-                            <h3 class="text-black">Freight Forwarding</h3>
-                            <p class="mb-4 text-black"></p>
-                            <h5 style="text-align: justify;">Kami menangani semua aspek pengiriman barang Anda, dari
-                                pengumpulan hingga pengantaran, melalui berbagai moda transportasi seperti udara, laut,
-                                dan darat.
-                            </h5>
+
+                <div class="col-lg-7 col-12">
+                    <div class="news-block">
+                        <div class="news-block-top">
+                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
+                                <img src="<?php echo base_url(); ?>asset-landing/img/news/medium-shot-volunteers-with-clothing-donations.jpg"
+                                    class="news-image img-fluid" alt="">
+                            </a>
+                        </div>
+
+                        <div class="news-block-info">
+                            <div class="d-flex mt-2">
+                                <div class="news-block-date">
+                                    <p>
+                                        <i class="bi-calendar4 custom-icon me-1"></i>
+                                        October 12, 2036
+                                    </p>
+                                </div>
+
+                                <div class="news-block-author mx-5">
+                                    <p>
+                                        <i class="bi-person custom-icon me-1"></i>
+                                        By Admin
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="news-block-title mb-2">
+                                <h4><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Clothing donation to
+                                        urban area</a></h4>
+                            </div>
+
+                            <div class="news-block-body">
+                                <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito
+                                    Professional charity theme based on Bootstrap</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="news-block mt-3">
+                        <div class="news-block-top">
+                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
+                                <img src="<?php echo base_url(); ?>asset-landing/img/news/medium-shot-people-collecting-foodstuff.jpg"
+                                    class="news-image img-fluid" alt="">
+                            </a>
+                        </div>
+
+                        <div class="news-block-info">
+                            <div class="d-flex mt-2">
+                                <div class="news-block-date">
+                                    <p>
+                                        <i class="bi-calendar4 custom-icon me-1"></i>
+                                        October 20, 2036
+                                    </p>
+                                </div>
+
+                                <div class="news-block-author mx-5">
+                                    <p>
+                                        <i class="bi-person custom-icon me-1"></i>
+                                        By Admin
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="news-block-title mb-2">
+                                <h4><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Food donation area</a>
+                                </h4>
+                            </div>
+
+                            <div class="news-block-body">
+                                <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus
+                                    elementum, tempor risus vel, condimentum orci</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="news-block mt-3">
+                        <div class="news-block-top">
+                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
+                                <img src="<?php echo base_url(); ?>asset-landing/img/news/medium-shot-people-collecting-foodstuff.jpg"
+                                    class="news-image img-fluid" alt="">
+                            </a>
+                        </div>
+
+                        <div class="news-block-info">
+                            <div class="d-flex mt-2">
+                                <div class="news-block-date">
+                                    <p>
+                                        <i class="bi-calendar4 custom-icon me-1"></i>
+                                        October 20, 2036
+                                    </p>
+                                </div>
+
+                                <div class="news-block-author mx-5">
+                                    <p>
+                                        <i class="bi-person custom-icon me-1"></i>
+                                        By Admin
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="news-block-title mb-2">
+                                <h4><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Food donation area</a>
+                                </h4>
+                            </div>
+
+                            <div class="news-block-body">
+                                <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus
+                                    elementum, tempor risus vel, condimentum orci</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-lg-4 col-12 mx-auto">
+                    <h5 class="mt-5 mb-3">Popular Article</h5>
+
+                    <div class="news-block news-block-two-col d-flex mt-4">
+                        <div class="news-block-two-col-image-wrap">
+                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
+                                <img src="<?php echo base_url(); ?>asset-landing/img/news/africa-humanitarian-aid-doctor.jpg"
+                                    class="news-image img-fluid" alt="">
+                            </a>
+                        </div>
+
+                        <div class="news-block-two-col-info">
+                            <div class="news-block-title mb-2">
+                                <h6><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Food donation area</a>
+                                </h6>
+                            </div>
+
+                            <div class="news-block-date">
+                                <p>
+                                    <i class="bi-calendar4 custom-icon me-1"></i>
+                                    October 16, 2036
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="news-block news-block-two-col d-flex mt-4">
+                        <div class="news-block-two-col-image-wrap">
+                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
+                                <img src="<?php echo base_url(); ?>asset-landing/img/news/close-up-happy-people-working-together.jpg"
+                                    class="news-image img-fluid" alt="">
+                            </a>
+                        </div>
+
+                        <div class="news-block-two-col-info">
+                            <div class="news-block-title mb-2">
+                                <h6><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Volunteering Clean</a>
+                                </h6>
+                            </div>
+
+                            <div class="news-block-date">
+                                <p>
+                                    <i class="bi-calendar4 custom-icon me-1"></i>
+                                    October 24, 2036
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Freight Forwarding End -->
-     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="section-title wow fadeInUp" data-wow-delay="0.1s" style="text-align:center">
-          <h2>Gallery</h2>
-          <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fuga eum quidem</p>
-        </div>
-
-        <div class="row wow fadeInUp" data-wow-delay="0.2s">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container wow fadeInUp" data-wow-delay="0.3s">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
+    </section>
+    <!-- Artikel End -->
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
