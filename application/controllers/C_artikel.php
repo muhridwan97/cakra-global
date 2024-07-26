@@ -12,41 +12,36 @@ class C_artikel extends CI_Controller {
     
 	public function index()
 	{
-		$data["datas"]=$this->m_artikel->read($slug);
-		$data["sidebar"]=$slug;
-		$modified_string = strtoupper(str_replace('_', ' ', $slug));
-		$data["title"]="DATA ".$modified_string;
-		$data["menu"]=$modified_string;
-		$this->load->view("layanan_kami/index",$data);
+		$data["datas"]=$this->m_artikel->read();
+		$data["sidebar"]='artikel';
+		$data["title"]="Data Artikel";
+		$data["menu"]='artikel';
+		$this->load->view("artikel/index",$data);
 
 	}
-	public function tambahLayananKami($slug, $error=''){
-		$data["sidebar"]=$slug;
-		$modified_string = strtoupper(str_replace('_', ' ', $slug));
-		$data["menu"]=$modified_string;
-		$data["title"]="Tambah ".$modified_string;
+	public function tambah($error=''){
+		$data["sidebar"]='artikel';
+		$data["menu"]='artikel';
+		$data["title"]="Tambah artikel";
 		$data["error"]=$error;
-		$this->load->view('layanan_kami/tambah', $data);
+		$this->load->view('artikel/tambah', $data);
 	}
-	public function editLayananKami($slug, $id){
+	public function edit($id){
 
-		$wst = $this->m_artikel->get_layanan_kami("where id='$id'");
+		$wst = $this->m_artikel->get_artikel("where id='$id'");
 		$data = array(
 			"id"=> $wst[0]['id'], 
-			"nama" => $wst[0]['nama'], 
+			"judul" => $wst[0]['judul'], 
 			"foto" => $wst[0]['foto'], 
-			"deskripsi" => $wst[0]['deskripsi'],
-			"slug" => $wst[0]['slug'],
-			"is_warehouse" => $wst[0]['is_warehouse'],
+			"isi" => $wst[0]['isi'],
 		);
-		$data["sidebar"]=$slug;
-		$modified_string = strtoupper(str_replace('_', ' ', $slug));
-		$data["menu"]=$modified_string;
-		$data["title"]="Edit Layanan ".$modified_string;
-		$this->load->view('layanan_kami/edit',$data);
+		$data["sidebar"]='artikel';
+		$data["menu"]='artikel';
+		$data["title"]="Edit Artikel";
+		$this->load->view('artikel/edit',$data);
 		
 	}
-	public function save_layanan_kami(){
+	public function save(){
 		$config['upload_path']          = './assets/images/foto/';
 		$config['allowed_types']        = 'gif|jpg|png|jpeg';
 		$config['max_size']             = 5000;
@@ -57,101 +52,77 @@ class C_artikel extends CI_Controller {
 			$error = array('error' => $this->upload->display_errors());
 			$this->tambahLayananKami($error);
 		}else{
-			$nama =  $this->input->post('nama');
-			$deskripsi =  $this->input->post('deskripsi');
-			$slug =  $this->input->post('slug');
+			$judul =  $this->input->post('judul');
+			$isi =  $this->input->post('isi');
 			$upload_data = $this->upload->data();
 			$foto =  $upload_data['file_name'];
-		
-			$active_warehouse = ['open_yard_jakarta_umum', 'gudang_plb_jakarta', 'gudang_plb_surabaya',
-            'gudang_umum_surabaya'];
-
+			
+			date_default_timezone_set('Asia/Jakarta');
 			$data = array(
-				'nama' => $nama,
-				'deskripsi' => $deskripsi,
+				'judul' => $judul,
+				'isi' => $isi,
 				'foto' => $foto,
-				'slug' => $slug,
-				'is_warehouse' => in_array($slug, $active_warehouse) ? 1 : 0,
+				'created_at' => date("Y-m-d H:i:s"),
+				'created_name' => 'Admin',
+				'total_akses' => 0,
 				);
 
-			$this->m_artikel->set_data($data,'layanan_kami');
+			$this->m_artikel->set_data($data,'artikel');
 			$data = array('upload_data' => $this->upload->data());
-			redirect('c_layanan/layananKami/'.$slug);
+			redirect('c_artikel');
 		}
 	}
 	
-	public function edit_layanan_kami($id){
+	public function update($id){
 		$config['upload_path']          = './assets/images/foto/';
 		$config['allowed_types']        = 'gif|jpg|png|jpeg';
 		$config['max_size']             = 5000;
  
 		$this->load->library('upload', $config);
  
-		$slug =  $this->input->post('slug');
 		if (!empty($_FILES['berkas']['name'])) {
 			if ( ! $this->upload->do_upload('berkas')){
 				$error = array('error' => $this->upload->display_errors());
-				$this->editLayananKami($slug, $error);
+				$this->edit($error);
 			}else{
-				$nama =  $this->input->post('nama');
-				$deskripsi =  $this->input->post('deskripsi');
-				$is_warehouse =  $this->input->post('is_warehouse');
+				$judul =  $this->input->post('judul');
+				$isi =  $this->input->post('isi');
 				$upload_data = $this->upload->data();
 				$foto =  $upload_data['file_name'];
 			
 				$data = array(
-					'nama' => $nama,
+					'judul' => $judul,
 					'foto' => $foto,
-					'deskripsi' => $deskripsi,
-					'slug' => $slug,
-					'is_warehouse' => $is_warehouse,
+					'isi' => $isi,
 					);
 
-				$this->m_artikel->update_data($data,$id,'layanan_kami');
+				$this->m_artikel->update_data($data,$id,'artikel');
 				$data = array('upload_data' => $this->upload->data());
 				redirect('c_layanan/layananKami/'.$slug);
 			}
 		}else{//jika tidak ada file
 			
-			$nama =  $this->input->post('nama');
-			$deskripsi =  $this->input->post('deskripsi');
-			$is_warehouse =  $this->input->post('is_warehouse');
+			$judul =  $this->input->post('judul');
+			$isi =  $this->input->post('isi');
 			$foto =  $this->input->post('foto');
 		
 		$data = array(
-			'nama' => $nama,
+			'judul' => $judul,
 			'foto' => $foto,
-			'deskripsi' => $deskripsi,
-			'slug' => $slug,
-			'is_warehouse' => $is_warehouse,
+			'isi' => $isi,
 			);
 
-			$this->m_artikel->update_data($data,$id,'layanan_kami');
+			$this->m_artikel->update_data($data,$id,'artikel');
 			$data = array('upload_data' => $this->upload->data());
-			redirect('c_layanan/layananKami/'.$slug);
+			redirect('c_artikel');
 		}
 
 	}
-    
-	public function detailLayananKami($id){
 
-		$wst = $this->m_artikel->get_layanan_kami("where id='$id'");
-        $gallery = $this->m_gallery_layanan->readGellery($id);
-		$data = array(
-			"id"=> $wst[0]['id'], 
-			"nama" => $wst[0]['nama'], 
-			"foto" => $wst[0]['foto'], 
-			"deskripsi" => $wst[0]['deskripsi'],
-			"slug" => $wst[0]['slug'],
-			"is_warehouse" => $wst[0]['is_warehouse'],
-            "galleries" => $gallery
-		);
-		$data["sidebar"]=$wst[0]['slug'];
-		$modified_string = strtoupper(str_replace('_', ' ', $wst[0]['slug']));
-		$data["menu"]=$modified_string;
-		$data["title"]="Detail ".$modified_string;
-		$this->load->view('layanan_kami/detail',$data);
-		
+	public function hapus(){
+		$id= $this->input->post("id");
+		$this->m_artikel->delete($id);
+		echo "{}";
 	}
 		
 }

@@ -11,7 +11,7 @@
  Target Server Version : 100904 (10.9.4-MariaDB-1:10.9.4+maria~ubu2204)
  File Encoding         : 65001
 
- Date: 20/07/2024 08:00:52
+ Date: 26/07/2024 09:34:55
 */
 
 SET NAMES utf8mb4;
@@ -52,109 +52,56 @@ INSERT INTO `banner` VALUES (2, 'foto2', 'bg-01.jpg');
 INSERT INTO `banner` VALUES (7, 'f', 'bg-02.jpg');
 
 -- ----------------------------
--- Table structure for galeri
+-- Table structure for gallery_layanan
 -- ----------------------------
-DROP TABLE IF EXISTS `galeri`;
-CREATE TABLE `galeri`  (
-  `idGaleri` int NOT NULL AUTO_INCREMENT,
-  `foto1` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `foto2` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `foto3` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `foto4` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `idWisata` int NOT NULL,
-  PRIMARY KEY (`idGaleri`) USING BTREE,
-  INDEX `idWisata`(`idWisata` ASC) USING BTREE,
-  CONSTRAINT `galeri_ibfk_1` FOREIGN KEY (`idWisata`) REFERENCES `paketwisata` (`idWisata`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of galeri
--- ----------------------------
-INSERT INTO `galeri` VALUES (7, '20180705_091414-min.jpg', '20180705_094216-min.jpg', '20180705_094230-min.jpg', '20180705_094412-min.jpg', 17);
-
--- ----------------------------
--- Table structure for guide
--- ----------------------------
-DROP TABLE IF EXISTS `guide`;
-CREATE TABLE `guide`  (
-  `idGuide` int NOT NULL AUTO_INCREMENT,
-  `fotoGuide` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `namaGuide` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `emailGuide` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `notelpGuide` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `umurGuide` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `alamatGuide` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `idWisata` int NOT NULL,
-  PRIMARY KEY (`idGuide`) USING BTREE,
-  INDEX `idRelasi`(`idWisata` ASC) USING BTREE,
-  CONSTRAINT `guide_ibfk_1` FOREIGN KEY (`idWisata`) REFERENCES `paketwisata` (`idWisata`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of guide
--- ----------------------------
-INSERT INTO `guide` VALUES (1, '62914.jpg', 'Amir Budi Sahroni ', 'amirpsikologi7@gmail.com', '+6282139143825', '22', 'dusun bajul mati, desa gajahrejo kec gedangan', 17);
-INSERT INTO `guide` VALUES (3, '21.jpg', 'Siswanto', 'siswantodedi@gmail.com', '082332863442', '35', 'Dusun Bajulmati RT 40', 20);
-
--- ----------------------------
--- Table structure for instagram
--- ----------------------------
-DROP TABLE IF EXISTS `instagram`;
-CREATE TABLE `instagram`  (
+DROP TABLE IF EXISTS `gallery_layanan`;
+CREATE TABLE `gallery_layanan`  (
   `id` int NOT NULL AUTO_INCREMENT,
-  `namaIg` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `linkIg` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `fotoIg` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `layanan_id` int NULL DEFAULT NULL,
+  `foto` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `kategori` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `client` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `tanggal_projek` date NULL DEFAULT NULL,
+  `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `judul` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `deskripsi` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of instagram
+-- Records of gallery_layanan
 -- ----------------------------
-INSERT INTO `instagram` VALUES (1, 'admin', '121121', 'afraide2.JPG');
-INSERT INTO `instagram` VALUES (2, 'mejas', '231211', '14230204890811.png');
-INSERT INTO `instagram` VALUES (4, 'andi iman', '231211', '75220.jpg');
+INSERT INTO `gallery_layanan` VALUES (1, 1, 'portfolio-11.jpg', 'plb', 'monata', '2024-07-24', 'https://www.scribd.com/document/501040988/UKBM-PAI-Perkembangan-Islam-Nusantara', 'Pengembangan Pasukan Elite empire sudna', 'coba');
+INSERT INTO `gallery_layanan` VALUES (2, 1, 'portfolio-2.jpg', 'umum', 'monata', '2024-08-01', 'https://www.scribd.com/document/631590907/POS-Penialaian-Akhir-Semester-SMP-NEGERI-27-PEKANBARU-TP-2022-2023', 'Pengembangan Pasukan Elite empire sudna', 'tes');
+INSERT INTO `gallery_layanan` VALUES (7, 1, 'portfolio-4.jpg', 'umum', 'monata', '2024-08-01', 'https://www.scribd.com/document/580344804/18-UMPAN-BALIK-GURU-SISWA', 'Pengembangan Pasukan Elite empire sudna', 'tes24');
 
 -- ----------------------------
--- Table structure for paketwisata
+-- Table structure for layanan_kami
 -- ----------------------------
-DROP TABLE IF EXISTS `paketwisata`;
-CREATE TABLE `paketwisata`  (
-  `idWisata` int NOT NULL AUTO_INCREMENT,
-  `foto` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `namaWisata` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `preview` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `tanggal` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `latitude` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `longitude` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  PRIMARY KEY (`idWisata`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 21 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of paketwisata
--- ----------------------------
-INSERT INTO `paketwisata` VALUES (15, '20180709_155253.jpg', 'Pantai Joilangkung', ' wowowow', '09/16/2018', '-8.428082', '112.628543');
-INSERT INTO `paketwisata` VALUES (16, '20180702_111451-min.jpg', 'Pantai Bajulmati', ' wowowowwe', '09/16/2018', '-8.430820', '112.635452');
-INSERT INTO `paketwisata` VALUES (17, '20180705_094027-min.jpg', 'Susur Sungai', ' wewew', '09/16/2018', '-8.426384', '112.642522');
-INSERT INTO `paketwisata` VALUES (20, '20180707_1700194.jpg', 'Pantai Ungapan', ' Pantai ungapan adalah salah satu pantai yang terletak di daerah pantai selatan. Tepatnya terletak di sebelah jembatan bajulmati yang menjadi ikon wisata daerah malang selatan.\r\nUntuk masuk ke dalam pantai ini, pengunjung hanya membayar biaya sebesar 10000 rupiah dan sudah bisa menikmati indahnya pantai ungapan. \r\nPantai ungapan sendiri memiliki beragam fasilitas di dalamnya. Untuk fasilitas umum sendiri seperti warung makanan, homestay, tempat parkir, dan yang utama adalah pantai ungapan adalah spesialis bumi perkemahan. Jadi di tiap Sabtu dan Minggu pantai ini akan dipenuhi oleh tenda tenda dari orang yang melakukan camp disini. Bisa dari komunitas pecinta alam, pramuka, dan lain sebagainya. \r\nKemudian ada wisata tambahan seperti penyewaan sepeda listrik, ATV, dan juga jet ski. Bagi yang ingin menggunakan fasillitas tersebut harus membayar dengan biaya yang lumayan yaitu 25000 rupiah.\r\n   ', '11/27/2018', '-7.937739', '112.635406');
-
--- ----------------------------
--- Table structure for product
--- ----------------------------
-DROP TABLE IF EXISTS `product`;
-CREATE TABLE `product`  (
+DROP TABLE IF EXISTS `layanan_kami`;
+CREATE TABLE `layanan_kami`  (
   `id` int NOT NULL AUTO_INCREMENT,
-  `keterangan` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `fotoProduk` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `foto` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `deskripsi` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `is_warehouse` bit(1) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of product
+-- Records of layanan_kami
 -- ----------------------------
-INSERT INTO `product` VALUES (6, 'ini produk', '02.jpg');
-INSERT INTO `product` VALUES (7, 'produk 2', '021.jpg');
-INSERT INTO `product` VALUES (8, 'produk 3', '022.jpg');
+INSERT INTO `layanan_kami` VALUES (1, 'PLB (Pusat Logistik Berikat)', 'plb1.jpg', 'Kami menangani semua aspek pengiriman barang Anda, dari pengumpulan hingga pengantaran, melalui berbagai moda transportasi seperti udara, laut, dan darat.', 'plb', b'0');
+INSERT INTO `layanan_kami` VALUES (2, 'Freight Forwarding', 'ffw1.jpg', 'Kami menangani semua aspek pengiriman barang Anda, dari pengumpulan hingga pengantaran, melalui berbagai moda transportasi seperti udara, laut, dan darat.', 'freight_forwarding', b'0');
+INSERT INTO `layanan_kami` VALUES (3, 'Custome Handling', 'customehandling2.jpg', 'Kita menangani semua aspek pengiriman barang Anda, dari pengumpulan hingga pengantaran, melalui berbagai moda transportasi seperti udara, laut, dan darat.', 'custome_handling', b'1');
+INSERT INTO `layanan_kami` VALUES (4, 'Project Logistic', 'projectlogistik.jpg', 'Kami menangani semua aspek pengiriman barang Anda, dari pengumpulan hingga pengantaran, melalui berbagai moda transportasi seperti udara, laut, dan darat.', 'project_logistic', b'0');
+INSERT INTO `layanan_kami` VALUES (5, 'Trucking', 'trucking.jpg', 'Kami menangani semua aspek pengiriman barang Anda, dari pengumpulan hingga pengantaran, melalui berbagai moda transportasi seperti udara, laut, dan darat.', 'trucking', b'0');
+INSERT INTO `layanan_kami` VALUES (6, 'Open Yard Jakarta Umum', 'plb2.jpg', 'Kami menangani semua aspek pengiriman barang Anda, dari pengumpulan hingga pengantaran, melalui berbagai moda transportasi seperti udara, laut, dan darat.', 'open_yard_jakarta_umum', b'1');
+INSERT INTO `layanan_kami` VALUES (7, 'Gudang PLB Jakarta', 'customehandling1.jpg', 'Kami menangani semua aspek pengiriman barang Anda, dari pengumpulan hingga pengantaran, melalui berbagai moda transportasi seperti udara, laut, dan darat.', 'gudang_plb_jakarta', b'1');
+INSERT INTO `layanan_kami` VALUES (8, 'Gudang PLB Surabaya', 'ffw2.jpg', 'Kami menangani semua aspek pengiriman barang Anda, dari pengumpulan hingga pengantaran, melalui berbagai moda transportasi seperti udara, laut, dan darat.', 'gudang_plb_surabaya', b'1');
+INSERT INTO `layanan_kami` VALUES (9, 'Gudang Umum Surabaya', 'warehouse.jpg', 'Kami menangani semua aspek pengiriman barang Anda, dari pengumpulan hingga pengantaran, melalui berbagai moda transportasi seperti udara, laut, dan darat.', 'gudang_umum_surabaya', b'1');
+INSERT INTO `layanan_kami` VALUES (10, 'Warehousing', 'warehouse.jpg', NULL, 'warehouse', b'0');
 
 -- ----------------------------
 -- Table structure for tentang_kami
@@ -170,7 +117,7 @@ CREATE TABLE `tentang_kami`  (
 -- ----------------------------
 -- Records of tentang_kami
 -- ----------------------------
-INSERT INTO `tentang_kami` VALUES (1, 'ffw.jpg', 'tes');
+INSERT INTO `tentang_kami` VALUES (1, 'freight.jpg', 'tes');
 INSERT INTO `tentang_kami` VALUES (2, 'freight.jpg', 'foto2');
 
 SET FOREIGN_KEY_CHECKS = 1;

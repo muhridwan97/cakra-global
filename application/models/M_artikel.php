@@ -7,9 +7,8 @@ class m_artikel extends CI_Model{
 		return $query->result_array();
 	}
 	
-	function read($slug){
+	function read(){
 		$this->db->order_by("id","desc");
-		$this->db->where("slug",$slug);
 		$query=$this->db->get("artikel");
 		return $query->result_array();
 	}
@@ -22,6 +21,11 @@ class m_artikel extends CI_Model{
 	{
 	   $this->db->where('id', $id);
 	   $this->db->update($table,$data); 
+	}
+
+	function delete($id){
+		$this->db->where("id",$id);
+		$this->db->delete("artikel");
 	}
 }
 ?>

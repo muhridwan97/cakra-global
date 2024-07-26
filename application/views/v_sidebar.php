@@ -84,8 +84,8 @@
                 </ul>
             </li>
             <!--PAGE GUIDE -->
-            <li class="">
-                <a href="<?php echo base_url();?>c_admin/artikel">
+            <li class="<?php echo $sidebar == 'artikel' ? 'active' : '' ; ?>">
+                <a href="<?php echo base_url();?>c_artikel">
                     <i class="fa fa-bullhorn"></i>
                     <span>Artikel</span>
                     <span class="pull-right-container">
