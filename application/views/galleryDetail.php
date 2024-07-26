@@ -127,29 +127,46 @@
     <!-- Navbar End -->
 
     <!-- Freight Forwarding Start -->
-    <!-- Projects Start -->
-    <div class="container-xxl py-5">
-                <div class="container">
-                    <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                        <h1 class="display-5 mb-5">Layanan Kami</h1>
-                    </div>
-                    <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.3s">
-                    <?php foreach($layanan_kami as $index => $item) { ?>
-                        <div class="project-item pe-5 pb-5">
-                            <div class="project-img mb-3">
-                                <img class="img-fluid rounded"
-                                    src="<?php echo base_url(); ?>assets/images/foto/<?php echo "$item[foto]"?>" alt="">
-                                <a href="<?php echo base_url(); ?>c_web/layananKami/<?php echo "$item[slug]"?>"><i class="fa fa-link fa-3x text-primary"></i></a>
-                            </div>
-                            <div class="project-title">
-                                <h4 class="mb-0"><?= $item["nama"] ?></h4>
-                            </div>
+    <div class="container-xxl feature py-5" style="margin-top:150px">
+        <div class="wow fadeInUp text-center" data-wow-delay="0.1s">
+            <div class="d-flex flex-column align-items-center">
+                <h5 class="display-5 mb-4">Gallery Detail</h5>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <img class="img-fluid rounded mb-4" src="<?php echo base_url(); ?>assets/images/foto/<?php echo "$gallery[foto]"?>">
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div id="portfolio-details" class="portfolio-details">
+                        <div class="portfolio-info">
+                            <h3>Project information</h3>
+                            <ul>
+                                <li><strong>Category</strong>: <?= $gallery["kategori"] ?></li>
+                                <li><strong>Client</strong>: <?= $gallery["client"] ?></li>
+                                <li><strong>Project date</strong>: <?php $date = new DateTime($gallery['tanggal_projek']);
+                                        $formattedDate = $date->format('F j, Y');
+                                        echo $formattedDate;
+                                        ?></li>
+                                <li><strong>Project URL</strong>: <a href="<?= $gallery["url"] ?>"><?= $gallery["url"] ?></a></li>
+                            </ul>
                         </div>
-                    <?php } ?>
+                    </div>
+                    <div class=" rounded p-4">
+                        <div class="mb-4">
+                            <h3 class="text-black"><?= $gallery["judul"] ?></h3>
+                            <p class="mb-4 text-black"></p>
+                            <h5 style="text-align: justify;"><?= $gallery["deskripsi"] ?>
+                            </h5>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Projects End -->
+        </div>
+    </div>
+    <!-- Freight Forwarding End -->
+    
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">

@@ -181,7 +181,7 @@
                             <?php foreach($tentang_kami as $index => $item) { ?>
                             <div class="carousel-item <?php echo $index == 0 ? 'active' : ''; ?>">
                                 <img class="img-fluid rounded"
-                                    src="<?php echo base_url(); ?>asset-landing/img/<?php echo "$item[foto]"?>">
+                                    src="<?php echo base_url(); ?>assets/images/foto/<?php echo "$item[foto]"?>">
                             </div>
                             <?php } ?>
                         </div>
@@ -256,67 +256,34 @@
                         <h1 class="display-5 mb-5">Layanan Kami</h1>
                     </div>
                     <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.3s">
+                        
+                        <?php foreach($layanan_kami as $index => $item) { ?>
+                            <?php if ($item["slug"] == "warehouse") { ?>
+                                
+                            <div class="project-item pe-5 pb-5">
+                                <div class="project-img mb-3">
+                                    <img class="img-fluid rounded"
+                                        src="<?php echo base_url(); ?>asset-landing/img/warehouse.jpg" alt="">
+                                    <a href="<?php echo base_url(); ?>c_web/warehouse"><i class="fa fa-link fa-3x text-primary"></i></a>
+                                </div>
+                                <div class="project-title">
+                                    <h4 class="mb-0">Warehousing</h4>
+                                </div>
+                            </div>
+                            <?php }else{ ?>
+                            
                         <div class="project-item pe-5 pb-5">
                             <div class="project-img mb-3">
-                                <img class="img-fluid rounded" src="<?php echo base_url(); ?>asset-landing/img/ffw.jpg"
+                                <img class="img-fluid rounded" src="<?php echo base_url(); ?>assets/images/foto/<?php echo "$item[foto]"?>"
                                     alt="">
-                                <a href="<?php echo base_url(); ?>c_web/layananKami/freight-forwarding"><i
+                                <a href="<?php echo base_url(); ?>c_web/layananKami/<?php echo "$item[slug]"?>"><i
                                         class="fa fa-link fa-3x text-primary"></i></a>
                             </div>
                             <div class="project-title">
-                                <h4 class="mb-0">Freight Forwarding</h4>
+                                <h4 class="mb-0"><?= $item["nama"] ?></h4>
                             </div>
                         </div>
-                        <div class="project-item pe-5 pb-5">
-                            <div class="project-img mb-3">
-                                <img class="img-fluid rounded"
-                                    src="<?php echo base_url(); ?>asset-landing/img/customehandling.jpg" alt="">
-                                <a href="<?php echo base_url(); ?>c_web/layananKami/freight-forwarding"><i class="fa fa-link fa-3x text-primary"></i></a>
-                            </div>
-                            <div class="project-title">
-                                <h4 class="mb-0">Custom Handling</h4>
-                            </div>
-                        </div>
-                        <div class="project-item pe-5 pb-5">
-                            <div class="project-img mb-3">
-                                <img class="img-fluid rounded"
-                                    src="<?php echo base_url(); ?>asset-landing/img/warehouse.jpg" alt="">
-                                <a href="<?php echo base_url(); ?>c_web/warehouse"><i class="fa fa-link fa-3x text-primary"></i></a>
-                            </div>
-                            <div class="project-title">
-                                <h4 class="mb-0">Warehousing</h4>
-                            </div>
-                        </div>
-                        <div class="project-item pe-5 pb-5">
-                            <div class="project-img mb-3">
-                                <img class="img-fluid rounded"
-                                    src="<?php echo base_url(); ?>asset-landing/img/projectlogistik.jpg" alt="">
-                                <a href="<?php echo base_url(); ?>c_web/layananKami/freight-forwarding"><i class="fa fa-link fa-3x text-primary"></i></a>
-                            </div>
-                            <div class="project-title">
-                                <h4 class="mb-0">Project Logistic</h4>
-                            </div>
-                        </div>
-                        <div class="project-item pe-5 pb-5">
-                            <div class="project-img mb-3">
-                                <img class="img-fluid rounded"
-                                    src="<?php echo base_url(); ?>asset-landing/img/trucking.jpg" alt="">
-                                <a href="<?php echo base_url(); ?>c_web/layananKami/freight-forwarding"><i class="fa fa-link fa-3x text-primary"></i></a>
-                            </div>
-                            <div class="project-title">
-                                <h4 class="mb-0">Trucking</h4>
-                            </div>
-                        </div>
-                        <div class="project-item pe-5 pb-5">
-                            <div class="project-img mb-3">
-                                <img class="img-fluid rounded" src="<?php echo base_url(); ?>asset-landing/img/plb.jpg"
-                                    alt="">
-                                <a href="<?php echo base_url(); ?>c_web/layananKami/freight-forwarding"><i class="fa fa-link fa-3x text-primary"></i></a>
-                            </div>
-                            <div class="project-title">
-                                <h5 class="mb-0">PLB (Pusat Logistik Berikat)</h5>
-                            </div>
-                        </div>
+                        <?php } } ?>
                     </div>
                 </div>
             </div>
@@ -543,10 +510,11 @@
                 </div>
 
                 <div class="col-lg-7 col-12">
-                    <div class="news-block">
+                    <?php foreach($artikel as $index => $item) { ?>
+                        <div class="news-block">
                         <div class="news-block-top">
-                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
-                                <img src="<?php echo base_url(); ?>asset-landing/img/news/medium-shot-volunteers-with-clothing-donations.jpg"
+                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/<?=$item['id']?>">
+                                <img src="<?php echo base_url(); ?>assets/images/foto/<?=$item['foto']?>"
                                     class="news-image img-fluid" alt="">
                             </a>
                         </div>
@@ -556,117 +524,74 @@
                                 <div class="news-block-date">
                                     <p>
                                         <i class="bi-calendar4 custom-icon me-1"></i>
-                                        October 12, 2036
+                                        <?php $date = new DateTime($item['created_at']);
+                                        $formattedDate = $date->format('F j, Y');
+                                        echo $formattedDate;
+                                        ?>
                                     </p>
                                 </div>
 
                                 <div class="news-block-author mx-5">
                                     <p>
                                         <i class="bi-person custom-icon me-1"></i>
-                                        By Admin
+                                        By <?= $item['created_name']; ?>
                                     </p>
                                 </div>
                             </div>
 
                             <div class="news-block-title mb-2">
-                                <h4><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Clothing donation to
-                                        urban area</a></h4>
+                                <h4><a href="<?php echo base_url(); ?>c_web/artikelDetail/<?= $item['id']?>" class="news-block-title-link"><?= $item['judul']; ?></a></h4>
                             </div>
 
-                            <div class="news-block-body">
-                                <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito
-                                    Professional charity theme based on Bootstrap</p>
+                            <div class="news-block-body" style="text-align: justify;">
+                                <p><?php // Pecah string menjadi array kata-kata
+                                $words = explode(' ', $item['isi']);
+
+                                // Ambil 20 kata pertama
+                                $first20Words = array_slice($words, 0, 20);
+
+                                // Gabungkan kembali menjadi string
+                                $shortenedString = implode(' ', $first20Words);
+
+                                echo $shortenedString;?></p>
+                                    
                             </div>
                         </div>
                     </div>
-
-                    <div class="news-block mt-3">
-                        <div class="news-block-top">
-                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
-                                <img src="<?php echo base_url(); ?>asset-landing/img/news/medium-shot-people-collecting-foodstuff.jpg"
-                                    class="news-image img-fluid" alt="">
-                            </a>
-                        </div>
-
-                        <div class="news-block-info">
-                            <div class="d-flex mt-2">
-                                <div class="news-block-date">
-                                    <p>
-                                        <i class="bi-calendar4 custom-icon me-1"></i>
-                                        October 20, 2036
-                                    </p>
-                                </div>
-
-                                <div class="news-block-author mx-5">
-                                    <p>
-                                        <i class="bi-person custom-icon me-1"></i>
-                                        By Admin
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="news-block-title mb-2">
-                                <h4><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Food donation area</a>
-                                </h4>
-                            </div>
-
-                            <div class="news-block-body">
-                                <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus
-                                    elementum, tempor risus vel, condimentum orci</p>
-                            </div>
-                        </div>
-                        <div id="hubungi-kami"></div>
-                    </div>
+                    <?php } ?>
                 </div>
 
                 <div class="col-lg-4 col-12 mx-auto">
                     <h5 class="mt-5 mb-3">Popular Article</h5>
 
+                    <?php foreach($artikel_popular as $index => $item) { ?>
                     <div class="news-block news-block-two-col d-flex mt-4">
                         <div class="news-block-two-col-image-wrap">
-                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
-                                <img src="<?php echo base_url(); ?>asset-landing/img/news/africa-humanitarian-aid-doctor.jpg"
+                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/<?= $item['id'] ?>">
+                                <img src="<?php echo base_url(); ?>assets/images/foto/<?=$item['foto']?>"
                                     class="news-image img-fluid" alt="">
                             </a>
                         </div>
 
                         <div class="news-block-two-col-info">
                             <div class="news-block-title mb-2">
-                                <h6><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Food donation area</a>
+                                <h6><a href="<?php echo base_url(); ?>c_web/artikelDetail/<?= $item['id'] ?>" class="news-block-title-link"><?= $item['judul'] ?></a>
                                 </h6>
                             </div>
 
                             <div class="news-block-date">
                                 <p>
                                     <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 16, 2036
+                                        <?php $date = new DateTime($item['created_at']);
+                                        $formattedDate = $date->format('F j, Y');
+                                        echo $formattedDate;
+                                        ?>
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="news-block news-block-two-col d-flex mt-4">
-                        <div class="news-block-two-col-image-wrap">
-                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
-                                <img src="<?php echo base_url(); ?>asset-landing/img/news/close-up-happy-people-working-together.jpg"
-                                    class="news-image img-fluid" alt="">
-                            </a>
-                        </div>
-
-                        <div class="news-block-two-col-info">
-                            <div class="news-block-title mb-2">
-                                <h6><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Volunteering Clean</a>
-                                </h6>
-                            </div>
-
-                            <div class="news-block-date">
-                                <p>
-                                    <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 24, 2036
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
 
                 </div>
             </div>

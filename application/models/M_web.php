@@ -61,6 +61,7 @@ class m_web extends CI_Model {
 		$query=$this->db->get("product");
 		return $query->result_array();
 	}
+	
 	function get_instagram(){
 		$this->db->order_by("id","desc");
 		$query=$this->db->get("instagram");
@@ -74,6 +75,61 @@ class m_web extends CI_Model {
 	function get_tentang_kami(){
 		$this->db->order_by("id","desc");
 		$query=$this->db->get("tentang_kami");
+		return $query->result_array();
+	}
+	function get_layanan_kami(){
+		$this->db->order_by("id","desc");
+		$this->db->where('is_warehouse', 0);
+		$query=$this->db->get("layanan_kami");
+		return $query->result_array();
+	}
+	function get_layanan_by_slug($id){
+		$this->db->where('slug', $id);
+		$query=$this->db->get("layanan_kami");
+		return $query->row_array();
+	}
+	function get_gallery_layanan($id){
+		$this->db->where('layanan_id', $id);
+		$query=$this->db->get("gallery_layanan");
+		return $query->result_array();
+	}
+	function get_layanan_warehouse(){
+		$this->db->order_by("id","desc");
+		$this->db->where('is_warehouse', 1);
+		$query=$this->db->get("layanan_kami");
+		return $query->result_array();
+	}
+	function get_gallery($id){
+		$this->db->where('id', $id);
+		$query=$this->db->get("gallery_layanan");
+		return $query->row_array();
+	}
+	function get_artikel($id){
+		// Update total_akses dengan menambah 1
+		$this->db->set('total_akses', 'total_akses+1', FALSE);
+		$this->db->where('id', $id);
+		$this->db->update('artikel');
+
+		//get
+		$this->db->where('id', $id);
+		$query=$this->db->get("artikel");
+		return $query->row_array();
+	}
+	function get_artikel_all(){
+		$this->db->order_by("created_at","desc");
+		$query=$this->db->get("artikel");
+		return $query->result_array();
+	}
+	function get_artikel_limit(){
+		$this->db->order_by("created_at","desc");
+		$this->db->limit(3);
+		$query=$this->db->get("artikel");
+		return $query->result_array();
+	}
+	function get_artikel_popular(){
+		$this->db->order_by("total_akses","desc");
+		$this->db->limit(3);
+		$query=$this->db->get("artikel");
 		return $query->result_array();
 	}
 	function hapusWisata($table,$where){

@@ -15,6 +15,9 @@ class C_web extends CI_Controller {
 	{
 		$data["banner"]=$this->m_web->get_banner();
 		$data["tentang_kami"]=$this->m_web->get_tentang_kami();
+		$data["layanan_kami"]=$this->m_web->get_layanan_kami();
+		$data["artikel"]=$this->m_web->get_artikel_limit();
+		$data["artikel_popular"]=$this->m_web->get_artikel_popular();
 		$this->load->view('tampilanAwal',$data);
 	}
 	public function tampilanHome()
@@ -25,22 +28,33 @@ class C_web extends CI_Controller {
 	}
 	public function layananKami($id)
 	{
-		$data["tentang_kami"]=$this->m_web->get_tentang_kami();
+		$layanan = $this->m_web->get_layanan_by_slug($id);
+		$data["layanan_kami"]=$layanan;
+		$data["galleries"]=$this->m_web->get_gallery_layanan($layanan["id"]);
 		$this->load->view('layananKami',$data);
 	}
 	public function warehouse()
 	{
-		$data["tentang_kami"]=$this->m_web->get_tentang_kami();
+		$data["layanan_kami"]=$this->m_web->get_layanan_warehouse();
 		$this->load->view('warehouse',$data);
+	}
+	public function gallery_detail($id)
+	{
+		$data["gallery"]=$this->m_web->get_gallery($id);
+		$this->load->view('galleryDetail',$data);
 	}
 	public function artikel()
 	{
-		$data["tentang_kami"]=$this->m_web->get_tentang_kami();
+		$data["artikel"]=$this->m_web->get_artikel_all();
+		$data["artikel_popular"]=$this->m_web->get_artikel_popular();
+		$data["artikel_last"]=$this->m_web->get_artikel_limit();
 		$this->load->view('artikel',$data);
 	}
 	public function artikelDetail($id)
 	{
-		$data["tentang_kami"]=$this->m_web->get_tentang_kami();
+		$data["artikel"]=$this->m_web->get_artikel($id);
+		$data["artikel_popular"]=$this->m_web->get_artikel_popular();
+		$data["artikel_last"]=$this->m_web->get_artikel_limit();
 		$this->load->view('artikelDetail',$data);
 	}
 	public function tampilanDetail($id)

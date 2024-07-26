@@ -139,10 +139,11 @@
                 </div>
 
                 <div class="col-lg-7 col-12">
-                    <div class="news-block">
+                    <?php foreach($artikel as $index => $item) { ?>
+                        <div class="news-block">
                         <div class="news-block-top">
-                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
-                                <img src="<?php echo base_url(); ?>asset-landing/img/news/medium-shot-volunteers-with-clothing-donations.jpg"
+                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/<?=$item['id']?>">
+                                <img src="<?php echo base_url(); ?>assets/images/foto/<?=$item['foto']?>"
                                     class="news-image img-fluid" alt="">
                             </a>
                         </div>
@@ -152,153 +153,103 @@
                                 <div class="news-block-date">
                                     <p>
                                         <i class="bi-calendar4 custom-icon me-1"></i>
-                                        October 12, 2036
+                                        <?php $date = new DateTime($item['created_at']);
+                                        $formattedDate = $date->format('F j, Y');
+                                        echo $formattedDate;
+                                        ?>
                                     </p>
                                 </div>
 
                                 <div class="news-block-author mx-5">
                                     <p>
                                         <i class="bi-person custom-icon me-1"></i>
-                                        By Admin
+                                        By <?= $item['created_name']; ?>
                                     </p>
                                 </div>
                             </div>
 
                             <div class="news-block-title mb-2">
-                                <h4><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Clothing donation to
-                                        urban area</a></h4>
+                                <h4><a href="<?php echo base_url(); ?>c_web/artikelDetail/<?= $item['id']?>" class="news-block-title-link"><?= $item['judul']; ?></a></h4>
                             </div>
 
-                            <div class="news-block-body">
-                                <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito
-                                    Professional charity theme based on Bootstrap</p>
-                            </div>
-                        </div>
-                    </div>
+                            <div class="news-block-body" style="text-align: justify;">
+                                <p><?php // Pecah string menjadi array kata-kata
+                                $words = explode(' ', $item['isi']);
 
-                    <div class="news-block mt-3">
-                        <div class="news-block-top">
-                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
-                                <img src="<?php echo base_url(); ?>asset-landing/img/news/medium-shot-people-collecting-foodstuff.jpg"
-                                    class="news-image img-fluid" alt="">
-                            </a>
-                        </div>
+                                // Ambil 20 kata pertama
+                                $first20Words = array_slice($words, 0, 20);
 
-                        <div class="news-block-info">
-                            <div class="d-flex mt-2">
-                                <div class="news-block-date">
-                                    <p>
-                                        <i class="bi-calendar4 custom-icon me-1"></i>
-                                        October 20, 2036
-                                    </p>
-                                </div>
+                                // Gabungkan kembali menjadi string
+                                $shortenedString = implode(' ', $first20Words);
 
-                                <div class="news-block-author mx-5">
-                                    <p>
-                                        <i class="bi-person custom-icon me-1"></i>
-                                        By Admin
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="news-block-title mb-2">
-                                <h4><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Food donation area</a>
-                                </h4>
-                            </div>
-
-                            <div class="news-block-body">
-                                <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus
-                                    elementum, tempor risus vel, condimentum orci</p>
+                                echo $shortenedString;?></p>
+                                    
                             </div>
                         </div>
                     </div>
-
-                    <div class="news-block mt-3">
-                        <div class="news-block-top">
-                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
-                                <img src="<?php echo base_url(); ?>asset-landing/img/news/medium-shot-people-collecting-foodstuff.jpg"
-                                    class="news-image img-fluid" alt="">
-                            </a>
-                        </div>
-
-                        <div class="news-block-info">
-                            <div class="d-flex mt-2">
-                                <div class="news-block-date">
-                                    <p>
-                                        <i class="bi-calendar4 custom-icon me-1"></i>
-                                        October 20, 2036
-                                    </p>
-                                </div>
-
-                                <div class="news-block-author mx-5">
-                                    <p>
-                                        <i class="bi-person custom-icon me-1"></i>
-                                        By Admin
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="news-block-title mb-2">
-                                <h4><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Food donation area</a>
-                                </h4>
-                            </div>
-
-                            <div class="news-block-body">
-                                <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus
-                                    elementum, tempor risus vel, condimentum orci</p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
 
                 <div class="col-lg-4 col-12 mx-auto">
                     <h5 class="mt-5 mb-3">Popular Article</h5>
-
+                    <?php foreach($artikel_popular as $index => $item) { ?>
                     <div class="news-block news-block-two-col d-flex mt-4">
                         <div class="news-block-two-col-image-wrap">
-                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
-                                <img src="<?php echo base_url(); ?>asset-landing/img/news/africa-humanitarian-aid-doctor.jpg"
+                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/<?= $item['id'] ?>">
+                                <img src="<?php echo base_url(); ?>assets/images/foto/<?=$item['foto']?>"
                                     class="news-image img-fluid" alt="">
                             </a>
                         </div>
 
                         <div class="news-block-two-col-info">
                             <div class="news-block-title mb-2">
-                                <h6><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Food donation area</a>
+                                <h6><a href="<?php echo base_url(); ?>c_web/artikelDetail/<?= $item['id'] ?>" class="news-block-title-link"><?= $item['judul'] ?></a>
                                 </h6>
                             </div>
 
                             <div class="news-block-date">
                                 <p>
                                     <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 16, 2036
+                                        <?php $date = new DateTime($item['created_at']);
+                                        $formattedDate = $date->format('F j, Y');
+                                        echo $formattedDate;
+                                        ?>
                                 </p>
                             </div>
                         </div>
                     </div>
 
+                    <?php } ?>
+                    <h5 class="mt-5 mb-3">Lastest Article</h5>
+
+                    <?php foreach($artikel_last as $index => $item) { ?>
                     <div class="news-block news-block-two-col d-flex mt-4">
                         <div class="news-block-two-col-image-wrap">
-                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
-                                <img src="<?php echo base_url(); ?>asset-landing/img/news/close-up-happy-people-working-together.jpg"
+                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/<?= $item['id'] ?>">
+                                <img src="<?php echo base_url(); ?>assets/images/foto/<?=$item['foto']?>"
                                     class="news-image img-fluid" alt="">
                             </a>
                         </div>
 
                         <div class="news-block-two-col-info">
                             <div class="news-block-title mb-2">
-                                <h6><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Volunteering Clean</a>
+                                <h6><a href="<?php echo base_url(); ?>c_web/artikelDetail/<?= $item['id'] ?>" class="news-block-title-link"><?= $item['judul'] ?></a>
                                 </h6>
                             </div>
 
                             <div class="news-block-date">
                                 <p>
                                     <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 24, 2036
+                                        <?php $date = new DateTime($item['created_at']);
+                                        $formattedDate = $date->format('F j, Y');
+                                        echo $formattedDate;
+                                        ?>
                                 </p>
                             </div>
                         </div>
                     </div>
+
+                    <?php } ?>
 
                 </div>
             </div>

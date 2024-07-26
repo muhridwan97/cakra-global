@@ -127,27 +127,25 @@
     <!-- Navbar End -->
 
     <!-- Freight Forwarding Start -->
-    <div class="container-xxl feature py-5">
+    <div class="container-xxl feature py-5" style="margin-top: 110px;">
 
         <div class="wow fadeInUp text-center" data-wow-delay="0.1s">
             <div class="d-flex flex-column align-items-center">
-                <h5 class="display-5 mb-4">Freight Forwarding</h5>
+                <h5 class="display-5 mb-4"><?= $layanan_kami["nama"] ?></h5>
             </div>
         </div>
 
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <img class="img-fluid rounded mb-4" src="<?php echo base_url(); ?>asset-landing/img/freight.jpg">
+                    <img class="img-fluid rounded mb-4" src="<?php echo base_url(); ?>assets/images/foto/<?php echo "$layanan_kami[foto]"?>">
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="feature-box rounded p-4">
                         <div class="mb-4">
-                            <h3 class="text-black">Freight Forwarding</h3>
+                            <h3 class="text-black"><?= $layanan_kami["nama"] ?></h3>
                             <p class="mb-4 text-black"></p>
-                            <h5 style="text-align: justify;">Kami menangani semua aspek pengiriman barang Anda, dari
-                                pengumpulan hingga pengantaran, melalui berbagai moda transportasi seperti udara, laut,
-                                dan darat.
+                            <h5 style="text-align: justify;"><?= $layanan_kami["deskripsi"] ?>
                             </h5>
                         </div>
                     </div>
@@ -162,147 +160,46 @@
 
         <div class="section-title wow fadeInUp" data-wow-delay="0.1s" style="text-align:center">
           <h2>Gallery</h2>
-          <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fuga eum quidem</p>
+          <!-- <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fuga eum quidem</p> -->
         </div>
 
         <div class="row wow fadeInUp" data-wow-delay="0.2s">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <?php
+              $displayed_categories = [];
+               foreach($galleries as $index => $item){ 
+                $category = $item["kategori"];
+                
+                // Periksa apakah kategori sudah ditampilkan
+                if (!in_array($category, $displayed_categories)) {
+                    // Tambahkan kategori ke array displayed_categories
+                    $displayed_categories[] = $category;
+                    ?>
+                    <li data-filter=".filter-<?= htmlspecialchars($category) ?>"><?= htmlspecialchars($category) ?></li>
+                    
+              <?php } } ?>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container wow fadeInUp" data-wow-delay="0.3s">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <?php foreach($galleries as $index => $item){ ?>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-<?= $item["kategori"] ?>">
             <div class="portfolio-wrap">
-              <img src="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <img src="<?php echo base_url(); ?>assets/images/foto/<?php echo "$item[foto]"?>" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
+                <h4><?= $item["judul"] ?></h4>
+                <p><?= $item["kategori"] ?></p>
                 <div class="portfolio-links">
-                  <a href="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="<?php echo base_url(); ?>assets/images/foto/<?php echo "$item[foto]"?>" data-gallery="portfolioGallery" class="portfolio-lightbox" title="<?= $item["judul"] ?>"><i class="bx bx-plus"></i></a>
+                  <a href="<?php echo base_url(); ?>c_web/gallery_detail/<?php echo "$item[id]"?>" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="<?php echo base_url(); ?>asset-landing/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <?php } ?>
 
         </div>
 

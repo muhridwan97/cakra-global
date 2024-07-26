@@ -142,8 +142,8 @@
                 <div class="col-lg-7 col-12">
                     <div class="news-block">
                         <div class="news-block-top">
-                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
-                                <img src="<?php echo base_url(); ?>asset-landing/img/news/medium-shot-volunteers-with-clothing-donations.jpg"
+                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/<?= $artikel['id']; ?>">
+                                <img src="<?php echo base_url(); ?>assets/images/foto/<?=$artikel['foto']?>"
                                     class="news-image img-fluid" alt="">
                             </a>
                         </div>
@@ -153,74 +153,28 @@
                                 <div class="news-block-date">
                                     <p>
                                         <i class="bi-calendar4 custom-icon me-1"></i>
-                                        October 12, 2036
+                                        <?php $date = new DateTime($artikel['created_at']);
+                                        $formattedDate = $date->format('F j, Y');
+                                        echo $formattedDate;
+                                        ?>
                                     </p>
                                 </div>
 
                                 <div class="news-block-author mx-5">
                                     <p>
                                         <i class="bi-person custom-icon me-1"></i>
-                                        By Admin
+                                        By <?= $artikel['created_name']; ?>
                                     </p>
                                 </div>
                             </div>
 
                             <div class="news-block-title mb-2">
-                                <h4><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Clothing donation to
-                                        urban area</a></h4>
+                                <h4><a href="<?php echo base_url(); ?>c_web/artikelDetail/<?= $artikel['id']; ?>" class="news-block-title-link"><?= $artikel['judul']; ?></a></h4>
                             </div>
 
                             <div class="news-block-body">
                                 <div id="lipsum" style="text-align: justify;">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium
-                                        sollicitudin orci, ut pretium lorem euismod eu. Sed at risus vel turpis viverra
-                                        porttitor a at ipsum. In non mattis mi. Duis purus dui, iaculis sit amet dapibus
-                                        quis, aliquam eget mauris. Integer ultrices volutpat lacinia. Nam quis orci
-                                        vitae ex efficitur feugiat eu ut arcu. Aliquam bibendum lobortis ex, vel tempor
-                                        risus dictum nec. Duis et vulputate nisi. Proin leo augue, mattis in purus quis,
-                                        fringilla tristique lacus. Vestibulum justo felis, faucibus sit amet efficitur
-                                        id, cursus ac nisi. Proin condimentum, lacus sed hendrerit cursus, nibh tellus
-                                        maximus quam, sed ullamcorper lorem erat eu massa.
-                                    </p>
-                                    <p>
-                                        Donec dui nulla, laoreet sit amet placerat vitae, tempus pharetra metus. Aliquam
-                                        sed rutrum dui. Curabitur fringilla nunc massa, et eleifend orci blandit ac.
-                                        Cras sed malesuada odio. Integer eu erat purus. Duis consectetur sodales ornare.
-                                        Pellentesque fringilla lacinia neque eleifend rutrum. Ut blandit euismod est,
-                                        dictum dictum risus scelerisque in. Quisque neque sem, faucibus at dui at,
-                                        sodales hendrerit dui. Nam at ipsum erat. Ut eros lorem, hendrerit vitae ex
-                                        hendrerit, cursus lobortis sem. Pellentesque pellentesque ornare purus, non
-                                        aliquam turpis bibendum id. Aliquam pellentesque aliquam massa, a tristique erat
-                                        tempor vitae. Donec arcu purus, interdum a tristique vel, euismod vitae lectus.
-                                    </p>
-                                    <p>
-                                        Suspendisse et tortor vitae augue pulvinar imperdiet nec ultricies erat. Nulla
-                                        rhoncus quam diam. Duis vel dui vel ligula lobortis imperdiet vitae a arcu.
-                                        Etiam sodales, nulla convallis faucibus sagittis, magna arcu feugiat est, ac
-                                        tincidunt risus nisl nec elit. Vivamus lectus risus, viverra sit amet aliquet
-                                        id, tempus vel erat. Suspendisse convallis sagittis lectus at viverra. Sed
-                                        rutrum lorem nibh, quis ultricies purus accumsan at. Sed lorem purus, lobortis
-                                        vitae pulvinar ut, ultricies vel est.
-                                    </p>
-                                    <p>
-                                        In molestie ultricies risus, eget dignissim erat imperdiet vel. Ut ac arcu non
-                                        arcu lobortis ultricies. Nulla commodo in purus eu condimentum. Morbi
-                                        condimentum, augue sit amet auctor rutrum, elit purus cursus mauris, eget
-                                        ultricies est metus non dui. Fusce vitae egestas massa. Aliquam dictum tortor id
-                                        sapien auctor pretium tempus eget massa. Integer vitae lacus ullamcorper, porta
-                                        nibh eu, commodo nisl. Nullam eros libero, malesuada eu condimentum in, semper
-                                        non nunc. Sed vel euismod risus. Suspendisse eget ultricies justo.
-                                    </p>
-                                    <p>
-                                        Nulla ultricies iaculis justo, at interdum enim aliquam ac. Morbi scelerisque
-                                        tellus ut magna imperdiet pellentesque. Curabitur pellentesque, erat et blandit
-                                        facilisis, dolor felis pharetra nibh, sit amet pellentesque dui est euismod
-                                        mauris. Donec sodales sit amet libero sit amet hendrerit. Suspendisse feugiat
-                                        dui vel leo sollicitudin sollicitudin. Sed rutrum felis at quam porttitor
-                                        pretium. Vivamus vel mollis enim. Curabitur nibh massa, tincidunt dapibus
-                                        lobortis nec, tincidunt at tellus. Ut non aliquet diam.
-                                    </p>
+                                <?= $artikel['isi']; ?>
                                 </div>
                             </div>
                         </div>
@@ -229,99 +183,65 @@
 
                 <div class="col-lg-4 col-12 mx-auto">
                     <h5 class="mt-5 mb-3">Popular Article</h5>
-
+                    
+                    <?php foreach($artikel_popular as $index => $item) { ?>
                     <div class="news-block news-block-two-col d-flex mt-4">
                         <div class="news-block-two-col-image-wrap">
-                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
-                                <img src="<?php echo base_url(); ?>asset-landing/img/news/africa-humanitarian-aid-doctor.jpg"
+                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/<?= $item['id'] ?>">
+                                <img src="<?php echo base_url(); ?>assets/images/foto/<?=$item['foto']?>"
                                     class="news-image img-fluid" alt="">
                             </a>
                         </div>
 
                         <div class="news-block-two-col-info">
                             <div class="news-block-title mb-2">
-                                <h6><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Food donation area</a>
+                                <h6><a href="<?php echo base_url(); ?>c_web/artikelDetail/<?= $item['id'] ?>" class="news-block-title-link"><?= $item['judul'] ?></a>
                                 </h6>
                             </div>
 
                             <div class="news-block-date">
                                 <p>
                                     <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 16, 2036
+                                        <?php $date = new DateTime($item['created_at']);
+                                        $formattedDate = $date->format('F j, Y');
+                                        echo $formattedDate;
+                                        ?>
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="news-block news-block-two-col d-flex mt-4">
-                        <div class="news-block-two-col-image-wrap">
-                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
-                                <img src="<?php echo base_url(); ?>asset-landing/img/news/close-up-happy-people-working-together.jpg"
-                                    class="news-image img-fluid" alt="">
-                            </a>
-                        </div>
-
-                        <div class="news-block-two-col-info">
-                            <div class="news-block-title mb-2">
-                                <h6><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Volunteering Clean</a>
-                                </h6>
-                            </div>
-
-                            <div class="news-block-date">
-                                <p>
-                                    <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 24, 2036
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                     <h5 class="mt-5 mb-3">Lastest Article</h5>
 
+                    <?php foreach($artikel_last as $index => $item) { ?>
                     <div class="news-block news-block-two-col d-flex mt-4">
                         <div class="news-block-two-col-image-wrap">
-                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
-                                <img src="<?php echo base_url(); ?>asset-landing/img/news/africa-humanitarian-aid-doctor.jpg"
+                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/<?= $item['id'] ?>">
+                                <img src="<?php echo base_url(); ?>assets/images/foto/<?=$item['foto']?>"
                                     class="news-image img-fluid" alt="">
                             </a>
                         </div>
 
                         <div class="news-block-two-col-info">
                             <div class="news-block-title mb-2">
-                                <h6><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Food donation area</a>
+                                <h6><a href="<?php echo base_url(); ?>c_web/artikelDetail/<?= $item['id'] ?>" class="news-block-title-link"><?= $item['judul'] ?></a>
                                 </h6>
                             </div>
 
                             <div class="news-block-date">
                                 <p>
                                     <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 16, 2036
+                                        <?php $date = new DateTime($item['created_at']);
+                                        $formattedDate = $date->format('F j, Y');
+                                        echo $formattedDate;
+                                        ?>
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="news-block news-block-two-col d-flex mt-4">
-                        <div class="news-block-two-col-image-wrap">
-                            <a href="<?php echo base_url(); ?>c_web/artikelDetail/1">
-                                <img src="<?php echo base_url(); ?>asset-landing/img/news/close-up-happy-people-working-together.jpg"
-                                    class="news-image img-fluid" alt="">
-                            </a>
-                        </div>
-
-                        <div class="news-block-two-col-info">
-                            <div class="news-block-title mb-2">
-                                <h6><a href="<?php echo base_url(); ?>c_web/artikelDetail/1" class="news-block-title-link">Volunteering Clean</a>
-                                </h6>
-                            </div>
-
-                            <div class="news-block-date">
-                                <p>
-                                    <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 24, 2036
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
