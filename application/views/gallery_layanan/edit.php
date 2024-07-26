@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin Cakra Global Logistik</title>
+  <title>Admin Banner</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -43,12 +43,12 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-  <?php
-    include_once __DIR__ . '/../v_header.php';
-    ?>
-    <?php 
-    include_once __DIR__ . '/../v_sidebar.php';
-    ?>
+<?php
+  include_once __DIR__ . '/../v_header.php';
+  ?>
+  <?php 
+  include_once __DIR__ . '/../v_sidebar.php';
+  ?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -59,7 +59,7 @@
         <small>Control panel</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="<?php echo base_url();?>c_admin/adminGuide"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="<?php echo base_url();?>admin/adminGuide"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active"><?= $menu ?></li>
       </ol>
     </section>
@@ -72,7 +72,8 @@
         <div class="col-md-6">
           
           <!-- /.box -->
-          <form action="<?php echo base_url(); ?>c_layanan/save_layanan_kami" method="post" enctype="multipart/form-data">
+
+          <form action="<?php echo base_url(); ?>c_gallery_layanan/update/<?php echo "$id" ?>" method="post" enctype="multipart/form-data">
           <div class="box">
             <div class="box-header">
               <h3 class="box-title"><?= $title ?></h3>
@@ -82,30 +83,56 @@
               <div class="box-body">
 
                 <div class="form-group">
-                  <label for="exampleInputFile">Foto Layanan</label>
-                  <p class="help-block"><?php if($error!=""){echo $error;}?></p>  
-                  <input type="file" id="exampleInputFile" name="berkas" required>
+                  <label for="exampleInputFile">Foto gallery</label>
+                 <!--  <p class="help-block"><?php if($error!=""){echo $error;}?></p> --><br>
+                  <img src="<?php echo base_url(); ?>assets/images/foto/<?php echo $foto ?>" width="400px" ">
+                  <input type="file" id="exampleInputFile" name="berkas">
 
                   <p class="help-block">Max size foto : 5 MB</p>
                   <p class="help-block">800X600</p>
+                
 
                 </div>
 
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Nama Layanan</label>
-                  <input type="text" class="form-control" id="nama" value="" name="nama" placeholder="Masukkan nama layanan"> 
+                  <label for="exampleInputEmail1">Judul</label>
+                   <input type="text" class="form-control" id="judul" value="<?php echo $judul ?>" name="judul" placeholder="Masukkan judul" > 
                 </div>
 
                 <div class="form-group">
-                  <label for="deskripsi">Deskripsi Layanan</label>
-                  <textarea type="text" class="form-control" id="deskripsi" value="" name="deskripsi" placeholder="Masukkan deskripsi layanan"></textarea>
+                  <label for="deskripsi">Deskripsi</label>
+                  <textarea type="text" class="form-control" id="deskripsi" name="deskripsi" placeholder="Masukkan deskripsi"><?php echo $deskripsi ?></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="kategori">Kategori</label>
+                  <input type="text" class="form-control" id="kategori" value="<?php echo $kategori ?>" name="kategori" placeholder="Masukkan kategori" > 
+                </div>
+
+                <div class="form-group">
+                  <label for="client">Client</label>
+                  <input type="text" class="form-control" id="client" value="<?php echo $client ?>" name="client" placeholder="Masukkan client" > 
                 </div>
                 
-                  <input type="hidden" class="form-control" id="slug" value="<?= $sidebar ?>" name="slug"> 
+                <div class="form-group">
+                  <label for="tanggal_projek">Tanggal Projek</label>
+                  <input type="text" class="form-control" id="tanggal_projek" value="<?php echo $tanggal_projek ?>" name="tanggal_projek" placeholder="Masukkan tanggal projek" > 
+                </div>
+
+                <div class="form-group">
+                  <label for="url">Url</label>
+                  <input type="text" class="form-control" id="url" value="<?php echo $url ?>" name="url" placeholder="Masukkan url" > 
+                </div>
+                
+                <input type="hidden" class="form-control" id="slug" value="<?= $sidebar ?>" name="slug"> 
+                  <input type="hidden" class="form-control" id="layanan_id" value="<?= $layanan_id ?>" name="layanan_id"> 
+                <input type="hidden" class="form-control" id="foto" value="<?= $foto ?>" name="foto"> 
+        
                 <div class="box-footer">
                   <button type="submit" class="btn btn-primary" value="upload">Submit</button>
                 </div>
-        </form>       
+        </form>
+       
                 
               </div>
               <!-- /.box-body -->
@@ -182,36 +209,12 @@
 <script src="<?php echo base_url();?>/assets/js/demo.js"></script>
 <!-- script data table -->
 <script>
-   //Date range picker
-    $('#reservation').daterangepicker()
-    //Date range picker with time picker
-    $('#reservationtime').daterangepicker({ timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A' })
-    //Date range as a button
-    $('#daterange-btn').daterangepicker(
-      {
-        ranges   : {
-          'Today'       : [moment(), moment()],
-          'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-          'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
-          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-          'This Month'  : [moment().startOf('month'), moment().endOf('month')],
-          'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-        },
-        startDate: moment().subtract(29, 'days'),
-        endDate  : moment()
-      },
-      function (start, end) {
-        $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
-      }
-    )
-
-    //Date picker
-    $('#datepicker').datepicker({
-      autoclose: true
-    })
-
-
   $(function () {
+    
+
+    $('#tanggal_projek').datepicker({
+    autoClose: true
+  })
     $('#example1').DataTable()
     $('#example2').DataTable({
       'paging'      : true,
@@ -223,6 +226,5 @@
     })
   })
 </script>
-
 </body>
 </html>

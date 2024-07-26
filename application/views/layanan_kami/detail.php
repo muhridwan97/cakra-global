@@ -29,6 +29,9 @@
   <link rel="stylesheet" href="<?php echo base_url();?>/assets/bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="<?php echo base_url();?>/assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  <!-- pop up-->
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/sweetalert/sweetalert.css'); ?>">
+  <script type="text/javascript" src="<?php echo base_url('assets/sweetalert/sweetalert.min.js'); ?>"></script>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -93,7 +96,7 @@
               <div class="box-body">
 
                 <div class="form-group">
-                  <label for="exampleInputFile">Foto tentang kami</label>
+                  <label for="exampleInputFile">Foto Layanan</label>
                  <!--  <p class="help-block"><?php if($error!=""){echo $error;}?></p> --><br>
                   <img src="<?php echo base_url(); ?>assets/images/foto/<?php echo $foto ?>" width="400px" >
                   <!-- <input type="file" id="exampleInputFile" name="berkas"> -->
@@ -101,9 +104,19 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Nama Foto</label>
-                   <input type="text" class="form-control" id="nama" value="<?php echo $namaFoto ?>" name="nama" placeholder="Masukkan nama" disabled> 
+                  <label for="exampleInputEmail1">Nama Layanan</label>
+                   <input type="text" class="form-control" id="nama" value="<?php echo $nama ?>" name="nama" placeholder="Masukkan nama" disabled> 
                 </div>
+                
+
+                <div class="form-group">
+                  <label for="deskripsi">Deskripsi Layanan</label>
+                  <textarea type="text" class="form-control" id="deskripsi" name="deskripsi" placeholder="Masukkan deskripsi layanan" disabled><?php echo $deskripsi ?></textarea>
+                </div>
+                
+                <input type="hidden" class="form-control" id="slug" value="<?= $slug ?>" name="slug"> 
+                <input type="hidden" class="form-control" id="is_warehouse" value="<?= $is_warehouse ?>" name="is_warehouse"> 
+                <input type="hidden" class="form-control" id="foto" value="<?= $foto ?>" name="foto"> 
               
         </form>
        
@@ -120,6 +133,97 @@
       <!-- /.row -->
     </section>
     <!-- /.content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Gallery <?= $title ?></h3>
+              
+            </div>
+            <div class="box-header">
+              <a href="<?php echo base_url();?>c_gallery_layanan/tambah/<?=$id?>">
+              <button type="button" class="btn  btn-success btn-lg"><i class="fa fa-plus"> </i>Tambah</button>
+              </a>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>Nomor </th>
+                  <th>Foto</th>
+                  <th>Kategori</th>
+                  <th>Client</th>
+                  <th>Tanggal Project</th>
+                  <th>URL</th>
+                  <th>Judul</th>
+                  <th>Deskripsi</th>
+                  <th>Aksi</th>
+                </tr>
+                </thead>
+                <tbody>
+        <?php
+          $i=1;
+          foreach ($galleries as $a) {
+        ?>
+                <tr data-id="<?php echo "$a[id]"?>">
+                  <td><?php echo $i++;?></td>
+                  <td>
+                    <img src="<?php echo base_url();?>/assets/images/foto/<?php echo "$a[foto]"?>" class="" alt="User Image" width="150px" height="150px">
+                  </td>
+                  <td><?php echo "$a[kategori]" ?></td>
+                  <td><?php echo "$a[client]" ?></td>
+                  <td><?php echo "$a[tanggal_projek]" ?></td>
+                  <td><?php echo "$a[url]" ?></td>
+                  <td><?php echo "$a[judul]" ?></td>
+                  <td><?php echo "$a[deskripsi]" ?>
+                  </td>
+                  <td><div class="btn-group">
+                    <!-- <div>
+                    <a href="<?php echo base_url(); ?>c_gallery_layanan/detail/<?php echo "$a[id]" ?>" type="button" class="btn btn-info btn-flat"><i class="fa fa-info">Detail</i></a>
+                    </div> -->
+                    <div>
+                    <a href="<?php echo base_url(); ?>c_gallery_layanan/edit/<?php echo "$a[id]" ?>" type="button" class="btn btn-warning btn-flat"><i class="fa fa-edit">Edit</i></a>
+                    </div>
+                    <div>
+                    <button type="button" class="btn btn-danger btn-flat hapus-member" id="hapus" data-nama = "<?php echo "$a[judul]"?>" data-id="<?php echo "$a[id]"?>" ><i class="fa fa-trash">Hapus</i></button>
+                    </div>
+                  </div></td>
+                  
+                </tr>
+        <?php
+          }
+        ?>
+
+                </tbody>
+                <tfoot>
+                <tr>
+                  <th>Nomor </th>
+                  <th>Foto</th>
+                  <th>Kategori</th>
+                  <th>Client</th>
+                  <th>Tanggal Project</th>
+                  <th>URL</th>
+                  <th>Judul</th>
+                  <th>Deskripsi</th>
+                  <th>Aksi</th>
+                  
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+          
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -184,6 +288,37 @@
 <!-- script data table -->
 <script>
   $(function () {
+    $.ajaxSetup({
+  type:"post",
+  cache:false,
+  dataType: "json"
+  })
+    $(document).on("click",".hapus-member",function(){
+  var id=$(this).attr("data-id");
+  var nama=$(this).attr("data-nama");
+
+  swal({
+    title: "Hapus data "+ nama +"",
+    text:"Yakin akan menghapus data ini?",
+    type: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Hapus",
+    closeOnConfirm: true,
+  },
+    function(){
+     $.ajax({
+      url:"<?php echo base_url('c_gallery_layanan/hapus'); ?>",
+      data:{id:id},
+      success: function(){
+        alert("Data berhasil dihapus");
+        $("tr[data-id='"+id+"']").fadeOut("fast",function(){
+          $(this).remove();
+        });
+      }
+     });
+  });
+});
+
     $('#example1').DataTable()
     $('#example2').DataTable({
       'paging'      : true,

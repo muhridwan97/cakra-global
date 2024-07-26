@@ -230,7 +230,7 @@ if($this->session->userdata('username')==null){
   var nama=$(this).attr("data-nama");
 
   swal({
-    title: "Hapus data"+ nama +"",
+    title: "Hapus data "+ nama +"",
     text:"Yakin akan menghapus data ini?",
     type: "warning",
     showCancelButton: true,

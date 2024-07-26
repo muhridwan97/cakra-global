@@ -24,7 +24,7 @@
   <!-- jvectormap -->
   <link rel="stylesheet" href="<?php echo base_url();?>/assets/bower_components/jvectormap/jquery-jvectormap.css">
   <!-- Date Picker -->
-  <link rel="stylesheet" href="<?php echo base_url();?>/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <!-- Daterange picker -->
   <link rel="stylesheet" href="<?php echo base_url();?>/assets/bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
@@ -72,7 +72,7 @@
         <div class="col-md-6">
           
           <!-- /.box -->
-          <form action="<?php echo base_url(); ?>c_layanan/save_layanan_kami" method="post" enctype="multipart/form-data">
+          <form action="<?php echo base_url(); ?>c_gallery_layanan/save" method="post" enctype="multipart/form-data">
           <div class="box">
             <div class="box-header">
               <h3 class="box-title"><?= $title ?></h3>
@@ -82,7 +82,7 @@
               <div class="box-body">
 
                 <div class="form-group">
-                  <label for="exampleInputFile">Foto Layanan</label>
+                  <label for="exampleInputFile">Foto</label>
                   <p class="help-block"><?php if($error!=""){echo $error;}?></p>  
                   <input type="file" id="exampleInputFile" name="berkas" required>
 
@@ -92,16 +92,37 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Nama Layanan</label>
-                  <input type="text" class="form-control" id="nama" value="" name="nama" placeholder="Masukkan nama layanan"> 
+                  <label for="exampleInputEmail1">Judul</label>
+                  <input type="text" class="form-control" id="judul" value="" name="judul" placeholder="Masukkan judul"> 
                 </div>
 
                 <div class="form-group">
-                  <label for="deskripsi">Deskripsi Layanan</label>
-                  <textarea type="text" class="form-control" id="deskripsi" value="" name="deskripsi" placeholder="Masukkan deskripsi layanan"></textarea>
+                  <label for="deskripsi">Deskripsi</label>
+                  <textarea type="text" class="form-control" id="deskripsi" value="" name="deskripsi" placeholder="Masukkan deskripsi"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="kategori">Kategori</label>
+                  <input type="text" class="form-control" id="kategori" value="" name="kategori" placeholder="Masukkan kategori"> 
+                </div>
+
+                <div class="form-group">
+                  <label for="client">Client</label>
+                  <input type="text" class="form-control" id="client" value="" name="client" placeholder="Masukkan client"> 
+                </div>
+
+                <div class="form-group">
+                <label for="tanggal">Tanggal Projek</label>
+                  <input type="text" class="form-control" id="tanggal_projek" value="" name="tanggal_projek" placeholder="Pilih tanggal">
+                </div>
+
+                <div class="form-group">
+                  <label for="url">Url</label>
+                  <input type="text" class="form-control" id="url" value="" name="url" placeholder="Masukkan url"> 
                 </div>
                 
                   <input type="hidden" class="form-control" id="slug" value="<?= $sidebar ?>" name="slug"> 
+                  <input type="hidden" class="form-control" id="layanan_id" value="<?= $layanan_id ?>" name="layanan_id"> 
                 <div class="box-footer">
                   <button type="submit" class="btn btn-primary" value="upload">Submit</button>
                 </div>
@@ -150,16 +171,6 @@
 </script>
 <!-- Bootstrap 3.3.7 -->
 <script src="<?php echo base_url();?>/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- Morris.js charts -->
-<script src="<?php echo base_url();?>/assets/bower_components/raphael/raphael.min.js"></script>
-<script src="<?php echo base_url();?>/assets/bower_components/morris.js/morris.min.js"></script>
-<!-- Sparkline -->
-<script src="<?php echo base_url();?>/assets/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-<!-- jvectormap -->
-<script src="<?php echo base_url();?>/assets/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="<?php echo base_url();?>/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="<?php echo base_url();?>/assets/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
 <script src="<?php echo base_url();?>/assets/bower_components/moment/min/moment.min.js"></script>
 <script src="<?php echo base_url();?>/assets/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
@@ -205,6 +216,9 @@
       }
     )
 
+    $('#tanggal_projek').datepicker({
+    autoClose: true
+  })
     //Date picker
     $('#datepicker').datepicker({
       autoclose: true

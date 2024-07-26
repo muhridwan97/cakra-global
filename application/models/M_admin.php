@@ -3,9 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class m_admin extends CI_Model {
 
-	
-
-
 	/*
 	Web Wisata Model
 	*/
@@ -39,10 +36,6 @@ class m_admin extends CI_Model {
 	
     function get_tentang_kami($where=""){
         $query = $this->db->query("SELECT * FROM tentang_kami ".$where);
-        return $query->result_array();
-    }
-    function get_layanan_kami($where=""){
-        $query = $this->db->query("SELECT * FROM layanan_kami ".$where);
         return $query->result_array();
     }
 	function get_wisata($where=""){
@@ -105,13 +98,6 @@ class m_admin extends CI_Model {
 	function readTentangKami(){
 		$this->db->order_by("id","desc");
 		$query=$this->db->get("tentang_kami");
-		return $query->result_array();
-	}
-	
-	function readLayananKami($slug){
-		$this->db->order_by("id","desc");
-		$this->db->where("slug",$slug);
-		$query=$this->db->get("layanan_kami");
 		return $query->result_array();
 	}
 

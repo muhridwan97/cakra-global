@@ -73,7 +73,7 @@
           
           <!-- /.box -->
 
-          <form action="<?php echo base_url(); ?>c_admin/edit_layanan_kami/<?php echo "$id" ?>" method="post" enctype="multipart/form-data">
+          <form action="<?php echo base_url(); ?>c_layanan/edit_layanan_kami/<?php echo "$id" ?>" method="post" enctype="multipart/form-data">
           <div class="box">
             <div class="box-header">
               <h3 class="box-title"><?= $title ?></h3>

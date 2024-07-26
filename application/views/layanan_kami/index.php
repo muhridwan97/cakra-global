@@ -86,7 +86,7 @@ if($this->session->userdata('username')==null){
               
             </div>
             <div class="box-header">
-              <!-- <a href="<?php echo base_url();?>c_admin/tambahLayananKami/<?=$sidebar?>/">
+              <!-- <a href="<?php echo base_url();?>c_layanan/tambahLayananKami/<?=$sidebar?>/">
               <button type="button" class="btn  btn-success btn-lg"><i class="fa fa-plus"> </i>Tambah</button>
               </a> -->
             </div>
@@ -112,15 +112,15 @@ if($this->session->userdata('username')==null){
                   <td>
                     <img src="<?php echo base_url();?>/assets/images/foto/<?php echo "$a[foto]"?>" class="" alt="User Image" width="150px" height="150px">
                   </td>
-                  <td><?php echo "$a[nama]" ?>
+                  <td><?php echo "$a[nama]" ?> </td>
                   <td><?php echo "$a[deskripsi]" ?>
                   </td>
                   <td><div class="btn-group">
                     <div>
-                    <a href="<?php echo base_url(); ?>c_admin/infoLayananKami//<?php echo "$a[id]" ?>" type="button" class="btn btn-info btn-flat"><i class="fa fa-info">Detail</i></a>
+                    <a href="<?php echo base_url(); ?>c_layanan/detailLayananKami/<?php echo "$a[id]" ?>" type="button" class="btn btn-info btn-flat"><i class="fa fa-info">Detail</i></a>
                     </div>
                     <div>
-                    <a href="<?php echo base_url(); ?>c_admin/editLayananKami/<?= $sidebar?>/<?php echo "$a[id]" ?>" type="button" class="btn btn-warning btn-flat"><i class="fa fa-edit">Edit</i></a>
+                    <a href="<?php echo base_url(); ?>c_layanan/editLayananKami/<?= $sidebar?>/<?php echo "$a[id]" ?>" type="button" class="btn btn-warning btn-flat"><i class="fa fa-edit">Edit</i></a>
                     </div>
                     <!-- <div>
                     <button type="button" class="btn btn-danger btn-flat hapus-member" id="hapus" data-nama = "<?php echo "$a[nama]"?>" data-id="<?php echo "$a[id]"?>" ><i class="fa fa-trash">Hapus</i></button>
@@ -242,7 +242,7 @@ if($this->session->userdata('username')==null){
   },
     function(){
      $.ajax({
-      url:"<?php echo base_url('c_admin/hapus'); ?>",
+      url:"<?php echo base_url('c_layanan/hapus'); ?>",
       data:{id:id},
       success: function(){
         alert("Data berhasil dihapus");
