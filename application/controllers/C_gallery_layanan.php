@@ -52,12 +52,12 @@ class C_gallery_layanan extends CI_Controller {
 	public function save(){
 		$config['upload_path']          = './assets/images/foto/';
 		$config['allowed_types']        = 'gif|jpg|png|jpeg';
-		$config['max_size']             = 5000;
+		$config['max_size']             = 5242880; // 5mb dalam byte
  
 		$this->load->library('upload', $config);
  
 		if ( ! $this->upload->do_upload('berkas')){
-			$error = array('error' => $this->upload->display_errors());
+			$error = $this->upload->display_errors();
 			$this->tambah($error);
 		}else{
 			$judul =  $this->input->post('judul');
@@ -96,14 +96,14 @@ class C_gallery_layanan extends CI_Controller {
 	public function update($id){
 		$config['upload_path']          = './assets/images/foto/';
 		$config['allowed_types']        = 'gif|jpg|png|jpeg';
-		$config['max_size']             = 5000;
+		$config['max_size']             = 5242880; // 5mb dalam byte
  
 		$this->load->library('upload', $config);
  
 		$slug =  $this->input->post('slug');
 		if (!empty($_FILES['berkas']['name'])) {
 			if ( ! $this->upload->do_upload('berkas')){
-				$error = array('error' => $this->upload->display_errors());
+				$error = $this->upload->display_errors();
 				$this->editLayananKami($slug, $error);
 			}else{
 				$judul =  $this->input->post('judul');

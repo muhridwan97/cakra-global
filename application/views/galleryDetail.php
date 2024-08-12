@@ -93,12 +93,12 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Layanan Kami</a>
                         <div class="dropdown-menu border-light m-0">
-                            <a href="produkpelatihan" class="dropdown-item">Freight Forwarding</a>
-                            <a href="asesor" class="dropdown-item">Custom Handling</a>
-                            <a href="asesor" class="dropdown-item">Warehousing</a>
-                            <a href="asesor" class="dropdown-item">Project Logistic</a>
-                            <a href="asesor" class="dropdown-item">Trucking</a>
-                            <a href="asesor" class="dropdown-item">PLB</a>
+                            <a href="<?php echo base_url(); ?>c_web/layananKami/freight_forwarding" class="dropdown-item">Freight Forwarding</a>
+                            <a href="<?php echo base_url(); ?>c_web/layananKami/custome_handling" class="dropdown-item">Custom Handling</a>
+                            <a href="<?php echo base_url(); ?>c_web/layananKami/warehouse" class="dropdown-item">Warehousing</a>
+                            <a href="<?php echo base_url(); ?>c_web/layananKami/project_logistic" class="dropdown-item">Project Logistic</a>
+                            <a href="<?php echo base_url(); ?>c_web/layananKami/trucking" class="dropdown-item">Trucking</a>
+                            <a href="<?php echo base_url(); ?>c_web/layananKami/plb" class="dropdown-item">PLB</a>
                         </div>
                     </div>
                     <a href="<?php echo base_url(); ?>#artikel" class="nav-item nav-link">Artikel</a>

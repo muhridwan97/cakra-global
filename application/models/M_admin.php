@@ -120,6 +120,11 @@ class m_admin extends CI_Model {
 		$this->db->where("id",$id);
 		$this->db->delete("banner");
 	}
+
+	function deleteTentangKami($id){
+		$this->db->where("id",$id);
+		$this->db->delete("tentang_kami");
+	}
 	function deleteInstagram($id){
 		$this->db->where("id",$id);
 		$this->db->delete("instagram");

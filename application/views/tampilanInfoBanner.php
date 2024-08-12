@@ -215,7 +215,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Nama Wisata</label>
+                  <label for="exampleInputEmail1">Nama Banner</label>
                    <input type="text" class="form-control" id="nama" value="<?php echo $namaBanner ?>" name="nama" placeholder="Masukkan nama" disabled> 
                 </div>
                 
@@ -244,7 +244,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+    <strong>Copyright &copy; 2024 <a href="#">RRDesign</a>.</strong> All rights
     reserved.
   </footer>
 

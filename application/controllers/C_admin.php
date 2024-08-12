@@ -62,17 +62,11 @@ class C_admin extends CI_Controller {
 	}
 	
 	public function tampilanTambahBanner($error=''){
-		$this->load->view('tampilanTambahBanner', array('error' => ' ' ));
-	}
-	public function tampilanTambahIg($error=''){
-		$data["instagram"]=$this->m_admin->readInstagram();
+		$data["sidebar"]="dashboard";
+		$data["menu"]="Banner";
+		$data["title"]="Tambah Banner";
 		$data["error"]=$error;
-		$this->load->view('tampilanTambahInstagram', $data);
-	}
-	public function tampilanTambahProduk($error=''){
-		$data["produk"]=$this->m_admin->readProduk();
-		$data["error"]=$error;
-		$this->load->view('tampilanTambahProduk', $data);
+		$this->load->view('tampilanTambahBanner', $data);
 	}
 	public function tampilanInfoBanner($id){
 
@@ -107,6 +101,9 @@ class C_admin extends CI_Controller {
 			"namaBanner" => $wst[0]['namaBanner'], 
 			"fotoBanner" => $wst[0]['fotoBanner']
 		);
+		$data["sidebar"]="dashboard";
+		$data["menu"]="Banner";
+		$data["title"]="Edit Banner";
 		$this->load->view('tampilanEditBanner',$data);
 		
 	}
@@ -174,12 +171,12 @@ class C_admin extends CI_Controller {
 	public function save_tentang_kami(){
 		$config['upload_path']          = './assets/images/foto/';
 		$config['allowed_types']        = 'gif|jpg|png|jpeg';
-		$config['max_size']             = 5000;
+		$config['max_size']             = 5242880; // 5MB dalam byte
  
 		$this->load->library('upload', $config);
  
 		if ( ! $this->upload->do_upload('berkas')){
-			$error = array('error' => $this->upload->display_errors());
+			$error = $this->upload->display_errors();
 			$this->tambahTentangKami($error);
 		}else{
 			$nama =  $this->input->post('nama');
@@ -202,12 +199,12 @@ class C_admin extends CI_Controller {
 	public function aksi_upload(){
 		$config['upload_path']          = './assets/images/foto/';
 		$config['allowed_types']        = 'gif|jpg|png|jpeg';
-		$config['max_size']             = 5000;
+		$config['max_size']             = 5242880; // 5mb dalam byte
  
 		$this->load->library('upload', $config);
  
 		if ( ! $this->upload->do_upload('berkas')){
-			$error = array('error' => $this->upload->display_errors());
+			$error = $this->upload->display_errors();
 			$this->tampilanTambahBanner($error);
 		}else{
 			$nama =  $this->input->post('nama');
@@ -229,12 +226,12 @@ class C_admin extends CI_Controller {
 	public function aksi_uploadIg(){
 		$config['upload_path']          = './assets/images/foto/';
 		$config['allowed_types']        = 'gif|jpg|png|jpeg';
-		$config['max_size']             = 5000;
+		$config['max_size']             = 5242880; // 5mb dalam byte
  
 		$this->load->library('upload', $config);
  
 		if ( ! $this->upload->do_upload('berkas')){
-			$error = array('error' => $this->upload->display_errors());
+			$error = $this->upload->display_errors();
 			$this->tampilanTambahIg($error);
 		}else{
 			$nama =  $this->input->post('nama');
@@ -258,12 +255,12 @@ class C_admin extends CI_Controller {
 	public function aksi_uploadProduk(){
 		$config['upload_path']          = './assets/images/produk/';
 		$config['allowed_types']        = 'gif|jpg|png|jpeg';
-		$config['max_size']             = 5000;
+		$config['max_size']             = 5242880; // 5mb dalam byte
  
 		$this->load->library('upload', $config);
  
 		if ( ! $this->upload->do_upload('berkas')){
-			$error = array('error' => $this->upload->display_errors());
+			$error = $this->upload->display_errors();
 			$this->load->view('v_upload', $error);
 		}else{
 			$keterangan =  $this->input->post('keterangan');
@@ -285,42 +282,60 @@ class C_admin extends CI_Controller {
 	public function editBanner($id){
 		$config['upload_path']          = './assets/images/foto/';
 		$config['allowed_types']        = 'gif|jpg|png|jpeg';
-		$config['max_size']             = 5000;
+		$config['max_size']             = 5242880; // 5mb dalam byte
  
 		$this->load->library('upload', $config);
- 
-		if ( ! $this->upload->do_upload('berkas')){
-			$error = array('error' => $this->upload->display_errors());
-			$this->tampilanEditBanner($error);
-		}else{
+		$slug =  $this->input->post('slug');
+		if (!empty($_FILES['berkas']['name'])) {
+			if ( ! $this->upload->do_upload('berkas')){
+				$error = $this->upload->display_errors();
+				$this->tampilanEditBanner($error);
+			}else{
+				
+				$nama =  $this->input->post('nama');
+				$upload_data = $this->upload->data();
+				$foto =  $upload_data['file_name'];
+				
+				$this->load->model('m_admin');
 			
+			$data = array(
+				'namaBanner' => $nama,
+				'fotoBanner' => $foto
+				);
+
+				$this->m_admin->update_banner($data,$id,'banner');
+				$data = array('upload_data' => $this->upload->data());
+				redirect('c_admin/tampilanAdmin');
+			}
+		}else{//jika tidak ada file
+		
+				
 			$nama =  $this->input->post('nama');
-			$upload_data = $this->upload->data();
-			$foto =  $upload_data['file_name'];
+			$foto =  $this->input->post('foto');
 			
 			$this->load->model('m_admin');
 		
-		$data = array(
-			'namaBanner' => $nama,
-			'fotoBanner' => $foto
-			);
+			$data = array(
+				'namaBanner' => $nama,
+				'fotoBanner' => $foto
+				);
 
-			$this->m_admin->update_banner($data,$id,'banner');
-			$data = array('upload_data' => $this->upload->data());
-			redirect('c_admin/tampilanAdmin');
-		}
+				$this->m_admin->update_banner($data,$id,'banner');
+				$data = array('upload_data' => $this->upload->data());
+				redirect('c_admin/tampilanAdmin');
+			}
 
 	}
 	
 	public function edit_tentang_kami($id){
 		$config['upload_path']          = './assets/images/foto/';
 		$config['allowed_types']        = 'gif|jpg|png|jpeg';
-		$config['max_size']             = 5000;
+		$config['max_size']             = 5242880; // 5mb dalam byte
  
 		$this->load->library('upload', $config);
  
 		if ( ! $this->upload->do_upload('berkas')){
-			$error = array('error' => $this->upload->display_errors());
+			$error = $this->upload->display_errors();
 			$this->editTentangKami($error);
 		}else{
 			
@@ -349,7 +364,7 @@ class C_admin extends CI_Controller {
 		$this->load->library('upload', $config);
  
 		if ( ! $this->upload->do_upload('berkas')){
-			$error = array('error' => $this->upload->display_errors());
+			$error = $this->upload->display_errors();
 			$this->load->view('v_upload', $error);
 		}else{
 			
@@ -380,7 +395,7 @@ class C_admin extends CI_Controller {
 		$this->load->library('upload', $config);
  
 		if ( ! $this->upload->do_upload('berkas')){
-			$error = array('error' => $this->upload->display_errors());
+			$error = $this->upload->display_errors();
 			$this->load->view('v_upload', $error);
 		}else{
 			
@@ -405,6 +420,12 @@ class C_admin extends CI_Controller {
 	public function hapus(){
 		$id= $this->input->post("id");
 		$this->m_admin->delete($id);
+		echo "{}";
+	}
+
+	public function hapusTentangKami(){
+		$id= $this->input->post("id");
+		$this->m_admin->deleteTentangKami($id);
 		echo "{}";
 	}
 	public function hapusInstagram(){

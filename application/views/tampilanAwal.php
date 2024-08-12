@@ -100,12 +100,12 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan Kami</a>
                         <div class="dropdown-menu border-light m-0">
-                            <a href="produkpelatihan" class="dropdown-item">Freight Forwarding</a>
-                            <a href="asesor" class="dropdown-item">Custom Handling</a>
-                            <a href="asesor" class="dropdown-item">Warehousing</a>
-                            <a href="asesor" class="dropdown-item">Project Logistic</a>
-                            <a href="asesor" class="dropdown-item">Trucking</a>
-                            <a href="asesor" class="dropdown-item">PLB</a>
+                            <a href="<?php echo base_url(); ?>c_web/layananKami/freight_forwarding" class="dropdown-item">Freight Forwarding</a>
+                            <a href="<?php echo base_url(); ?>c_web/layananKami/custome_handling" class="dropdown-item">Custom Handling</a>
+                            <a href="<?php echo base_url(); ?>c_web/layananKami/warehouse" class="dropdown-item">Warehousing</a>
+                            <a href="<?php echo base_url(); ?>c_web/layananKami/project_logistic" class="dropdown-item">Project Logistic</a>
+                            <a href="<?php echo base_url(); ?>c_web/layananKami/trucking" class="dropdown-item">Trucking</a>
+                            <a href="<?php echo base_url(); ?>c_web/layananKami/plb" class="dropdown-item">PLB</a>
                         </div>
                     </div>
                     <a href="#artikel" class="nav-item nav-link">Artikel</a>
@@ -247,9 +247,12 @@
                     </div>
                 </div>
             </div>
-            <!-- Tujuan End -->
-
-            <!-- Projects Start -->
+        </div>
+    </div>
+    <!-- Tentang kami End -->
+     <!-- Layanan kami Start -->
+    <div class="" style="background-color: #ffc701">
+        <div class="container" style="margin-top: 40px; ">
             <div class="container-xxl py-5">
                 <div class="container">
                     <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
@@ -287,8 +290,12 @@
                     </div>
                 </div>
             </div>
-            <!-- Projects End -->
-            <!-- Pelanggan Kami Start -->
+        </div>
+    </div>
+     <!-- Layanan Kami End -->
+    <!-- Pelanggan kami Start -->
+    <div class="container-xxl py-5">
+        <div class="container" style="margin-top: 40px;">
             <div class="container-xxl service py-5">
                 <div class="container">
                     <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
@@ -422,8 +429,8 @@
     </div>
     <!-- Pelanggan Kami End -->
     <!-- Nilai Nilai Perusahaan Start -->
-    <div class="container-xxl feature py-5">
-        <div class="container">
+    <div class="" style="background-color: #ffc701">
+        <div class="container-xxl feature py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Nilai Nilai Perusahaan
@@ -615,139 +622,7 @@
         </div>
     </div>
     <!-- Hubungi Kami End -->
-    <!-- Pengajar & Asesor Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h1 class="display-5 mb-5">Pengajar & Asesor</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">
-                <div class="testimonial-item">
-                    <div class="testimonial-text border rounded p-4 pt-5 mb-5">
-                        <div class="btn-square bg-white border rounded-circle">
-                            <i class="fa fa-quote-right fa-2x text-primary"></i>
-                        </div>
-                        Herry permana adalah sosok pengajar dan asesor berpengalaman dalam industri tambang. Mempunyai
-                        pengetahuan yang luas tentang metodologi terbaik dalam mengelola sumber daya alam.
-                        Siap menjadi sosok Pengajar dan asesor yang menjunjung tinggi kualitas pembelajaran serta
-                        memastikan mutu pendidikan.
-                    </div>
-                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-01.jpg"
-                        alt="">
-                    <h5>Dr.Ing. Herry Permana, ST., Msc</h5>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-text border rounded p-4 pt-5 mb-5">
-                        <div class="btn-square bg-white border rounded-circle">
-                            <i class="fa fa-quote-right fa-2x text-primary"></i>
-                        </div>
-                        Hillarius Petrus adalah seorang pengajar dan asesor yang mengintegrasikan teknik pemeliharaan
-                        terpadu dengan analisis keselamatan dan kesehatan kerja, serta mengoperasikan pelatihan dalam
-                        teknologi pertambangan yang paling mutakhir.
-                        Dengan pengawasan yang terarah untuk perusahaan pertambangan dan analisis investasi.
-                        <br>
-                    </div>
-                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-02.jpg"
-                        alt="">
-                    <h5>Hillarius Petrus De Rosari, S.Sos, MT</h5>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-text border rounded p-4 pt-5 mb-5">
-                        <div class="btn-square bg-white border rounded-circle">
-                            <i class="fa fa-quote-right fa-2x text-primary"></i>
-                        </div>
-                        Mariyanti adalah seorang pengajar dan asesor yang telah memiliki pengalaman selama lebih dari 13
-                        tahun sebagai praktisi pelatih Keselamatan dan Kesehatan Kerja dalam sektor Pertambangan,
-                        Migas serta Lingkungan Hidup (LH) untuk meningkatkan kualitas para pekerja industri.
-                        <br>
-                        <br>
-                    </div>
-                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-03.jpg"
-                        alt="">
-                    <h5>Mariyanti, S.E</h5>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-text border rounded p-4 pt-5 mb-5">
-                        <div class="btn-square bg-white border rounded-circle">
-                            <i class="fa fa-quote-right fa-2x text-primary"></i>
-                        </div>
-                        Seorang pengajar dan asesor dengan latar belakang sebagai Praktisi dan Pengajar Keselamatan dan
-                        Kesehatan Kerja serta memiliki pengalaman praktis yang luas dalam dunia kompetensi, mampu
-                        mengintegrasikan teori dan praktik terkini dalam pembelajaran.
-                        Berkomitmen untuk memahami dan menerapkan praktik K3 yang efektif di tempat kerja.
-                        <br>
-                    </div>
-                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-04.jpg"
-                        alt="">
-                    <h5>Rinto Andrianto,ST., MSi</h5>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-text border rounded p-4 pt-5 mb-5">
-                        <div class="btn-square bg-white border rounded-circle">
-                            <i class="fa fa-quote-right fa-2x text-primary"></i>
-                        </div>
-                        Dengan pengalaman 30 tahun di berbagai bidang strategis posisi di Industri Pertambangan dan
-                        Migas di Indonesia,
-                        Yogi Sasongko merupakan pengajar di sektor pertambangan yang mempunyai komitmen tinggi dalam
-                        kaidah teknis pertambangan.
-                        <br>
-                        <br>
-                        <br>
-                    </div>
-                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-05.jpg"
-                        alt="">
-                    <h5>Ir. Yogi Sasongko, MSc</h5>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-text border rounded p-4 pt-5 mb-5">
-                        <div class="btn-square bg-white border rounded-circle">
-                            <i class="fa fa-quote-right fa-2x text-primary"></i>
-                        </div>
-                        Dengan latar belakang sebagai praktisi dan pengajar sektor pertambangan,
-                        Hadisyah Putra merupakan seorang pengajar yang telah lama berkecimpung dalam ranah pertambangan
-                        dan perencanaan tambang.
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                    </div>
-                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-06.jpg"
-                        alt="">
-                    <h5>Hadisyah Putra, ST</h5>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-text border rounded p-4 pt-5 mb-5">
-                        <div class="btn-square bg-white border rounded-circle">
-                            <i class="fa fa-quote-right fa-2x text-primary"></i>
-                        </div>
-                        Seorang pelatih K3 yang berpengalaman dan berkualifikasi tinggi, siap untuk memberikan pelatihan
-                        yang komprehensif dan efektif dalam keselamatan dan kesehatan kerja.
-                        Dengan pengetahuan mendalam tentang regulasi K3, Hendrajati mampu meningkatkan budaya
-                        keselamatan untuk mengurangi risiko kecelakaan di tempat kerja.
-                    </div>
-                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-07.jpg"
-                        alt="">
-                    <h5>Hendrajati, MM</h5>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-text border rounded p-4 pt-5 mb-5">
-                        <div class="btn-square bg-white border rounded-circle">
-                            <i class="fa fa-quote-right fa-2x text-primary"></i>
-                        </div>
-                        Dengan pengalaman yang luas dan mendalam sebagai seorang asesor serta inspektur tambang, Faisal
-                        memiliki pengetahuan dan pemahaman yang komprehensif
-                        tentang industri pertambangan untuk mengimplementasikan ilmu dalam kerja yang aktual.
-                        <br>
-                        <br>
-                    </div>
-                    <img class="rounded-circle mb-3" src="<?php echo base_url(); ?>asset-landing/img/asesor-08.jpg"
-                        alt="">
-                    <h5>Faisal, T.C</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Pengajar & Asesor End -->
+    
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">

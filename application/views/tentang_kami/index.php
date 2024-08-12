@@ -160,7 +160,7 @@ if($this->session->userdata('username')==null){
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; 2018<a href="https://adminlte.io"></a>.</strong> All rights
+    <strong>Copyright &copy; 2024 <a href="#">RRDesign</a>.</strong> All rights
     reserved.
   </footer>
 
@@ -239,7 +239,7 @@ if($this->session->userdata('username')==null){
   },
     function(){
      $.ajax({
-      url:"<?php echo base_url('c_admin/hapus'); ?>",
+      url:"<?php echo base_url('c_admin/hapusTentangKami'); ?>",
       data:{id:id},
       success: function(){
         alert("Data berhasil dihapus");
