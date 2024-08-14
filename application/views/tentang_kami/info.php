@@ -69,7 +69,7 @@
         <small>Control panel</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="<?php echo base_url();?>admin/adminGuide"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="<?php echo base_url();?>admin/tampilanAdmin"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active"><?= $menu ?></li>
       </ol>
     </section>

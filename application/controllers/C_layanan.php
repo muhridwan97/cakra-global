@@ -104,7 +104,7 @@ class C_layanan extends CI_Controller {
 					'foto' => $foto,
 					'deskripsi' => $deskripsi,
 					'slug' => $slug,
-					'is_warehouse' => $is_warehouse,
+					'is_warehouse' => (int) $is_warehouse,
 					);
 
 				$this->m_layanan->update_data($data,$id,'layanan_kami');
