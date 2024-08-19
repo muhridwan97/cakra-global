@@ -95,14 +95,14 @@
                         <div class="dropdown-menu border-light m-0">
                             <a href="<?php echo base_url(); ?>c_web/layananKami/freight_forwarding" class="dropdown-item">Freight Forwarding</a>
                             <a href="<?php echo base_url(); ?>c_web/layananKami/custome_handling" class="dropdown-item">Custom Handling</a>
-                            <a href="<?php echo base_url(); ?>c_web/layananKami/warehouse" class="dropdown-item">Warehousing</a>
+                            <a href="<?php echo base_url(); ?>c_web/warehouse" class="dropdown-item">Warehousing</a>
                             <a href="<?php echo base_url(); ?>c_web/layananKami/project_logistic" class="dropdown-item">Project Logistic</a>
                             <a href="<?php echo base_url(); ?>c_web/layananKami/trucking" class="dropdown-item">Trucking</a>
                             <a href="<?php echo base_url(); ?>c_web/layananKami/plb" class="dropdown-item">PLB</a>
                         </div>
                     </div>
                     <a href="<?php echo base_url(); ?>#artikel" class="nav-item nav-link">Artikel</a>
-                    <a href="<?php echo base_url(); ?>#hubungi-kami" class="nav-item nav-link">Hubungi Kami</a>
+                    <a href="<?php echo base_url(); ?>c_web/hubungiKami" class="nav-item nav-link">Hubungi Kami</a>
                 </div>
                 <div class="d-none d-lg-flex ms-2">
                     <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="">
@@ -128,10 +128,10 @@
 
     <!-- Freight Forwarding Start -->
     <!-- Projects Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5" style="margin-top: 110px;">
                 <div class="container">
                     <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                        <h1 class="display-5 mb-5">Layanan Kami</h1>
+                        <h1 class="display-5 mb-5">Warehouse</h1>
                     </div>
                     <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.3s">
                     <?php foreach($layanan_kami as $index => $item) { ?>
@@ -142,7 +142,7 @@
                                 <a href="<?php echo base_url(); ?>c_web/layananKami/<?php echo "$item[slug]"?>"><i class="fa fa-link fa-3x text-primary"></i></a>
                             </div>
                             <div class="project-title">
-                                <h4 class="mb-0"><?= $item["nama"] ?></h4>
+                                <h5 class="mb-0"><?= $item["nama"] ?></h5>
                             </div>
                         </div>
                     <?php } ?>

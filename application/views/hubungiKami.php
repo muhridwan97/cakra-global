@@ -91,7 +91,7 @@
                     <a href="<?php echo base_url(); ?>#tentang-kami" class="nav-item nav-link">Tentang Kami</a>
 
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Layanan Kami</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan Kami</a>
                         <div class="dropdown-menu border-light m-0">
                             <a href="<?php echo base_url(); ?>c_web/layananKami/freight_forwarding" class="dropdown-item">Freight Forwarding</a>
                             <a href="<?php echo base_url(); ?>c_web/layananKami/custome_handling" class="dropdown-item">Custom Handling</a>
@@ -102,7 +102,7 @@
                         </div>
                     </div>
                     <a href="<?php echo base_url(); ?>#artikel" class="nav-item nav-link">Artikel</a>
-                    <a href="<?php echo base_url(); ?>c_web/hubungiKami" class="nav-item nav-link">Hubungi Kami</a>
+                    <a href="<?php echo base_url(); ?>c_web/hubungiKami" class="nav-item nav-link active">Hubungi Kami</a>
                 </div>
                 <div class="d-none d-lg-flex ms-2">
                     <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="">
@@ -127,46 +127,89 @@
     <!-- Navbar End -->
 
     <!-- Freight Forwarding Start -->
-    <div class="container-xxl feature py-5" style="margin-top:150px">
-        <div class="wow fadeInUp text-center" data-wow-delay="0.1s">
-            <div class="d-flex flex-column align-items-center">
-                <h5 class="display-5 mb-4">Gallery Detail</h5>
-            </div>
+    <!-- Projects Start -->
+    <div class="container-xxl py-5" style="margin-top: 110px;">
+    <section class="site-section" id="contactus-section" data-aos="fade">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title mb-3">Hubungi Kami</h2>
+          </div>
         </div>
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <img class="img-fluid rounded mb-4" src="<?php echo base_url(); ?>assets/images/foto/<?php echo "$gallery[foto]"?>">
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div id="portfolio-details" class="portfolio-details">
-                        <div class="portfolio-info">
-                            <h3>Project information</h3>
-                            <ul>
-                                <li><strong>Category</strong>: <?= $gallery["kategori"] ?></li>
-                                <li><strong>Client</strong>: <?= $gallery["client"] ?></li>
-                                <li><strong>Project date</strong>: <?php $date = new DateTime($gallery['tanggal_projek']);
-                                        $formattedDate = $date->format('F j, Y');
-                                        echo $formattedDate;
-                                        ?></li>
-                                <li><strong>Project URL</strong>: <a href="<?= $gallery["url"] ?>"><?= $gallery["url"] ?></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class=" rounded p-4">
-                        <div class="mb-4">
-                            <h3 class="text-black"><?= $gallery["judul"] ?></h3>
-                            <p class="mb-4 text-black"></p>
-                            <h5 style="text-align: justify;"><?= $gallery["deskripsi"] ?>
-                            </h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="row mb-5">
+          <div class="col-md-4 text-center">
+            <p class="mb-4">
+              <span class="icon-room d-block h4 text-primary"></span>
+              <span>Bakrie Tower Epicentrum
+                Rasuna Said, Jakarta Selatan
+                Lt 3t Block 3A</span>
+            </p>
+          </div>
+          <div class="col-md-4 text-center">
+            <p class="mb-4">
+              <span class="icon-phone d-block h4 text-primary"></span>
+              <a href="#">+62 21 80868243</a>
+            </p>
+          </div>
+          <div class="col-md-4 text-center">
+            <p class="mb-0">
+              <span class="icon-mail_outline d-block h4 text-primary"></span>
+              <a href="#">operation@cdenergi.com</a>
+            </p>
+          </div>
         </div>
-    </div>
-    <!-- Freight Forwarding End -->
-    
+        <div class="row form-group">
+          <div class="col-md-12">
+            <div data-aos="fade-up" data-aos-delay="100">
+              <a href="http://cdenergi.com/download/companyprofile.pdf" class="btn smoothscroll btn-primary mr-2 mb-2">Download Company Profile</a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mb-5">
+            <form action="mail.php" method="post" class="p-5 bg-white">
+              
+              <h2 class="h4 text-black mb-5">Pesan Untuk Kami</h2> 
+
+
+              <div class="row form-group" style="margin-bottom: 1rem;">
+                
+                <div class="col-md-12">
+                  <label class="text-black" for="email" name="email"  autocomplete="on" required>Nama Email</label> 
+                  <input type="email" id="email" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group" style="margin-bottom: 1rem;">
+                
+                <div class="col-md-12">
+                  <label class="text-black" for="subject">Subjek</label> 
+                  <input type="subject" id="subject" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group" style="margin-bottom: 1rem;">
+                <div class="col-md-12">
+                  <label class="text-black" for="message">Pesan Anda</label> 
+                  <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Tulis Pesan Disini..."></textarea>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Kirim Pesan" class="btn btn-primary btn-md text-white">
+                </div>
+              </div>
+              <br>
+              </form>
+              
+          </div>
+          
+        </div>
+      </div>
+    </section>
+</div>
+            <!-- Projects End -->
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">

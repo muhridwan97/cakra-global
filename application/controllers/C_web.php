@@ -38,6 +38,10 @@ class C_web extends CI_Controller {
 		$data["layanan_kami"]=$this->m_web->get_layanan_warehouse();
 		$this->load->view('warehouse',$data);
 	}
+	public function hubungiKami()
+	{
+		$this->load->view('hubungiKami');
+	}
 	public function gallery_detail($id)
 	{
 		$data["gallery"]=$this->m_web->get_gallery($id);

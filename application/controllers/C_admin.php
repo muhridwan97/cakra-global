@@ -76,6 +76,9 @@ class C_admin extends CI_Controller {
 			"namaBanner" => $wst[0]['namaBanner'], 
 			"fotoBanner" => $wst[0]['fotoBanner']
 		);
+		$data["sidebar"]="dashboard";
+		$data["menu"]="Banner";
+		$data["title"]="Info Banner";
 		$this->load->view('tampilanInfoBanner',$data);
 		
 	}

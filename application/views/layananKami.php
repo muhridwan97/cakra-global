@@ -95,14 +95,14 @@
                         <div class="dropdown-menu border-light m-0">
                             <a href="<?php echo base_url(); ?>c_web/layananKami/freight_forwarding" class="dropdown-item">Freight Forwarding</a>
                             <a href="<?php echo base_url(); ?>c_web/layananKami/custome_handling" class="dropdown-item">Custom Handling</a>
-                            <a href="<?php echo base_url(); ?>c_web/layananKami/warehouse" class="dropdown-item">Warehousing</a>
+                            <a href="<?php echo base_url(); ?>c_web/warehouse" class="dropdown-item">Warehousing</a>
                             <a href="<?php echo base_url(); ?>c_web/layananKami/project_logistic" class="dropdown-item">Project Logistic</a>
                             <a href="<?php echo base_url(); ?>c_web/layananKami/trucking" class="dropdown-item">Trucking</a>
                             <a href="<?php echo base_url(); ?>c_web/layananKami/plb" class="dropdown-item">PLB</a>
                         </div>
                     </div>
                     <a href="<?php echo base_url(); ?>#artikel" class="nav-item nav-link">Artikel</a>
-                    <a href="<?php echo base_url(); ?>#hubungi-kami" class="nav-item nav-link">Hubungi Kami</a>
+                    <a href="<?php echo base_url(); ?>c_web/hubungiKami" class="nav-item nav-link">Hubungi Kami</a>
                 </div>
                 <div class="d-none d-lg-flex ms-2">
                     <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="">
