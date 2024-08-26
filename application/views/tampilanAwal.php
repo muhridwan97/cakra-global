@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="<?php echo base_url(); ?>asset-landing/img/trucking.jpg" rel="icon">
+    <link href="<?php echo base_url(); ?>asset-landing/img/fav-log.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,17 +76,17 @@
     <div class="container-fluid fixed-top px-0 wow fadeIn bg-white" data-wow-delay="0.1s">
         <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
             <div class="col-lg-6 px-5 text-start">
-                <small><i class="fa fa-map-marker-alt text-primary me-2"></i>Bakrie Tower Epicentrum</small>
+                <small><i class="fa fa-map-marker-alt text-primary me-2"></i>Kebon Bawang</small>
             </div>
             <div class="col-lg-6 px-5 text-end">
-                <small><i class="fa fa-envelope text-primary me-2"></i>daftar@cde-learningcenter.id</small>
-                <small class="ms-4"><i class="fa fa-mobile-alt text-primary me-2"></i>+6281210006323</small>
+                <small><i class="fa fa-envelope text-primary me-2"></i>axel.rizky@cakralogistic.co.id</small>
+                <small class="ms-4"><i class="fa fa-mobile-alt text-primary me-2"></i>+62-2121-6977-04</small>
             </div>
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-            <a href="index" class="navbar-brand ms-4 ms-lg-0">
-                <img src="<?php echo base_url(); ?>asset-landing/img/logo-01.png" class="navbar-logo">
+        <a href="<?php echo base_url(); ?>" class="navbar-brand ms-4 ms-lg-0">
+        <img src="<?php echo base_url(); ?>asset-landing/img/logo-01.png" class="navbar-logo">
             </a>
             <button type="button" class="navbar-toggler me-4 ms-auto" data-bs-toggle="collapse"
                 data-bs-target="#navbarCollapse">
@@ -94,8 +94,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index" class="nav-item nav-link active">Beranda</a>
-                    <a href="#tentang-kami" class="nav-item nav-link">Tentang Kami</a>
+                <a href="<?php echo base_url(); ?>" class="nav-item nav-link">Beranda</a>
+                <a href="<?php echo base_url(); ?>#tentang-kami" class="nav-item nav-link">Tentang Kami</a>
 
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan Kami</a>
@@ -112,18 +112,18 @@
                     <a href="<?php echo base_url(); ?>c_web/hubungiKami" class="nav-item nav-link">Hubungi Kami</a>
                 </div>
                 <div class="d-none d-lg-flex ms-2">
-                    <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="">
+                    <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="#">
                         <small class="fab fa-facebook-f text-primary"></small>
                     </a>
                     <a class="btn btn-light btn-sm-square rounded-circle ms-3"
-                        href="https://www.instagram.com/cde_learning/" target="_blank">
+                        href="#">
                         <small class="fab fa-instagram text-primary"></small>
                     </a>
-                    <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="">
+                    <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="#">
                         <small class="fab fa-youtube text-primary"></small>
                     </a>
                     <a class="btn btn-light btn-sm-square rounded-circle ms-3"
-                        href="https://api.whatsapp.com/send/?phone=6281210006323&text&type=phone_number&app_absent=0"
+                        href="https://api.whatsapp.com/send?phone=+6285770552864&text=Hallo%20Cakra%20Global%20Logistik"
                         target="_blank">
                         <small class="fab fa-whatsapp text-primary"></small>
                     </a>
@@ -133,7 +133,7 @@
     </div>
     <!-- Navbar End -->
 
-    <!-- Carousel Start -->
+    <!-- Banner Start -->
     <div class="container-fluid p-0 mb-5 wow fadeIn carousel-top" data-wow-delay="0.1s">
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -168,9 +168,9 @@
             </div>
         </div>
     </div>
-    <!-- Carousel End -->
+    <!-- Banner End -->
 
-    <!-- Tujuan Start -->
+    <!-- Tentang Kami Start -->
     <div class="container-xxl py-5" id="tentang-kami">
         <div class="container" style="margin-top: 40px;">
             <div class="row g-4 align-items-center mb-4">
@@ -270,7 +270,7 @@
                                     <a href="<?php echo base_url(); ?>c_web/warehouse"><i class="fa fa-link fa-3x text-primary"></i></a>
                                 </div>
                                 <div class="project-title">
-                                    <h4 class="mb-0">Warehousing</h4>
+                                    <h5 class="mb-0">Warehouse</h5>
                                 </div>
                             </div>
                             <?php }else{ ?>
@@ -283,7 +283,7 @@
                                         class="fa fa-link fa-3x text-primary"></i></a>
                             </div>
                             <div class="project-title">
-                                <h4 class="mb-0"><?= $item["nama"] ?></h4>
+                                <h5 class="mb-0"><?= $item["nama"] ?></h5>
                             </div>
                         </div>
                         <?php } } ?>
@@ -336,7 +336,7 @@
                                         <div class="col-md-6" style="min-height: 350px;">
                                             <div class="position-relative h-100">
                                                 <img class="position-absolute rounded w-100 h-100"
-                                                    src="<?php echo base_url(); ?>asset-landing/img/plb.jpg"
+                                                    src="<?php echo base_url(); ?>asset-landing/img/manufaktur.jpg"
                                                     style="object-fit: cover;" alt="">
                                             </div>
                                         </div>
@@ -354,7 +354,7 @@
                                         <div class="col-md-6" style="min-height: 350px;">
                                             <div class="position-relative h-100">
                                                 <img class="position-absolute rounded w-100 h-100"
-                                                    src="<?php echo base_url(); ?>asset-landing/img/ffw.jpg"
+                                                    src="<?php echo base_url(); ?>asset-landing/img/perdagangan.jpg"
                                                     style="object-fit: cover;" alt="">
                                             </div>
                                         </div>
@@ -372,7 +372,7 @@
                                         <div class="col-md-6" style="min-height: 350px;">
                                             <div class="position-relative h-100">
                                                 <img class="position-absolute rounded w-100 h-100"
-                                                    src="<?php echo base_url(); ?>asset-landing/img/ffw.jpg"
+                                                    src="<?php echo base_url(); ?>asset-landing/img/retail.jpg"
                                                     style="object-fit: cover;" alt="">
                                             </div>
                                         </div>
@@ -390,7 +390,7 @@
                                         <div class="col-md-6" style="min-height: 350px;">
                                             <div class="position-relative h-100">
                                                 <img class="position-absolute rounded w-100 h-100"
-                                                    src="<?php echo base_url(); ?>asset-landing/img/ffw.jpg"
+                                                    src="<?php echo base_url(); ?>asset-landing/img/perusahaanlogistik.jpg"
                                                     style="object-fit: cover;" alt="">
                                             </div>
                                         </div>
@@ -408,7 +408,7 @@
                                         <div class="col-md-6" style="min-height: 350px;">
                                             <div class="position-relative h-100">
                                                 <img class="position-absolute rounded w-100 h-100"
-                                                    src="<?php echo base_url(); ?>asset-landing/img/trucking.jpg"
+                                                    src="<?php echo base_url(); ?>asset-landing/img/pemerintah.jpg"
                                                     style="object-fit: cover;" alt="">
                                             </div>
                                         </div>
@@ -481,17 +481,15 @@
         </div>
     </div>
     <!-- Features End -->
-    <!--Why choose ud start -->
+    <!--Komitment Kami start -->
     <div class="container-fluid overflow-hidden my-5 px-lg-0 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container feature px-lg-0">
             <div class="row g-0 mx-lg-0">
                 <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="p-lg-5 ps-lg-0">
                         <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
-                        <h1 class="display-5 mb-5">Why Choose Us</h1>
-                        <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam
-                            amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat
-                            amet</p>
+                        <h1 class="display-5 mb-5">Komitmen Kami</h1>
+                        <p class="mb-4 pb-2"style="text-align: justify;">PT Cakra Global Logistik berkomitmen untuk memberikan solusi logistik kelas dunia yang memenuhi kebutuhan pelanggan kami. Kami terus berinovasi dan meningkatkan layanan kami untuk memastikan kepuasan dan kesuksesan Anda.</p>
 
                     </div>
                 </div>
@@ -505,7 +503,7 @@
             </div>
         </div>
     </div>
-    <!-- Why choose us end -->
+    <!-- Komitmen Kami end -->
 
     <!-- Artikel Start -->
     <section class="news-section section-padding wow fadeInUp" data-wow-delay="0.1s" id="artikel">
@@ -629,46 +627,32 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Alamat</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Bakrie Tower Lt.3 Unit 3A</p>
-                    <p style="text-align: justify;">Jl. Epicentrum Utama Raya No.2
-                        Kuningan, Setiabudi,
-                        Jakarta Selatan 12940.</p>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3966.337060755108!2d106.8319136!3d-6.2192067!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3f65ff69f6d%3A0xe31b5c3ce0b14b41!2sBakrie%20Tower!5e0!3m2!1sid!2sid!4v1719148955545!5m2!1sid!2sid"
-                        width="320" height="150" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Kebon Bawang VIII No.20</p>
+                    <p style="text-align: justify;">RT.19/RW.1, Kb. Bawang, Kec. Tj. Priok, Jakarta Utara</p>
                     <div class="d-flex pt-2">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Tautan</h4>
-                    <a class="btn btn-link" href="tentangkami">Tentang Kami</a>
-                    <a class="btn btn-link" href="tujuan">Tujuan</a>
-                    <a class="btn btn-link" href="produkpelatihan">Produk Pelatihan</a>
+                    <h4 class="text-white mb-4">Link</h4>
+                    <a class="btn btn-link" href="<?php echo base_url(); ?>#tentang-kami">Tentang Kami</a>
+                    <a class="btn btn-link" href="<?php echo base_url(); ?>c_web/artikel">Artikel</a>
+                    <a class="btn btn-link" href="<?php echo base_url(); ?>c_web/hubungiKami">Hubungi Kami</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Tautan</h4>
-                    <a class="btn btn-link" href="asesor">Pengajar & Asesor</a>
-                    <a class="btn btn-link" href="hubungikami">Hubungi Kami</a>
+                    <h4 class="text-white mb-4">Layanan Kami<h4>
+                    <a class="btn btn-link" href="<?php echo base_url(); ?>c_web/layananKami/freight_forwarding">Freight Forwarding</a>
+                    <a class="btn btn-link" href="<?php echo base_url(); ?>c_web/layananKami/custome_handling">Custom Handling</a>
+                    <a class="btn btn-link" href="<?php echo base_url(); ?>c_web/layananKami/c_web/warehouse">Warehouse</a>
+                    <a class="btn btn-link" href="<?php echo base_url(); ?>c_web/layananKami/project_logistic">Project Logistic</a>
+                    <a class="btn btn-link" href="<?php echo base_url(); ?>c_web/layananKami/trucking">Trucking</a>
+                    <a class="btn btn-link" href="<?php echo base_url(); ?>c_web/layananKami/plb">PLB</a>
+
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Informasi</h4>
-                    <p class="mb-2"><i class="fa fa-globe me-3"></i><a
-                            href="http://cde-learningcenter.id/">cde-learningcenter.id</a></p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>daftar@cde-learningcenter.id</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+6281210006323</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2"
-                            href="https://api.whatsapp.com/send/?phone=6281210006323&text&type=phone_number&app_absent=0"
-                            target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2"
-                            href="https://www.instagram.com/cde_learning/" target="_blank"><i
-                                class="fab fa-instagram"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i
-                                class="fab fa-youtube"></i></a>
-                    </div>
+                    <p class="mb-2"><i class="fa fa-globe me-3"></i><a href="">cakralogistic.co.id</a></p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>axel.rizky@cakralogistic.co.id</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+62-2121-6977-04</p>
                     <div class="position-relative w-100">
                     </div>
                 </div>
@@ -686,8 +670,7 @@
                     &copy; <a class="border-bottom" href="index">Cakra Global Logistik</a>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Website By : RAG
+                    Website by : RR DESIGN
                 </div>
             </div>
         </div>

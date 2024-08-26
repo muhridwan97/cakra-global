@@ -5,9 +5,9 @@ services:
       context: ./
       dockerfile: ./docker-config/php/php.dockerfile
     container_name: cakra-global
-    working_dir: /d/php-dev/cakra-global/
+    working_dir: /var/www/html
     volumes:
-      - ./:/d/php-dev/cakra-global/
+      - ./:/var/www/html
     networks:
       - app-network
     links:
@@ -16,6 +16,8 @@ services:
       - database
     environment:
       - TZ=Asia/Jakarta
+    ports:
+      - "9000:9000"  # Port untuk PHP-FPM
   
   database:
     image: mariadb
@@ -26,41 +28,43 @@ services:
       - "3306:3306"
     environment:
       MYSQL_DATABASE: cakra-global
-      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_USER: cakra-global
+      MYSQL_PASSWORD: Cakraglobal888
+      MYSQL_ROOT_PASSWORD: Cakraglobal888
     volumes:
       - dbdata:/var/lib/mysql/
       - ./docker-config/mysql/db:/docker-entrypoint-initdb.d
     networks:
       - app-network
 
-  # phpmyadmin:
-  #   depends_on:
-  #     - database
-  #   image: phpmyadmin
-  #   restart: always
-  #   ports:
-  #     - "8090:80"
-  #   environment:
-  #     PMA_HOST: database
-  #     MYSQL_ROOT_PASSWORD: 12345
-  #   networks:
-  #     - app-network
-
-  web:
-    image: nginx:latest
-    container_name: cakra-global-webserver
-    volumes:
-      - ./docker-config/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./:/d/php-dev/cakra-global/
+  phpmyadmin:
+    depends_on:
+      - database
+    image: phpmyadmin
+    restart: always
     ports:
-      - "8080:80"
+      - "8090:80"
+    environment:
+      PMA_HOST: database
+      MYSQL_ROOT_PASSWORD: Cakraglobal888
     networks:
       - app-network
-    depends_on:
-      - php_fpm
-      - database
-    environment:
-      - TZ=Asia/Jakarta
+
+  # web:
+  #   image: nginx:latest
+  #   container_name: cakra-global-webserver
+  #   volumes:
+  #     - ./docker-config/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+  #     - ./:/var/www/html
+  #   ports:
+  #     - "8080:80"
+  #   networks:
+  #     - app-network
+  #   depends_on:
+  #     - php_fpm
+  #     - database
+  #   environment:
+  #     - TZ=Asia/Jakarta
 
 networks:
   app-network:

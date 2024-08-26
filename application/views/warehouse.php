@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CDE - Learning Center</title>
+    <title>Cakra Global Logistik</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -69,11 +69,11 @@
     <div class="container-fluid fixed-top px-0 wow fadeIn bg-white" data-wow-delay="0.1s">
         <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
             <div class="col-lg-6 px-5 text-start">
-                <small><i class="fa fa-map-marker-alt text-primary me-2"></i>Bakrie Tower Epicentrum</small>
+                <small><i class="fa fa-map-marker-alt text-primary me-2"></i>Kebon Bawang</small>
             </div>
             <div class="col-lg-6 px-5 text-end">
-                <small><i class="fa fa-envelope text-primary me-2"></i>daftar@cde-learningcenter.id</small>
-                <small class="ms-4"><i class="fa fa-mobile-alt text-primary me-2"></i>+6281210006323</small>
+                <small><i class="fa fa-envelope text-primary me-2"></i>axel.rizky@cakralogistic.co.id</small>
+                <small class="ms-4"><i class="fa fa-mobile-alt text-primary me-2"></i>+62-2121-6977-04</small>
             </div>
         </div>
 
