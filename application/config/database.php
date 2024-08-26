@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '127.0.0.1',
+	'hostname' => '172.18.0.1',
 	'username' => 'cakra-global',
 	'password' => 'Cakraglobal888',
 	'database' => 'cakra-global',
