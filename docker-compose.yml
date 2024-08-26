@@ -50,21 +50,21 @@ services:
     networks:
       - app-network
 
-  # web:
-  #   image: nginx:latest
-  #   container_name: cakra-global-webserver
-  #   volumes:
-  #     - ./docker-config/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
-  #     - ./:/var/www/html
-  #   ports:
-  #     - "8080:80"
-  #   networks:
-  #     - app-network
-  #   depends_on:
-  #     - php_fpm
-  #     - database
-  #   environment:
-  #     - TZ=Asia/Jakarta
+  web:
+    image: nginx:latest
+    container_name: cakra-global-webserver
+    volumes:
+      - ./docker-config/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./:/var/www/html
+    ports:
+      - "8080:80"
+    networks:
+      - app-network
+    depends_on:
+      - php_fpm
+      - database
+    environment:
+      - TZ=Asia/Jakarta
 
 networks:
   app-network:
