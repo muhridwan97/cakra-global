@@ -18,5 +18,8 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 # Salin file php.ini kustom
 COPY ./docker-config/php/php.ini /usr/local/etc/php/conf.d/
 
+# Salin file konfigurasi PHP-FPM kustom
+COPY ./docker-config/php/www.conf /usr/local/etc/php-fpm.d/www.conf
+
 EXPOSE 9000
 CMD ["php-fpm"]
