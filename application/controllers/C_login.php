@@ -112,11 +112,13 @@ class c_login extends CI_Controller {
 	}
 	public function logout()
 	{
+		$home = base_url();
 		$this->session->sess_destroy();
 		redirect($home."welcome/");
 	}
 	public function logoutAdmin()
 	{
+		$home = base_url();
 		$this->session->sess_destroy();
 		redirect($home."c_login/tampilanLoginAdmin");
 	}
