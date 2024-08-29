@@ -28,7 +28,7 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Informasi</h4>
                     <p class="mb-2"><i class="fa fa-globe me-3"></i><a href="">cakralogistic.co.id</a></p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>axel.rizky@cakralogistic.co.id</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>marketing@cakralogistic.co.id</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+62-2121-6977-04</p>
                     <div class="position-relative w-100">
                     </div>

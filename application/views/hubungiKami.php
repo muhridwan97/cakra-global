@@ -36,6 +36,9 @@
     <link href="<?php echo base_url(); ?>asset-landing/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>asset-landing/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>asset-landing/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- pop up-->
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/sweetalert/sweetalert.css'); ?>">
+  <script type="text/javascript" src="<?php echo base_url('assets/sweetalert/sweetalert.min.js'); ?>"></script>
 
     <!-- Template Stylesheet -->
     <style>
@@ -69,11 +72,11 @@
     <div class="container-fluid fixed-top px-0 wow fadeIn bg-white" data-wow-delay="0.1s">
         <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
             <div class="col-lg-6 px-5 text-start">
-                <small><i class="fa fa-map-marker-alt text-primary me-2"></i>Kebon Bawang</small>
+                <small><i class="fa fa-location-arrow text-primary me-2"></i>Kebon Bawang</small>
             </div>
             <div class="col-lg-6 px-5 text-end">
-                <small><i class="fa fa-envelope text-primary me-2"></i>axel.rizky@cakralogistic.co.id</small>
-                <small class="ms-4"><i class="fa fa-mobile-alt text-primary me-2"></i>+62-2121-6977-04</small>
+                <small><i class="fa fa-envelope text-primary me-2"></i>marketing@cakralogistic.co.id</small>
+                <small class="ms-4"><i class="fa fa-phone text-primary me-2"></i>+62-2121-6977-04</small>
             </div>
         </div>
 
@@ -152,13 +155,13 @@
           <div class="col-md-4 text-center">
             <p class="mb-0">
               <span class="icon-mail_outline d-block h4 text-primary"></span>
-              <a href="#">axel.rizky@cakralogistic.co.id</a>
+              <a href="#">marketing@cakralogistic.co.id</a>
             </p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 mb-5">
-            <form action="mail.php" method="post" class="p-5 bg-white">
+            <form action="<?php echo base_url(); ?>c_web/send_email" method="post" class="p-5 bg-white" enctype="multipart/form-data">
               
               <h2 class="h4 text-black mb-5">Pesan Untuk Kami</h2> 
 
@@ -167,7 +170,7 @@
                 
                 <div class="col-md-12">
                   <label class="text-black" for="email" name="email"  autocomplete="on" required>Nama Email</label> 
-                  <input type="email" id="email" class="form-control">
+                  <input type="email" id="email" name="email" class="form-control">
                 </div>
               </div>
 
@@ -175,7 +178,7 @@
                 
                 <div class="col-md-12">
                   <label class="text-black" for="subject">Subjek</label> 
-                  <input type="subject" id="subject" class="form-control">
+                  <input type="subject" id="subject" name="subject" class="form-control">
                 </div>
               </div>
 

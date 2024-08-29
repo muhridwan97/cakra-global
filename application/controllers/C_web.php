@@ -20,6 +20,46 @@ class c_web extends CI_Controller {
 		$data["artikel_popular"]=$this->m_web->get_artikel_popular();
 		$this->load->view('tampilanAwal',$data);
 	}
+	public function send_email() {
+        $this->load->config('email');
+        $this->load->library('email');
+    
+		// Ambil data dari form
+		$email = $this->input->post('email');
+		$subject = $this->input->post('subject');
+		$message = $this->input->post('message');
+		
+		$from = 'auto-replay@hijoy.id'; // Gunakan alamat email yang sah
+		$from_name = 'Customer'; // Nama pengirim yang sesuai
+		$to = 'ranggaaryagafur@gmail.com'; // Alamat penerima
+
+		// Set pengirim, balasan, penerima, subjek, dan pesan
+		$this->email->from($from, $from_name);
+		$this->email->reply_to($email, 'Reply To Name'); // Atur sesuai kebutuhan
+		$this->email->to($to);
+		$this->email->subject($subject);
+
+		// Data untuk email template
+		$emailData = [
+			'title' => $subject,
+			'name' => $email,
+			'email' => $to,
+			'content' => $message
+		];
+
+		// Muat view email dan kirim
+		$this->email->message($this->load->view('email/basic', $emailData, TRUE));
+
+		// Kirim email dan tampilkan hasil
+		if ($this->email->send()) {
+			$data["redirect"] = base_url().'c_web/hubungiKami';
+			$data["error"] = 'Email berahasil Dikirim!';
+			$this->load->view('email/waiting',$data);
+		} else {
+			$data["error"] =  $this->email->print_debugger();
+			$this->load->view('email/waiting',$data);
+		}
+    }
 	public function tampilanHome()
 	{
 		$data["banner"]=$this->m_web->get_banner();

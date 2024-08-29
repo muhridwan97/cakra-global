@@ -5,8 +5,11 @@
     <meta charset="utf-8">
     <title>Cakra Global Logistik</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta name="description" content="PT Cakra Global Logistik didirikan pada tahun 2024 dengan komitmen untuk menjadi mitra terdepan dalam solusi logistik global.">
+    <meta name="keywords" content="Cakra Global Logistik,PLB, PLB murah, solusi impor, kebutuhan proses PI, pengurusan PI, PLB alat berat, PLB industri, gudang umum open yard, konsultasi import, Pusat Logistik Berikat, Freight Forwarding, Warehousing,Custom Handling, Project Logistik, Trucking">
+    <meta name="copyright" content="Cakra Global Logistik">
+    <meta name="author" content="Cakra Global Logistik">
+    <meta name="language" content="id">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -38,6 +41,11 @@
     <link href="<?php echo base_url(); ?>asset-landing/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
+     <!-- Whatsapp -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=+6285770552864&text=Hello%20Cakra%20Global%20Logistik" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+    </a>
     <style>
     .carousel-top {
         margin-top: 120px;
@@ -69,11 +77,11 @@
     <div class="container-fluid fixed-top px-0 wow fadeIn bg-white" data-wow-delay="0.1s">
         <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
             <div class="col-lg-6 px-5 text-start">
-                <small><i class="fa fa-map-marker-alt text-primary me-2"></i>Kebon Bawang</small>
+                <small><i class="fa fa-location-arrow text-primary me-2"></i>Kebon Bawang</small>
             </div>
             <div class="col-lg-6 px-5 text-end">
-                <small><i class="fa fa-envelope text-primary me-2"></i>axel.rizky@cakralogistic.co.id</small>
-                <small class="ms-4"><i class="fa fa-mobile-alt text-primary me-2"></i>+62-2121-6977-04</small>
+                <small><i class="fa fa-envelope text-primary me-2"></i>marketing@cakralogistic.co.id</small>
+                <small class="ms-4"><i class="fa fa-phone text-primary me-2"></i>+62-2121-6977-04</small>
             </div>
         </div>
 
