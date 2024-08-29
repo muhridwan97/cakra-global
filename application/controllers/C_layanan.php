@@ -92,7 +92,8 @@ class c_layanan extends CI_Controller {
 		if (!empty($_FILES['berkas']['name'])) {
 			if ( ! $this->upload->do_upload('berkas')){
 				$error = $this->upload->display_errors();
-				$this->editLayananKami($slug, $id, $error);
+				echo $error;
+				// $this->editLayananKami($slug, $id, $error);
 			}else{
 				$nama =  $this->input->post('nama');
 				$deskripsi =  $this->input->post('deskripsi');
