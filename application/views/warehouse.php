@@ -158,75 +158,10 @@
                 </div>
             </div>
             <!-- Projects End -->
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Alamat</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Bakrie Tower Lt.3 Unit 3A</p>
-                    <p style="text-align: justify;">Jl. Epicentrum Utama Raya No.2
-                        Kuningan, Setiabudi,
-                        Jakarta Selatan 12940.</p>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3966.337060755108!2d106.8319136!3d-6.2192067!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3f65ff69f6d%3A0xe31b5c3ce0b14b41!2sBakrie%20Tower!5e0!3m2!1sid!2sid!4v1719148955545!5m2!1sid!2sid"
-                        width="320" height="150" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <div class="d-flex pt-2">
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Tautan</h4>
-                    <a class="btn btn-link" href="tentangkami">Tentang Kami</a>
-                    <a class="btn btn-link" href="tujuan">Tujuan</a>
-                    <a class="btn btn-link" href="produkpelatihan">Produk Pelatihan</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Tautan</h4>
-                    <a class="btn btn-link" href="asesor">Pengajar & Asesor</a>
-                    <a class="btn btn-link" href="hubungikami">Hubungi Kami</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Informasi</h4>
-                    <p class="mb-2"><i class="fa fa-globe me-3"></i><a
-                            href="http://cde-learningcenter.id/">cde-learningcenter.id</a></p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>daftar@cde-learningcenter.id</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+6281210006323</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2"
-                            href="https://api.whatsapp.com/send/?phone=6281210006323&text&type=phone_number&app_absent=0"
-                            target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2"
-                            href="https://www.instagram.com/cde_learning/" target="_blank"><i
-                                class="fab fa-instagram"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i
-                                class="fab fa-youtube"></i></a>
-                    </div>
-                    <div class="position-relative w-100">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="index">CDE Learning Center</a>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Website By : RAG
-                </div>
-            </div>
-        </div>
-    </div>
+    
+    <?php
+    include_once 'v_landing_footer.php';
+    ?>
     <!-- Copyright End -->
 
 
