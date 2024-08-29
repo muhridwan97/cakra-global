@@ -5,8 +5,11 @@
     <meta charset="utf-8">
     <title>Cakra Global Logistik</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta name="description" content="PT Cakra Global Logistik didirikan pada tahun 2024 dengan komitmen untuk menjadi mitra terdepan dalam solusi logistik global.">
+    <meta name="keywords" content="Cakra Global Logistik,PLB, PLB murah, solusi impor, kebutuhan proses PI, pengurusan PI, PLB alat berat, PLB industri, gudang umum open yard, konsultasi import, Pusat Logistik Berikat, Freight Forwarding, Warehousing,Custom Handling, Project Logistik, Trucking">
+    <meta name="copyright" content="Cakra Global Logistik">
+    <meta name="author" content="Cakra Global Logistik">
+    <meta name="language" content="id">
 
     <!-- Favicon -->
     <link href="<?php echo base_url(); ?>asset-landing/img/fav-log.png" rel="icon">
