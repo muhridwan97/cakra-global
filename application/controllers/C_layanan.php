@@ -28,7 +28,7 @@ class c_layanan extends CI_Controller {
 		$data["error"]=$error;
 		$this->load->view('layanan_kami/tambah', $data);
 	}
-	public function editLayananKami($slug, $id){
+	public function editLayananKami($slug, $id, $error=''){
 
 		$wst = $this->m_layanan->get_layanan_kami("where id='$id'");
 		$data = array(
@@ -43,6 +43,7 @@ class c_layanan extends CI_Controller {
 		$modified_string = strtoupper(str_replace('_', ' ', $slug));
 		$data["menu"]=$modified_string;
 		$data["title"]="Edit Layanan ".$modified_string;
+		$data["error"]=$error;
 		$this->load->view('layanan_kami/edit',$data);
 		
 	}
@@ -91,7 +92,7 @@ class c_layanan extends CI_Controller {
 		if (!empty($_FILES['berkas']['name'])) {
 			if ( ! $this->upload->do_upload('berkas')){
 				$error = $this->upload->display_errors();
-				$this->editLayananKami($slug, $error);
+				$this->editLayananKami($slug, $id, $error);
 			}else{
 				$nama =  $this->input->post('nama');
 				$deskripsi =  $this->input->post('deskripsi');
@@ -109,7 +110,7 @@ class c_layanan extends CI_Controller {
 
 				$this->m_layanan->update_data($data,$id,'layanan_kami');
 				$data = array('upload_data' => $this->upload->data());
-				redirect('c_layanan/layananKami/'.$slug);
+				redirect('c_layanan/layananKami/'.$slug.'/'.$id);
 			}
 		}else{//jika tidak ada file
 			
@@ -128,7 +129,7 @@ class c_layanan extends CI_Controller {
 
 			$this->m_layanan->update_data($data,$id,'layanan_kami');
 			$data = array('upload_data' => $this->upload->data());
-			redirect('c_layanan/layananKami/'.$slug);
+			redirect('c_layanan/layananKami/'.$slug.'/'.$id);
 		}
 
 	}
