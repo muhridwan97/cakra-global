@@ -1,6 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+// Tambahkan ob_start di awal untuk menangani output buffering
+ob_start();
+
 class c_login extends CI_Controller {
 
 	public function __construct()
