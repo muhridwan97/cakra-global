@@ -19,7 +19,7 @@
                     <h4 class="text-white mb-4">Layanan Kami<h4>
                     <a class="btn btn-link" href="<?php echo base_url(); ?>c_web/layananKami/freight_forwarding">Freight Forwarding</a>
                     <a class="btn btn-link" href="<?php echo base_url(); ?>c_web/layananKami/custome_handling">Custom Handling</a>
-                    <a class="btn btn-link" href="<?php echo base_url(); ?>c_web/layananKami/c_web/warehouse">Warehouse</a>
+                    <a class="btn btn-link" href="<?php echo base_url(); ?>c_web/layananKami/warehouse">Warehouse</a>
                     <a class="btn btn-link" href="<?php echo base_url(); ?>c_web/layananKami/project_logistic">Project Logistic</a>
                     <a class="btn btn-link" href="<?php echo base_url(); ?>c_web/layananKami/trucking">Trucking</a>
                     <a class="btn btn-link" href="<?php echo base_url(); ?>c_web/layananKami/plb">PLB</a>
