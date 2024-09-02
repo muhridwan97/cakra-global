@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Cakra Global Logistik</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <<meta name="description" content="PT Cakra Global Logistik didirikan pada tahun 2024 dengan komitmen untuk menjadi mitra terdepan dalam solusi logistik global.">
+    <meta name="description" content="PT Cakra Global Logistik didirikan pada tahun 2024 dengan komitmen untuk menjadi mitra terdepan dalam solusi logistik global.">
     <meta name="keywords" content="Cakra Global Logistik,PLB, PLB murah, solusi impor, kebutuhan proses PI, pengurusan PI, PLB alat berat, PLB industri, gudang umum open yard, konsultasi import, Pusat Logistik Berikat, Freight Forwarding, Warehousing,Custom Handling, Project Logistik, Trucking">
     <meta name="copyright" content="Cakra Global Logistik">
     <meta name="author" content="Cakra Global Logistik">
@@ -45,9 +45,8 @@
 
     <!-- Template Stylesheet -->
      <!-- Whatsapp -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <a href="https://api.whatsapp.com/send?phone=+6285770552864&text=Hello%20Cakra%20Global%20Logistik" class="float" target="_blank">
-    <i class="fa fa-whatsapp my-float"></i>
+    <i class="fab fa-whatsapp my-float"></i>
     </a>
     <style>
     .carousel-top {

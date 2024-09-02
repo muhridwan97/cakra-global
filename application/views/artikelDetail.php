@@ -45,12 +45,10 @@
     <link href="<?php echo base_url(); ?>asset-landing/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-         <!-- Whatsapp -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+     <!-- Whatsapp -->
     <a href="https://api.whatsapp.com/send?phone=+6285770552864&text=Hello%20Cakra%20Global%20Logistik" class="float" target="_blank">
-    <i class="fa fa-whatsapp my-float"></i>
+    <i class="fab fa-whatsapp my-float"></i>
     </a>
-    <style>
 
     <style>
     .carousel-top {

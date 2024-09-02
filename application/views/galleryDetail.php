@@ -37,6 +37,10 @@
     <link href="<?php echo base_url(); ?>asset-landing/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>asset-landing/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+     <!-- Whatsapp -->
+     <a href="https://api.whatsapp.com/send?phone=+6285770552864&text=Hello%20Cakra%20Global%20Logistik" class="float" target="_blank">
+    <i class="fab fa-whatsapp my-float"></i>
+    </a>
     <!-- Template Stylesheet -->
     <style>
     .carousel-top {

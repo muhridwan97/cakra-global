@@ -31,7 +31,7 @@ class c_web extends CI_Controller {
 		
 		$from = 'auto-replay@hijoy.id'; // Gunakan alamat email yang sah
 		$from_name = 'Customer'; // Nama pengirim yang sesuai
-		$to = 'ranggaaryagafur@gmail.com'; // Alamat penerima
+		$to = 'marketing@cakralogistic.co.id'; // Alamat penerima
 
 		// Set pengirim, balasan, penerima, subjek, dan pesan
 		$this->email->from($from, $from_name);

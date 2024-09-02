@@ -43,6 +43,10 @@
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/sweetalert/sweetalert.css'); ?>">
   <script type="text/javascript" src="<?php echo base_url('assets/sweetalert/sweetalert.min.js'); ?>"></script>
 
+     <!-- Whatsapp -->
+     <a href="https://api.whatsapp.com/send?phone=+6285770552864&text=Hello%20Cakra%20Global%20Logistik" class="float" target="_blank">
+    <i class="fab fa-whatsapp my-float"></i>
+    </a>
     <!-- Template Stylesheet -->
     <style>
     .carousel-top {
@@ -173,7 +177,7 @@
                 
                 <div class="col-md-12">
                   <label class="text-black" for="email" name="email"  autocomplete="on" required>Nama Email</label> 
-                  <input type="email" id="email" name="email" class="form-control">
+                  <input type="email" id="email" name="email" class="form-control" required>
                 </div>
               </div>
 
@@ -181,14 +185,14 @@
                 
                 <div class="col-md-12">
                   <label class="text-black" for="subject">Subjek</label> 
-                  <input type="subject" id="subject" name="subject" class="form-control">
+                  <input type="subject" id="subject" name="subject" class="form-control" required>
                 </div>
               </div>
 
               <div class="row form-group" style="margin-bottom: 1rem;">
                 <div class="col-md-12">
                   <label class="text-black" for="message">Pesan Anda</label> 
-                  <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Tulis Pesan Disini..."></textarea>
+                  <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Tulis Pesan Disini..." required></textarea>
                 </div>
               </div>
 
