@@ -617,11 +617,11 @@
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-5" data-aos="fade-up" data-aos-delay="0">
-                    <h2 class="heading" style="text-align:justify">Kami dengan senang hati mem-berikan penawaran
+                    <h2 class="heading">Kami dengan senang hati memberikan penawaran
                         konsultasi gratis dengan para profesional yang kompeten dan berpengalaman</h2>
                 </div>
                 <div class="col-lg-5 text-end" data-aos="fade-up" data-aos-delay="100">
-                    <a href="#" class="btn btn-outline-white-reverse">Contact us</a>
+                    <a href="<?php echo base_url(); ?>c_web/hubungiKami" class="btn btn-outline-white-reverse">Contact Us</a>
                 </div>
             </div>
         </div>
