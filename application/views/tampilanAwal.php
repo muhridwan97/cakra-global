@@ -511,20 +511,91 @@
         </div>
     </div>
     <!-- Komitmen Kami end -->
+     
+    <!-- kepemimpinan start -->
+    <section class="site-section" id="team-section" style="margin-top: 140px;margin-bottom: 50px">
+    <div class="container">
+      <div class="row mb-5 justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+        <div class="col-md-8 text-center">
+          <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Kepemimpinan Kami</h2>
+        </div>
+      </div>
+      <div class="row wow fadeInUp" data-wow-delay="0.1s">
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="team-member">
+            <figure>
+              <ul class="social">
+                <li><a href="ot-01"><span class="icon-search2"></span></a></li>
+              </ul>
+              <img src="<?php echo base_url(); ?>asset-landing/img/team-1.jpg" alt="Image" class="img-fluid">
+            </figure>
+            <div class="p-3">
+              <h3>Firman Silalahi SE., AK</h3>
+              <span class="position">Direktur Utama</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="team-member">
+            <figure>
+              <ul class="social">
+                <li><a href="ot-02"><span class="icon-search2"></span></a></li>
+              </ul>
+              <img src="<?php echo base_url(); ?>asset-landing/img/team-2.jpg" alt="Image" class="img-fluid">
+            </figure>
+            <div class="p-3">
+              <h3>Anita Andayani</h3>
+              <span class="position">Wakil Direktur</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="team-member">
+            <figure>
+              <ul class="social">
+                <li><a href="ot-03"><span class="icon-search2"></span></a></li>
+              </ul>
+              <img src="<?php echo base_url(); ?>asset-landing/img/team-3.jpg" alt="Image" class="img-fluid">
+            </figure>
+            <div class="p-3">
+              <h3>Bambang Soerjanto</h3>
+              <span class="position">Direktur Keuangan</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="team-member">
+            <figure>
+              <ul class="social">
+                <li><a href="ot-04"><span class="icon-search2"></span></a></li>
+              </ul>
+              <img src="<?php echo base_url(); ?>asset-landing/img/team-4.jpg" alt="Image" class="img-fluid">
+            </figure>
+            <div class="p-3">
+              <h3>Soenarto Tjiptohardjo</h3>
+              <span class="position">Direktur Operasi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+     
+     <!-- kepemimpinan end -->
 
         <!-- ======= Team Section ======= -->
-        <section id="team" class="team section-bg">
-      <div class="container" data-aos="fade-up">
+        <section id="team" class="team" style="background-color: #ffc701">
+      <div class="container" data-aos="fade-up" style="padding: 50px">
 
-        <div class="section-title">
+        <div class="section-title wow fadeInUp text-center" data-wow-delay="0.1s">
           <h2>HISTORY</h2>
         </div>
         <br>                        
         <div class="row">
 
-          <div class="col-lg-6">
+          <div class="col-lg-6 mt-4 wow fadeInUp" data-wow-delay="0.1s">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="assets/img/client.png" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="<?php echo base_url(); ?>asset-landing/img/team-4.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>PT. Wonokoyo Jaya Corporindo</h4>
                 <p style="text-align: justify;">PT. Wonokoyo Jaya Corporindo merupakan Customer pertama kami yang bergerak dibidang pakan ternak menyediakan pakan ikan untuk lele, nila, ikan mas dan ikan mas
@@ -533,7 +604,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 mt-4 mt-lg-0">
+          <div class="col-lg-6 mt-4 wow fadeInUp" data-wow-delay="0.1s">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
               <div class="pic"><img src="assets/img/client.png" class="img-fluid" alt=""></div>
               <div class="member-info">
@@ -543,7 +614,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 mt-4">
+          <div class="col-lg-6 mt-4 wow fadeInUp" data-wow-delay="0.1s">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
               <div class="pic"><img src="assets/img/client.png" class="img-fluid" alt=""></div>
               <div class="member-info">
@@ -554,7 +625,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 mt-4">
+          <div class="col-lg-6 mt-4 wow fadeInUp" data-wow-delay="0.1s">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
               <div class="pic"><img src="assets/img/client.png" class="img-fluid" alt=""></div>
               <div class="member-info">
@@ -570,6 +641,53 @@
       </div>
     </section>
     <!-- End Team Section -->
+
+    <!-- Testimoni start -->
+    <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="row">
+        <div class="text-center">
+          <div class="section-heading">
+            <h6>Testimonials</h6>
+            <h4>What They Say</h4>
+          </div>
+        </div>
+        <div class="col-lg-10 offset-lg-1">
+          <div class="owl-testimonials owl-carousel" style="position: relative; z-index: 5;">
+            <div class="item">
+              <i class="fa fa-quote-left"></i>
+              <p>“Donec et nunc massa. Nullam non felis dignissim, dapibus turpis semper, vulputate lorem. Nam volutpat posuere tellus, in porttitor justo interdum nec. Aenean in dapibus risus, in euismod ligula. Aliquam vel scelerisque elit.”</p>
+              <h4>David Eigenberg</h4>
+              <span>CEO of Mexant</span>
+              <div class="right-image">
+                <img src="<?php echo base_url(); ?>asset-landing/img/testimonials-01.jpg" alt="">
+              </div>
+            </div>
+            <div class="item">
+              <i class="fa fa-quote-left"></i>
+              <p>“Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”</p>
+              <h4>Andrew Garfield</h4>
+              <span>CTO of Mexant</span>
+              <div class="right-image">
+                <img src="<?php echo base_url(); ?>asset-landing/img/asesor-02.jpg" alt="">
+              </div>
+            </div>
+            <div class="item">
+              <i class="fa fa-quote-left"></i>
+              <p>“Ut dictum vehicula massa, ac pharetra leo tincidunt eu. Phasellus in tristique magna, ac gravida leo. Integer sed lorem sapien. Ut viverra mauris sed lobortis commodo.”</p>
+              <h4>George Lopez</h4>
+              <span>Crypto Manager</span>
+              <div class="right-image">
+                <img src="<?php echo base_url(); ?>asset-landing/img/asesor-03.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    <!-- End Testimonie -->
 
     <!-- Artikel Start -->
     <section class="news-section section-padding wow fadeInUp" data-wow-delay="0.1s" id="artikel">
@@ -714,6 +832,27 @@
 
     <!-- Template Javascript -->
     <script src="<?php echo base_url(); ?>asset-landing/js/main.js"></script>
+    <script>
+        $('.owl-testimonials').owlCarousel({
+		items:1,
+		loop:true,
+		dots: true,
+		nav: false,
+		autoplay: true,
+		margin:15,
+		  responsive:{
+			  0:{
+				  items:1
+			  },
+			  600:{
+				  items:1
+			  },
+			  1000:{
+				  items:1
+			  }
+		  }
+	  })
+    </script>
 </body>
 
 </html>
