@@ -4,6 +4,7 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Alamat</h4>
+                    <p><b>Operasional Office</b> / <b>Alamat Kantor Operasional</b></p>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Kebon Bawang VIII No.20</p>
                     <p style="text-align: justify;">RT.19/RW.1, Kb. Bawang, Kec. Tj. Priok, Jakarta Utara</p>
                     <div class="d-flex pt-2">
@@ -29,7 +30,7 @@
                     <h4 class="text-white mb-4">Informasi</h4>
                     <p class="mb-2"><i class="fa fa-globe" style="width:32px"></i><a href="">cakralogistic.co.id</a></p>
                     <p class="mb-2"><i class="fa fa-envelope" style="width:32px"></i>marketing@cakralogistic.co.id</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt" style="width:32px"></i>+62-2121-6977-04</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt" style="width:32px"></i>+62-21-6977-04</p>
                     <p class="mb-2"><i class="fa fa-mobile-alt" style="width:32px"></i>+62-857-7055-2864</p>
                 </div>
             </div>

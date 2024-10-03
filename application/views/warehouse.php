@@ -80,7 +80,7 @@
             </div>
             <div class="col-lg-6 px-5 text-end">
                 <small><i class="fa fa-envelope text-primary me-2"></i>marketing@cakralogistic.co.id</small>
-                <small class="ms-4"><i class="fa fa-phone text-primary me-2"></i>+62-2121-6977-04</small>
+                <small class="ms-4"><i class="fa fa-phone text-primary me-2"></i>+62-21-6977-04</small>
             </div>
         </div>
 

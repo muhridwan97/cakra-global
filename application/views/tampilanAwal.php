@@ -87,7 +87,7 @@
             </div>
             <div class="col-lg-6 px-5 text-end">
                 <small><i class="fa fa-envelope text-primary me-2"></i>marketing@cakralogistic.co.id</small>
-                <small class="ms-4"><i class="fa fa-phone text-primary me-2"></i>+62-2121-6977-04</small>
+                <small class="ms-4"><i class="fa fa-phone text-primary me-2"></i>+62-21-6977-04</small>
             </div>
         </div>
 
@@ -511,6 +511,65 @@
         </div>
     </div>
     <!-- Komitmen Kami end -->
+
+        <!-- ======= Team Section ======= -->
+        <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>HISTORY</h2>
+        </div>
+        <br>                        
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+              <div class="pic"><img src="assets/img/client.png" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>PT. Wonokoyo Jaya Corporindo</h4>
+                <p style="text-align: justify;">PT. Wonokoyo Jaya Corporindo merupakan Customer pertama kami yang bergerak dibidang pakan ternak menyediakan pakan ikan untuk lele, nila, ikan mas dan ikan mas
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
+              <div class="pic"><img src="assets/img/client.png" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>PT. Fibart Trans Network</h4>
+                <p style="text-align: justify;">PT. Fibart Trans Network adalah sebuah perusahaan yang mengakomodir dan memenuhi permintaan akan kebutuhan industri telekomunikasi seperti Kabel dan Aksesoris</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
+              <div class="pic"><img src="assets/img/client.png" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>PT. Akasha Wira International</h4>
+                <p style="text-align: justify;">PT. Akasha Wira International adalah  air minum kemasan dengan merek Nestle Pure Life dan Vica Royal serta perawatan kecantikan dengan merek Makarizo
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pic"><img src="assets/img/client.png" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>PT Semesta  Teknik Bersama</h4>
+                <p style="text-align: justify;">PPT. Semesta Teknik Bersama adalah perusahaan industry rekondisi mesin dan beberapa Heavy Equipment untuk support beberapa indusiri di Indonesia
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Team Section -->
 
     <!-- Artikel Start -->
     <section class="news-section section-padding wow fadeInUp" data-wow-delay="0.1s" id="artikel">

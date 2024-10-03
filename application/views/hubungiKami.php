@@ -83,7 +83,7 @@
             </div>
             <div class="col-lg-6 px-5 text-end">
                 <small><i class="fa fa-envelope text-primary me-2"></i>marketing@cakralogistic.co.id</small>
-                <small class="ms-4"><i class="fa fa-phone text-primary me-2"></i>+62-2121-6977-04</small>
+                <small class="ms-4"><i class="fa fa-phone text-primary me-2"></i>+62-21-6977-04</small>
             </div>
         </div>
 
@@ -150,13 +150,15 @@
           <div class="col-md-4 text-center">
             <p class="mb-4">
               <span class="icon-room d-block h4 text-primary"></span>
+              <span><b>Operasional Office</b>/<b>Alamat Kantor Operasional</b></span>
+              <br>
               <span>Jl. Kebon Bawang VIII No.20, RT.19/RW.1, Kb. Bawang, Kec. Tj. Priok, Jakarta Utara</span>
             </p>
           </div>
           <div class="col-md-4 text-center">
             <p class="mb-4">
               <span class="icon-phone d-block h4 text-primary"></span>
-              <a href="#">+62-2121-6977-04</a>
+              <a href="#">+62-21-6977-04</a>
             </p>
           </div>
           <div class="col-md-4 text-center">
