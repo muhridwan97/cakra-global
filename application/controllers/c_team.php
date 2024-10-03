@@ -1,44 +1,44 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class c_artikel extends CI_Controller {
+class c_team extends CI_Controller {
     function __construct(){
 		parent::__construct();
-		$this->load->model('m_artikel');
-		$this->load->model('m_gallery_layanan');
+		$this->load->model('m_team');
 		$this->load->helper(array('form', 'url'));
 		$this->load->database();
 	}
     
 	public function index()
 	{
-		$data["datas"]=$this->m_artikel->read();
-		$data["sidebar"]='artikel';
-		$data["title"]="Data Artikel";
-		$data["menu"]='artikel';
-		$this->load->view("artikel/index",$data);
+		$data["datas"]=$this->m_team->read();
+		$data["sidebar"]='team';
+		$data["title"]="Data Team";
+		$data["menu"]='team';
+		$this->load->view("team/index",$data);
 
 	}
 	public function tambah($error=''){
-		$data["sidebar"]='artikel';
-		$data["menu"]='artikel';
-		$data["title"]="Tambah artikel";
+		$data["sidebar"]='team';
+		$data["menu"]='team';
+		$data["title"]="Tambah team";
 		$data["error"]=$error;
-		$this->load->view('artikel/tambah', $data);
+		$this->load->view('team/tambah', $data);
 	}
 	public function edit($id){
 
-		$wst = $this->m_artikel->get_artikel("where id='$id'");
+		$wst = $this->m_team->get_team("where id='$id'");
 		$data = array(
 			"id"=> $wst[0]['id'], 
-			"judul" => $wst[0]['judul'], 
+			"nama" => $wst[0]['nama'], 
+			"jabatan" => $wst[0]['jabatan'], 
 			"foto" => $wst[0]['foto'], 
-			"isi" => $wst[0]['isi'],
+			"bio" => $wst[0]['bio'],
 		);
-		$data["sidebar"]='artikel';
-		$data["menu"]='artikel';
-		$data["title"]="Edit Artikel";
-		$this->load->view('artikel/edit',$data);
+		$data["sidebar"]='team';
+		$data["menu"]='team';
+		$data["title"]="Edit Team";
+		$this->load->view('team/edit',$data);
 		
 	}
 	public function save(){
@@ -52,24 +52,23 @@ class c_artikel extends CI_Controller {
 			$error = $this->upload->display_errors();
 			$this->tambahLayananKami($error);
 		}else{
-			$judul =  $this->input->post('judul');
-			$isi =  $this->input->post('isi');
+			$nama =  $this->input->post('nama');
+			$jabatan =  $this->input->post('jabatan');
+			$bio =  $this->input->post('bio');
 			$upload_data = $this->upload->data();
 			$foto =  $upload_data['file_name'];
 			
 			date_default_timezone_set('Asia/Jakarta');
 			$data = array(
-				'judul' => $judul,
-				'isi' => $isi,
+				'nama' => $nama,
+				'jabatan' => $jabatan,
 				'foto' => $foto,
-				'created_at' => date("Y-m-d H:i:s"),
-				'created_name' => 'Admin',
-				'total_akses' => 0,
+				'bio' => $bio,
 				);
 
-			$this->m_artikel->set_data($data,'artikel');
+			$this->m_team->set_data($data);
 			$data = array('upload_data' => $this->upload->data());
-			redirect('c_artikel');
+			redirect('c_team');
 		}
 	}
 	
@@ -85,43 +84,47 @@ class c_artikel extends CI_Controller {
 				$error = $this->upload->display_errors();
 				$this->edit($error);
 			}else{
-				$judul =  $this->input->post('judul');
-				$isi =  $this->input->post('isi');
+				$nama =  $this->input->post('nama');
+				$jabatan =  $this->input->post('jabatan');
+				$bio =  $this->input->post('bio');
 				$upload_data = $this->upload->data();
 				$foto =  $upload_data['file_name'];
 			
 				$data = array(
-					'judul' => $judul,
+					'nama' => $nama,
+					'jabatan' => $jabatan,
 					'foto' => $foto,
-					'isi' => $isi,
+					'bio' => $bio,
 					);
 
-				$this->m_artikel->update_data($data,$id,'artikel');
+				$this->m_team->update_data($data,$id);
 				$data = array('upload_data' => $this->upload->data());
-				redirect('c_artikel');
+				redirect('c_team');
 			}
 		}else{//jika tidak ada file
 			
-			$judul =  $this->input->post('judul');
-			$isi =  $this->input->post('isi');
+			$nama =  $this->input->post('nama');
+			$jabatan =  $this->input->post('jabatan');
+			$bio =  $this->input->post('bio');
 			$foto =  $this->input->post('foto');
 		
-		$data = array(
-			'judul' => $judul,
-			'foto' => $foto,
-			'isi' => $isi,
+			$data = array(
+				'nama' => $nama,
+				'jabatan' => $jabatan,
+				'foto' => $foto,
+				'bio' => $bio,
 			);
 
-			$this->m_artikel->update_data($data,$id,'artikel');
+			$this->m_team->update_data($data,$id);
 			$data = array('upload_data' => $this->upload->data());
-			redirect('c_artikel');
+			redirect('c_team');
 		}
 
 	}
 
 	public function hapus(){
 		$id= $this->input->post("id");
-		$this->m_artikel->delete($id);
+		$this->m_team->delete($id);
 		echo "{}";
 	}
 		

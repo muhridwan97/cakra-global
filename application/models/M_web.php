@@ -132,6 +132,11 @@ class m_web extends CI_Model {
 		$query=$this->db->get("artikel");
 		return $query->result_array();
 	}
+	function get_team(){
+		$this->db->order_by("id","asc");
+		$query=$this->db->get("team");
+		return $query->result_array();
+	}
 	function hapusWisata($table,$where){
 		$res=$this->db->delete($table,$where);
 		return $res;

@@ -9,6 +9,7 @@ class c_web extends CI_Controller {
 		$this->load->model('m_web');
 		$this->load->model('m_admin');
 		$this->load->helper(array('form', 'url'));
+		$this->load->model('m_team');
 		$this->load->database();
 	}
 	public function index()
@@ -18,6 +19,7 @@ class c_web extends CI_Controller {
 		$data["layanan_kami"]=$this->m_web->get_layanan_kami();
 		$data["artikel"]=$this->m_web->get_artikel_limit();
 		$data["artikel_popular"]=$this->m_web->get_artikel_popular();
+		$data["team"]=$this->m_web->get_team();
 		$this->load->view('tampilanAwal',$data);
 	}
 	public function send_email() {
@@ -161,5 +163,10 @@ class c_web extends CI_Controller {
 	}
 	public function tampilanKontak(){
 		$this->load->view('tampilanKontak');
+	}
+	public function team_detail($id)
+	{
+		$data["team"]=$this->m_team->get_id($id);
+		$this->load->view('teamDetail',$data);
 	}
 }

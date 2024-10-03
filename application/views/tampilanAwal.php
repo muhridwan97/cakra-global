@@ -521,62 +521,22 @@
         </div>
       </div>
       <div class="row wow fadeInUp" data-wow-delay="0.1s">
+      <?php foreach($team as $index => $item) { ?>
         <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
           <div class="team-member">
             <figure>
               <ul class="social">
-                <li><a href="ot-01"><span class="icon-search2"></span></a></li>
+                <li><a href="<?php echo base_url(); ?>c_web/team_detail/<?= $item['id']?>"><span class="icon-search2"></span></a></li>
               </ul>
-              <img src="<?php echo base_url(); ?>asset-landing/img/team-1.jpg" alt="Image" class="img-fluid">
+              <img src="<?php echo base_url(); ?>assets/images/foto/<?= $item['foto'] ?>" alt="Image" class="img-fluid">
             </figure>
             <div class="p-3">
-              <h3>Firman Silalahi SE., AK</h3>
-              <span class="position">Direktur Utama</span>
+              <h3><?= $item['nama'] ?></h3>
+              <span class="position"><?= $item['jabatan'] ?></span>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="team-member">
-            <figure>
-              <ul class="social">
-                <li><a href="ot-02"><span class="icon-search2"></span></a></li>
-              </ul>
-              <img src="<?php echo base_url(); ?>asset-landing/img/team-2.jpg" alt="Image" class="img-fluid">
-            </figure>
-            <div class="p-3">
-              <h3>Anita Andayani</h3>
-              <span class="position">Wakil Direktur</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="team-member">
-            <figure>
-              <ul class="social">
-                <li><a href="ot-03"><span class="icon-search2"></span></a></li>
-              </ul>
-              <img src="<?php echo base_url(); ?>asset-landing/img/team-3.jpg" alt="Image" class="img-fluid">
-            </figure>
-            <div class="p-3">
-              <h3>Bambang Soerjanto</h3>
-              <span class="position">Direktur Keuangan</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="team-member">
-            <figure>
-              <ul class="social">
-                <li><a href="ot-04"><span class="icon-search2"></span></a></li>
-              </ul>
-              <img src="<?php echo base_url(); ?>asset-landing/img/team-4.jpg" alt="Image" class="img-fluid">
-            </figure>
-            <div class="p-3">
-              <h3>Soenarto Tjiptohardjo</h3>
-              <span class="position">Direktur Operasi</span>
-            </div>
-          </div>
-        </div>
+        <?php } ?>
       </div>
     </div>
   </section>
