@@ -137,6 +137,16 @@ class m_web extends CI_Model {
 		$query=$this->db->get("team");
 		return $query->result_array();
 	}
+	function get_history(){
+		$this->db->order_by("id","asc");
+		$query=$this->db->get("history");
+		return $query->result_array();
+	}
+	function get_testimoni(){
+		$this->db->order_by("id","asc");
+		$query=$this->db->get("testimoni");
+		return $query->result_array();
+	}
 	function hapusWisata($table,$where){
 		$res=$this->db->delete($table,$where);
 		return $res;

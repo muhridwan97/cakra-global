@@ -20,6 +20,8 @@ class c_web extends CI_Controller {
 		$data["artikel"]=$this->m_web->get_artikel_limit();
 		$data["artikel_popular"]=$this->m_web->get_artikel_popular();
 		$data["team"]=$this->m_web->get_team();
+		$data["history"]=$this->m_web->get_history();
+		$data["testimoni"]=$this->m_web->get_testimoni();
 		$this->load->view('tampilanAwal',$data);
 	}
 	public function send_email() {

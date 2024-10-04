@@ -552,50 +552,18 @@
         </div>
         <br>                        
         <div class="row">
-
+        <?php foreach($history as $index => $item) { ?>
           <div class="col-lg-6 mt-4 wow fadeInUp" data-wow-delay="0.1s">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="<?php echo base_url(); ?>asset-landing/img/team-4.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="<?php echo base_url(); ?>assets/images/foto/<?= $item['foto']?>" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>PT. Wonokoyo Jaya Corporindo</h4>
-                <p style="text-align: justify;">PT. Wonokoyo Jaya Corporindo merupakan Customer pertama kami yang bergerak dibidang pakan ternak menyediakan pakan ikan untuk lele, nila, ikan mas dan ikan mas
+                <h4><?= $item['judul']?></h4>
+                <p style="text-align: justify;"><?= $item['narasi']?>
                 </p>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-6 mt-4 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="assets/img/client.png" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>PT. Fibart Trans Network</h4>
-                <p style="text-align: justify;">PT. Fibart Trans Network adalah sebuah perusahaan yang mengakomodir dan memenuhi permintaan akan kebutuhan industri telekomunikasi seperti Kabel dan Aksesoris</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="assets/img/client.png" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>PT. Akasha Wira International</h4>
-                <p style="text-align: justify;">PT. Akasha Wira International adalah  air minum kemasan dengan merek Nestle Pure Life dan Vica Royal serta perawatan kecantikan dengan merek Makarizo
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="assets/img/client.png" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>PT Semesta  Teknik Bersama</h4>
-                <p style="text-align: justify;">PPT. Semesta Teknik Bersama adalah perusahaan industry rekondisi mesin dan beberapa Heavy Equipment untuk support beberapa indusiri di Indonesia
-                </p>
-              </div>
-            </div>
-          </div>
-
+          <?php } ?>
         </div>
 
       </div>
@@ -614,33 +582,18 @@
         </div>
         <div class="col-lg-10 offset-lg-1">
           <div class="owl-testimonials owl-carousel" style="position: relative; z-index: 5;">
+            
+            <?php foreach($testimoni as $index => $item) { ?>
             <div class="item">
               <i class="fa fa-quote-left"></i>
-              <p>“Donec et nunc massa. Nullam non felis dignissim, dapibus turpis semper, vulputate lorem. Nam volutpat posuere tellus, in porttitor justo interdum nec. Aenean in dapibus risus, in euismod ligula. Aliquam vel scelerisque elit.”</p>
-              <h4>David Eigenberg</h4>
-              <span>CEO of Mexant</span>
+              <p>“<?= $item['testimoni']?>”</p>
+              <h4><?= $item['nama']?></h4>
+              <span><?= $item['jabatan']?></span>
               <div class="right-image">
-                <img src="<?php echo base_url(); ?>asset-landing/img/testimonials-01.jpg" alt="">
+                <img src="<?php echo base_url(); ?>asset-landing/img/<?= $item['foto']?>" alt="">
               </div>
             </div>
-            <div class="item">
-              <i class="fa fa-quote-left"></i>
-              <p>“Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”</p>
-              <h4>Andrew Garfield</h4>
-              <span>CTO of Mexant</span>
-              <div class="right-image">
-                <img src="<?php echo base_url(); ?>asset-landing/img/asesor-02.jpg" alt="">
-              </div>
-            </div>
-            <div class="item">
-              <i class="fa fa-quote-left"></i>
-              <p>“Ut dictum vehicula massa, ac pharetra leo tincidunt eu. Phasellus in tristique magna, ac gravida leo. Integer sed lorem sapien. Ut viverra mauris sed lobortis commodo.”</p>
-              <h4>George Lopez</h4>
-              <span>Crypto Manager</span>
-              <div class="right-image">
-                <img src="<?php echo base_url(); ?>asset-landing/img/asesor-03.jpg" alt="">
-              </div>
-            </div>
+            <?php } ?>
           </div>
         </div>
       </div>
