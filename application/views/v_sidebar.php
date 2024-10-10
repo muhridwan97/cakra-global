@@ -94,24 +94,24 @@
                 </a>
             </li>
             <!--PAGE GUIDE -->
-            <li class="<?php echo $sidebar == 'team' ? 'active' : '' ; ?>">
+            <!-- <li class="<?php echo $sidebar == 'team' ? 'active' : '' ; ?>">
                 <a href="<?php echo base_url();?>c_team">
                     <i class="fa fa-group"></i>
                     <span>Team</span>
                 </a>
-            </li>
+            </li> -->
             <li class="<?php echo $sidebar == 'history' ? 'active' : '' ; ?>">
                 <a href="<?php echo base_url();?>c_history">
                     <i class="fa fa-history"></i>
                     <span>History</span>
                 </a>
             </li>
-            <li class="<?php echo $sidebar == 'testimoni' ? 'active' : '' ; ?>">
+            <!-- <li class="<?php echo $sidebar == 'testimoni' ? 'active' : '' ; ?>">
                 <a href="<?php echo base_url();?>c_testimoni">
                     <i class="fa fa-quote-left"></i>
                     <span>Testimoni</span>
                 </a>
-            </li>
+            </li> -->
         </ul>
     </section>
     <!-- /.sidebar -->

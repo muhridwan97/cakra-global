@@ -513,7 +513,7 @@
     <!-- Komitmen Kami end -->
      
     <!-- kepemimpinan start -->
-    <section class="site-section" id="team-section" style="margin-top: 140px;margin-bottom: 50px">
+    <!-- <section class="site-section" id="team-section" style="margin-top: 140px;margin-bottom: 50px">
     <div class="container">
       <div class="row mb-5 justify-content-center wow fadeInUp" data-wow-delay="0.1s">
         <div class="col-md-8 text-center">
@@ -539,7 +539,7 @@
         <?php } ?>
       </div>
     </div>
-  </section>
+  </section> -->
      
      <!-- kepemimpinan end -->
 
@@ -571,7 +571,7 @@
     <!-- End Team Section -->
 
     <!-- Testimoni start -->
-    <section class="testimonials" id="testimonials">
+    <!-- <section class="testimonials" id="testimonials">
     <div class="container">
       <div class="row">
         <div class="text-center">
@@ -598,7 +598,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   
     <!-- End Testimonie -->
 
