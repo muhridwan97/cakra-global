@@ -16,7 +16,7 @@ RUN docker-php-ext-install mysqli
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Salin file php.ini kustom
-COPY ./docker-config/php/php.ini /usr/local/etc/php/conf.d/
+COPY ./docker-config/php/php.ini /usr/local/etc/php/php.ini
 
 # Mengatur kepemilikan direktori
 # RUN chown -R www-data:www-data /var/www/html/application/cache

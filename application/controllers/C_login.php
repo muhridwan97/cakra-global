@@ -1,8 +1,7 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
 // Tambahkan ob_start di awal untuk menangani output buffering
 ob_start();
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 class c_login extends CI_Controller {
 
@@ -28,10 +27,11 @@ class c_login extends CI_Controller {
 			if($d->username==$nama && $d->password==md5($password)){
 				$this->session->set_userdata('username',$nama);
 				redirect($home."c_admin/tampilanAdmin/");
+				return; // Ensure the script stops here after redirect
 			}
 		}
-				$gagal['gagal'] = "gagal";
-				$this->load->view('tampilanLoginAdmin', $gagal);
+		$gagal['gagal'] = "gagal";
+		$this->load->view('tampilanLoginAdmin', $gagal);
 	}
 	public function index()
 	{
@@ -127,4 +127,6 @@ class c_login extends CI_Controller {
 	}
 	
 }
+// Flush output buffer at the end of the script
+ob_end_flush();
 ?>
