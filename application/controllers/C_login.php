@@ -3,7 +3,7 @@
 ob_start();
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class c_login extends CI_Controller {
+class C_login extends CI_Controller {
 
 	public function __construct()
 	{
