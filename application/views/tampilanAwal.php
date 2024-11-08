@@ -571,7 +571,7 @@
     <!-- End Team Section -->
 
     <!-- Testimoni start -->
-    <section class="testimonials" id="testimonials">
+    <!-- <section class="testimonials" id="testimonials">
     <div class="container">
       <div class="row">
         <div class="text-center">
@@ -598,7 +598,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   
     <!-- End Testimonie -->
 
