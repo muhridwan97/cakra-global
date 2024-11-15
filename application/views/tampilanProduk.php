@@ -27,11 +27,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!--// Meta tag Keywords -->
 
 	<!-- Custom-Files -->
-	<link rel="stylesheet" href="<?php echo base_url();?>/assets/css/bootstrap.css">
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.css">
 	<!-- Bootstrap-Core-CSS -->
-	<link rel="stylesheet" href="<?php echo base_url();?>/assets/css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css" type="text/css" media="all" />
 	<!-- Style-CSS -->
-	<link href="<?php echo base_url();?>/assets/css/font-awesome.min.css" rel="stylesheet">
+	<link href="<?php echo base_url();?>assets/css/font-awesome.min.css" rel="stylesheet">
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //Custom-Files -->
 
@@ -115,7 +115,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<!-- logo -->
 				<h1>
 					<a id="logo" class="logo" href="<?php echo base_url(); ?>c_web/tampilanHome">
-						<img src="<?php echo base_url();?>/assets/images/logo.png" alt="" class="img-fluid"></a>
+						<img src="<?php echo base_url();?>assets/images/logo.png" alt="" class="img-fluid"></a>
 				</h1>
 				<!-- //logo -->
 				<!-- nav -->
@@ -169,7 +169,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-4">
 					<div class="gallery-demo">
 						<a href="#gal1">
-							<img src="<?php echo base_url();?>/assets/images/produk/<?php echo "$p[fotoProduk]"?>" alt=" " class="img-fluid" />
+							<img src="<?php echo base_url();?>assets/images/produk/<?php echo "$p[fotoProduk]"?>" alt=" " class="img-fluid" />
 							<h4 class="p-mask"><?php echo "$p[keterangan]"?></h4>
 						</a>
 					</div>
@@ -182,7 +182,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-4 mt-md-0 mt-4">
 					<div class="gallery-demo">
 						<a href="#gal4">
-							<img src="<?php echo base_url();?>/assets/images/g1.jpg" alt=" " class="img-fluid" />
+							<img src="<?php echo base_url();?>assets/images/g1.jpg" alt=" " class="img-fluid" />
 							<h4 class="p-mask">Cheese Burger - <span>$20</span></h4>
 						</a>
 					</div>
@@ -190,7 +190,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-4 mt-md-0 mt-4">
 					<div class="gallery-demo">
 						<a href="#gal5">
-							<img src="<?php echo base_url();?>/assets/images/g2.jpg" alt=" " class="img-fluid" />
+							<img src="<?php echo base_url();?>assets/images/g2.jpg" alt=" " class="img-fluid" />
 							<h4 class="p-mask">Chicken Burger - <span>$22</span></h4>
 						</a>
 					</div>
@@ -198,7 +198,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-4 mt-md-0 mt-4">
 					<div class="gallery-demo">
 						<a href="#gal6">
-							<img src="<?php echo base_url();?>/assets/images/g3.jpg" alt=" " class="img-fluid" />
+							<img src="<?php echo base_url();?>assets/images/g3.jpg" alt=" " class="img-fluid" />
 							<h4 class="p-mask">Veg Burger - <span>$16</span></h4>
 						</a>
 					</div>
@@ -211,7 +211,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- gallery popup 1 -->
 	<div id="gal1" class="pop-overlay">
 		<div class="popup">
-			<img class="img-fluid" src="<?php echo base_url();?>/assets/images/blog1.jpg" alt="">
+			<img class="img-fluid" src="<?php echo base_url();?>assets/images/blog1.jpg" alt="">
 			<h4 class="p-mask">French Burger - - <span>$22</span></h4>
 			<a href="https://api.whatsapp.com/send?phone=62821111111&text=Halo%20Priangan%20Sari" class="button-w3ls active mt-3">Order Now
 				<span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
@@ -223,7 +223,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- gallery popup 2 -->
 	<div id="gal2" class="pop-overlay">
 		<div class="popup">
-			<img class="img-fluid" src="<?php echo base_url();?>/assets/images/blog2.jpg" alt="">
+			<img class="img-fluid" src="<?php echo base_url();?>assets/images/blog2.jpg" alt="">
 			<h4 class="p-mask">Veg Muffin - <span>$16</span></h4>
 			<a href="https://api.whatsapp.com/send?phone=62821111111&text=Halo%20Priangan%20Sari" class="button-w3ls active mt-3">Order Now
 				<span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
@@ -235,7 +235,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- gallery popup 3 -->
 	<div id="gal3" class="pop-overlay">
 		<div class="popup">
-			<img class="img-fluid" src="<?php echo base_url();?>/assets/images/blog3.jpg" alt="">
+			<img class="img-fluid" src="<?php echo base_url();?>assets/images/blog3.jpg" alt="">
 			<h4 class="p-mask">Brioche - <span>$18</span></h4>
 			<a href="https://api.whatsapp.com/send?phone=62821111111&text=Halo%20Priangan%20Sari" class="button-w3ls active mt-3">Order Now
 				<span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
@@ -248,7 +248,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- gallery popup 4 -->
 	<div id="gal4" class="pop-overlay">
 		<div class="popup">
-			<img class="img-fluid" src="<?php echo base_url();?>/assets/images/g1.jpg" alt="">
+			<img class="img-fluid" src="<?php echo base_url();?>assets/images/g1.jpg" alt="">
 			<h4 class="p-mask">Cheese Burger - <span>$20</span></h4>
 			<a href="https://api.whatsapp.com/send?phone=62821111111&text=Halo%20Priangan%20Sari" class="button-w3ls active mt-3">Order Now
 				<span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
@@ -261,7 +261,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- gallery popup 5 -->
 	<div id="gal5" class="pop-overlay">
 		<div class="popup">
-			<img class="img-fluid" src="<?php echo base_url();?>/assets/images/g2.jpg" alt="">
+			<img class="img-fluid" src="<?php echo base_url();?>assets/images/g2.jpg" alt="">
 			<h4 class="p-mask">Chicken Burger - <span>$22</span></h4>
 			<a href="https://api.whatsapp.com/send?phone=62821111111&text=Halo%20Priangan%20Sari" class="button-w3ls active mt-3">Order Now
 				<span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
@@ -274,7 +274,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- gallery popup 6 -->
 	<div id="gal6" class="pop-overlay">
 		<div class="popup">
-			<img class="img-fluid" src="<?php echo base_url();?>/assets/images/g3.jpg" alt="">
+			<img class="img-fluid" src="<?php echo base_url();?>assets/images/g3.jpg" alt="">
 			<h4 class="p-mask">Veg Burger - <span>$16</span></h4>
 			<a href="https://api.whatsapp.com/send?phone=62821111111&text=Halo%20Priangan%20Sari" class="button-w3ls active mt-3">Order Now
 				<span class="fa fa-caret-right ml-1" aria-hidden="true"></span>
@@ -293,7 +293,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<!-- logo -->
 					<h2>
 						<a class="logo text-wh" href="<?php echo base_url(); ?>c_web/tampilanHome">
-							<img src="<?php echo base_url();?>/assets/images/logo.png" alt="" class="img-fluid"></a>
+							<img src="<?php echo base_url();?>assets/images/logo.png" alt="" class="img-fluid"></a>
 					</h2>
 					<!-- //logo -->
 					<p class="mt-lg-4 mt-3 mb-lg-5 mb-4">Tokoh Oleh Oleh Bogor</p>
@@ -337,7 +337,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="footer-title mt-4 pt-md-2">
 						<h3>Delivery Order</h3>
 					</div>
-					<a href="https://api.whatsapp.com/send?phone=62821111111&text=Halo%20Priangan%20Sari"><img src="<?php echo base_url();?>/assets/images/deliveryorder.png" alt=""></a>
+					<a href="https://api.whatsapp.com/send?phone=62821111111&text=Halo%20Priangan%20Sari"><img src="<?php echo base_url();?>assets/images/deliveryorder.png" alt=""></a>
 					</div>
 				<div class="col-lg-4 footer-grid_section_1its">
 					<div class="footer-title">

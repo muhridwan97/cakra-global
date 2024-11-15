@@ -3,7 +3,7 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="<?php echo base_url();?>/assets/images/profile-picture-anonymous-2.jpg" class="img-circle"
+                <img src="<?php echo base_url();?>assets/images/profile-picture-anonymous-2.jpg" class="img-circle"
                     alt="User Image">
             </div>
             <div class="pull-left info">

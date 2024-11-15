@@ -148,7 +148,7 @@
                     foreach($banner as $index => $a){ 
                 ?>
                 <div class="carousel-item <?php echo $index == 0 ? 'active' : ''; ?>">
-                    <img class="w-100" src="<?php echo base_url(); ?>/assets/images/foto/<?php echo "$a[fotoBanner]"?>"
+                    <img class="w-100" src="<?php echo base_url(); ?>assets/images/foto/<?php echo "$a[fotoBanner]"?>"
                         alt="Image">
                     <div class="carousel-caption">
                         <div class="container">

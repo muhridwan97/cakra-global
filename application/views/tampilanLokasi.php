@@ -52,11 +52,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </style>
 <!-- Table-->
 	<!-- Custom-Files -->
-	<link rel="stylesheet" href="<?php echo base_url();?>/assets/css/bootstrap.css">
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.css">
 	<!-- Bootstrap-Core-CSS -->
-	<link rel="stylesheet" href="<?php echo base_url();?>/assets/css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css" type="text/css" media="all" />
 	<!-- Style-CSS -->
-	<link href="<?php echo base_url();?>/assets/css/font-awesome.min.css" rel="stylesheet">
+	<link href="<?php echo base_url();?>assets/css/font-awesome.min.css" rel="stylesheet">
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //Custom-Files -->
 
@@ -141,7 +141,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<!-- logo -->
 				<h1>
 					<a id="logo" class="logo" href="<?php echo base_url(); ?>c_web/tampilanHome">
-						<img src="<?php echo base_url();?>/assets/images/logo.png" alt="" class="img-fluid">
+						<img src="<?php echo base_url();?>assets/images/logo.png" alt="" class="img-fluid">
 					</a>
 				</h1>
 				<!-- //logo -->
@@ -192,8 +192,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="row">
 				<div class="col-lg-6 pr-xl-5 mt-xl-2 mt-lg-0">
 					<h3 class="title-sub mb-4">PRIANGAN SARI – KOPO</h3>
-					<p class="sub-para"><img width="520" height="300" src="<?php echo base_url();?>/assets/images/ab.jpg"/></p>
-					<p class="sub-para pt-4 mt-4 border-top"><img width="520" height="50" src="<?php echo base_url();?>/assets/images/facility.jpg"/></p>
+					<p class="sub-para"><img width="520" height="300" src="<?php echo base_url();?>assets/images/ab.jpg"/></p>
+					<p class="sub-para pt-4 mt-4 border-top"><img width="520" height="50" src="<?php echo base_url();?>assets/images/facility.jpg"/></p>
 				</div>
 				<div class="col-lg-6 text-center mt-lg-0 mt-4">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m8!1m3!1d15851.411142680114!2d106.92485164906311!3d-6.6651586782383445!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d-6.6661737!2d106.92259109999999!5e0!3m2!1sen!2sid!4v1574358583711!5m2!1sen!2sid" width="600" height="480" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
@@ -216,7 +216,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<!-- logo -->
 					<h2>
 						<a class="logo text-wh" href="<?php echo base_url(); ?>c_web/tampilanHome">
-							<img src="<?php echo base_url();?>/assets/images/logo.png" alt="" class="img-fluid"></a>
+							<img src="<?php echo base_url();?>assets/images/logo.png" alt="" class="img-fluid"></a>
 					</h2>
 					<!-- //logo -->
 					<p class="mt-lg-4 mt-3 mb-lg-5 mb-4">Tokoh Oleh Oleh Bogor</p>
@@ -260,7 +260,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="footer-title mt-4 pt-md-2">
 						<h3>Delivery Order</h3>
 					</div>
-					<a href="https://api.whatsapp.com/send?phone=62821111111&text=Halo%20Priangan%20Sari"><img src="<?php echo base_url();?>/assets/images/deliveryorder.png" alt=""></a>
+					<a href="https://api.whatsapp.com/send?phone=62821111111&text=Halo%20Priangan%20Sari"><img src="<?php echo base_url();?>assets/images/deliveryorder.png" alt=""></a>
 					</div>
 				<div class="col-lg-4 footer-grid_section_1its">
 					<div class="footer-title">

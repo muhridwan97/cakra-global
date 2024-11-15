@@ -27,11 +27,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!--// Meta tag Keywords -->
 
 	<!-- Custom-Files -->
-	<link rel="stylesheet" href="<?php echo base_url();?>/assets/css/bootstrap.css">
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.css">
 	<!-- Bootstrap-Core-CSS -->
-	<link rel="stylesheet" href="<?php echo base_url();?>/assets/css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css" type="text/css" media="all" />
 	<!-- Style-CSS -->
-	<link href="<?php echo base_url();?>/assets/css/font-awesome.min.css" rel="stylesheet">
+	<link href="<?php echo base_url();?>assets/css/font-awesome.min.css" rel="stylesheet">
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //Custom-Files -->
 
@@ -116,7 +116,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<!-- logo -->
 				<h1>
 					<a id="logo" class="logo" href="<?php echo base_url(); ?>c_web/tampilanHome">
-						<img src="<?php echo base_url();?>/assets/images/logo.png" alt="" class="img-fluid">
+						<img src="<?php echo base_url();?>assets/images/logo.png" alt="" class="img-fluid">
 					</a>
 				</h1>
 				<!-- //logo -->
@@ -170,7 +170,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h3 class="footer-title mb-4 pb-lg-2">Our Address</h3>
 					<div class="row address-info-w3ls">
 						<div class="col-3 address-left">
-							<img src="<?php echo base_url();?>/assets/images/c1.png" alt="" class="img-fluid">
+							<img src="<?php echo base_url();?>assets/images/c1.png" alt="" class="img-fluid">
 						</div>
 						<div class="col-9 address-right mt-2">
 							<h5 class="address mb-2">Address</h5>
@@ -179,7 +179,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<div class="row address-info-w3ls my-2">
 						<div class="col-3 address-left">
-							<img src="<?php echo base_url();?>/assets/images/c2.png" alt="" class="img-fluid">
+							<img src="<?php echo base_url();?>assets/images/c2.png" alt="" class="img-fluid">
 						</div>
 						<div class="col-9 address-right mt-2">
 							<h5 class="address mb-2">Email</h5>
@@ -190,7 +190,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<div class="row address-info-w3ls">
 						<div class="col-3 address-left">
-							<img src="<?php echo base_url();?>/assets/images/c3.png" alt="" class="img-fluid">
+							<img src="<?php echo base_url();?>assets/images/c3.png" alt="" class="img-fluid">
 						</div>
 						<div class="col-9 address-right mt-2">
 							<h5 class="address mb-2">Phone</h5>
@@ -232,7 +232,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<!-- logo -->
 					<h2>
 						<a class="logo text-wh" href="<?php echo base_url(); ?>c_web/tampilanHome">
-							<img src="<?php echo base_url();?>/assets/images/logo.png" alt="" class="img-fluid"></a>
+							<img src="<?php echo base_url();?>assets/images/logo.png" alt="" class="img-fluid"></a>
 					</h2>
 					<!-- //logo -->
 					<p class="mt-lg-4 mt-3 mb-lg-5 mb-4">Tokoh Oleh Oleh Bogor</p>
@@ -276,7 +276,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="footer-title mt-4 pt-md-2">
 						<h3>Delivery Order</h3>
 					</div>
-					<a href="https://api.whatsapp.com/send?phone=62821111111&text=Halo%20Priangan%20Sari"><img src="<?php echo base_url();?>/assets/images/deliveryorder.png" alt=""></a>
+					<a href="https://api.whatsapp.com/send?phone=62821111111&text=Halo%20Priangan%20Sari"><img src="<?php echo base_url();?>assets/images/deliveryorder.png" alt=""></a>
 					</div>
 				<div class="col-lg-4 footer-grid_section_1its">
 					<div class="footer-title">

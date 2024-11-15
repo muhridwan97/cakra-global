@@ -17,18 +17,18 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--// Meta tag Keywords -->
 
 	<!-- Recent Trips section css files-->
-	<link rel="stylesheet" href="<?php echo base_url();?> /assets/css/owl.carousel.css" type="text/css" media="all">
-	<link href="<?php echo base_url();?>/assets/css/owl.theme.css" rel="stylesheet">
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/owl.carousel.css" type="text/css" media="all">
+	<link href="<?php echo base_url();?>assets/css/owl.theme.css" rel="stylesheet">
 	<!-- //Recent Trips section css files -->
 
 	<!-- Testimonials -->
-	<link rel="stylesheet" href="<?php echo base_url();?>/assets/css/flexslider.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/flexslider.css" type="text/css" media="screen" />
 	<!-- //Testimonials -->
 
 	<!-- css files -->
-	<link rel="stylesheet" href="<?php echo base_url();?>/assets/css/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
-	<link rel="stylesheet" href="<?php echo base_url();?>/assets/css/style.css" type="text/css" media="all" /> <!-- Style-CSS --> 
-	<link rel="stylesheet" href="<?php echo base_url();?>/assets/css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css" type="text/css" media="all" /> <!-- Style-CSS --> 
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
 	<!-- //css files -->
 
 	<!-- web-fonts -->
@@ -251,7 +251,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
 			</div>
 			<div class="modal-body">
-				<img src="<?php echo base_url();?>/assets/images/bg8.jpg" alt=" " class="img-responsive" />
+				<img src="<?php echo base_url();?>assets/images/bg8.jpg" alt=" " class="img-responsive" />
 				<p>Ut enim ad minima veniam, quis nostrum 
 					exercitationem ullam corporis suscipit laboriosam, 
 					nisi ut aliquid ex ea commodi consequatur? Quis autem 
@@ -323,7 +323,7 @@ Untuk tiket masuk sendiri, cukup membayar 400 rupiah kita sudah bisa masuk untuk
 				
 				<div class="team-img">
 
-					<img class="" src="<?php echo base_url();?>/assets/images/foto/guide/<?php echo "$a[fotoGuide]"?>" alt="" width ="350px" height="400px">
+					<img class="" src="<?php echo base_url();?>assets/images/foto/guide/<?php echo "$a[fotoGuide]"?>" alt="" width ="350px" height="400px">
 					<div class="captn">
 						
 					
@@ -362,7 +362,7 @@ Untuk tiket masuk sendiri, cukup membayar 400 rupiah kita sudah bisa masuk untuk
 			<div class="package_top_grid">
 				<div class="col-md-6">
 					<div class="packages_left">
-						<img src="<?php echo base_url();?>/assets/images/foto/<?php echo "$b[foto]"?>" >
+						<img src="<?php echo base_url();?>assets/images/foto/<?php echo "$b[foto]"?>" >
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -400,7 +400,7 @@ Untuk tiket masuk sendiri, cukup membayar 400 rupiah kita sudah bisa masuk untuk
 						<li>
 							<div class="w3l-info1">
 								<div class="col-md-3 testimonials-grid-1">
-									<img src="<?php echo base_url();?>/assets/images/test1.jpg" alt="" />
+									<img src="<?php echo base_url();?>assets/images/test1.jpg" alt="" />
 								</div>
 								<div class="col-md-9 testimonials-grid-2">
 									<h4>Jessica</h4>
@@ -419,7 +419,7 @@ Untuk tiket masuk sendiri, cukup membayar 400 rupiah kita sudah bisa masuk untuk
 						<li>
 							<div class="w3l-info1">
 								<div class="col-md-3 testimonials-grid-1">
-									<img src="<?php echo base_url();?>/assets/images/test3.jpg" alt="" />
+									<img src="<?php echo base_url();?>assets/images/test3.jpg" alt="" />
 								</div>
 								<div class="col-md-9 testimonials-grid-2">
 									<h4>Selena</h4>
@@ -438,7 +438,7 @@ Untuk tiket masuk sendiri, cukup membayar 400 rupiah kita sudah bisa masuk untuk
 						<li>
 							<div class="w3l-info1">
 								<div class="col-md-3 testimonials-grid-1">
-									<img src="<?php echo base_url();?>/assets/images/test2.jpg" alt=""  />
+									<img src="<?php echo base_url();?>assets/images/test2.jpg" alt=""  />
 								</div>
 								<div class="col-md-9 testimonials-grid-2">
 									<h4>Michael</h4>
@@ -731,12 +731,12 @@ Untuk tiket masuk sendiri, cukup membayar 400 rupiah kita sudah bisa masuk untuk
 <!-- js-scripts -->		
 
 	<!-- js -->
-	<script type="text/javascript" src="<?php echo base_url();?>/assets/js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>/assets/js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap --> 
+	<script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap --> 
 	<!-- //js -->	
 
 	<!--  Testimonials js-->
-	<script defer src="<?php echo base_url();?>/assets/js/jquery.flexslider.js"></script>
+	<script defer src="<?php echo base_url();?>assets/js/jquery.flexslider.js"></script>
 	<!--Start-slider-script-->
 		<script type="text/javascript">
 		
@@ -753,7 +753,7 @@ Untuk tiket masuk sendiri, cukup membayar 400 rupiah kita sudah bisa masuk untuk
 	<!--  //Testimonials js-->
 
 	<!-- Recent Trips js file-->
-	<script src="<?php echo base_url();?>/assets/js/owl.carousel.js"></script>
+	<script src="<?php echo base_url();?>assets/js/owl.carousel.js"></script>
 		<!-- Recent Trips Script-->
 		<script>
 		$(document).ready(function() { 
@@ -773,9 +773,9 @@ Untuk tiket masuk sendiri, cukup membayar 400 rupiah kita sudah bisa masuk untuk
 	<!-- //Recent Trips js file-->
 
 	<!-- start-smoth-scrolling -->
-	<script src="<?php echo base_url();?>/assets/js/SmoothScroll.min.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>/assets/js/move-top.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>/assets/js/easing.js"></script>
+	<script src="<?php echo base_url();?>assets/js/SmoothScroll.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>assets/js/move-top.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>assets/js/easing.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
@@ -804,7 +804,7 @@ Untuk tiket masuk sendiri, cukup membayar 400 rupiah kita sudah bisa masuk untuk
 	<!-- start-smoth-scrolling -->
 
 	<!-- Banner-js -->
-	<script src="<?php echo base_url();?>/assets/js/responsiveslides.min.js"></script>
+	<script src="<?php echo base_url();?>assets/js/responsiveslides.min.js"></script>
 	<script>
 		$(function () {
 			$("#slider").responsiveSlides({
