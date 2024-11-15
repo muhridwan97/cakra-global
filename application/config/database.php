@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '172.18.0.1',
-	'username' => 'cakra-global',
+	'hostname' => 'localhost',
+	'username' => 'u643387971_cakra_global',
 	'password' => 'Cakraglobal888',
-	'database' => 'cakra-global',
+	'database' => 'u643387971_cakra_global',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
