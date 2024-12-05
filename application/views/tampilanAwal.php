@@ -512,7 +512,7 @@
     </div>
     <!-- Komitmen Kami end -->
      
-    <!-- kepemimpinan start
+    <!-- kepemimpinan start -->
     <section class="site-section" id="team-section" style="margin-top: 140px;margin-bottom: 50px">
     <div class="container">
       <div class="row mb-5 justify-content-center wow fadeInUp" data-wow-delay="0.1s">
@@ -541,7 +541,7 @@
     </div>
   </section>
      
-     kepemimpinan end -->
+     <!--kepemimpinan end -->
 
         <!-- ======= Team Section ======= -->
         <section id="team" class="team" style="background-color: #ffc701">
