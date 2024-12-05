@@ -148,11 +148,20 @@
         </div>
         <div class="row mb-5">
           <div class="col-md-4 text-center">
-            <p class="mb-4">
+              <p class="mb-4">
               <span class="icon-room d-block h4 text-primary"></span>
+              <span><b>Head</b>/<b>Office</b></span>
+              <br>
+              <span>SCBD, Gedung Treasury Tower, District 8 LOT 28</span>
+              <br>
+              <span>Jl. Tulodong Atas 2 No.28, Senayan, Kebayoran Baru, Jakarta Selatan 12190.</span>
+              <br>
+              <br>
               <span><b>Operasional Office</b>/<b>Alamat Kantor Operasional</b></span>
               <br>
               <span>Jl. Kebon Bawang VIII No.20, RT.19/RW.1, Kb. Bawang, Kec. Tj. Priok, Jakarta Utara</span>
+              <br>
+              
             </p>
           </div>
           <div class="col-md-4 text-center">

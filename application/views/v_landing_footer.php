@@ -3,7 +3,11 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Alamat</h4>
+                <h4 class="text-white mb-4">Alamat</h4>
+                    <p><b>Head</b> / <b>Office</b></p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>SCBD, Gedung Treasury Tower, District 8 LOT 28,
+                    </p>
+                    <p style="text-align: justify;">Jl. Tulodong Atas 2 No.28, Senayan, Kebayoran Baru, Jakarta Selatan 12190.</p>
                     <p><b>Operasional Office</b> / <b>Alamat Kantor Operasional</b></p>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Kebon Bawang VIII No.20</p>
                     <p style="text-align: justify;">RT.19/RW.1, Kb. Bawang, Kec. Tj. Priok, Jakarta Utara</p>
