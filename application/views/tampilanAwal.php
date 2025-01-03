@@ -503,7 +503,7 @@
                 <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <img class="position-absolute img-fluid w-100 h-100"
-                            src="<?php echo base_url(); ?>asset-landing/img/projectlogistik.jpg"
+                            src="<?php echo base_url(); ?>asset-landing/img/komitmen.jpg"
                             style="object-fit: cover;" alt="">
                     </div>
                 </div>
